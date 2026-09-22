@@ -10,8 +10,7 @@ error = real - mediana   (>0: el REM subestimo; <0: sobreestimo). Unidades de la
 error_rel_pct solo para niveles (TC, exportaciones, importaciones): error / real * 100.
 dentro_p10_p90: 1/0 si el real cayo dentro del rango p10-p90 de las proyecciones (NaN si no hay p10/p90).
 
-Reales: BCRA (actuals_monthly.csv) e INDEC (actuals_indec.csv, opcional). Sin real todavia: resultado primario
-del SPNF (no es INDEC: Secretaria de Hacienda).
+Reales: BCRA (actuals_monthly.csv) e INDEC/Hacienda (actuals_indec.csv, opcional, generado por fetch_indec.py).
 """
 import argparse
 from pathlib import Path
@@ -47,6 +46,10 @@ RULES = [
     ("EXPORTACIONES", None, "anio", "EXPORTACIONES_ANIO", "ultimo"),
     ("IMPORTACIONES", None, "mes", "IMPORTACIONES_MES", "ultimo"),
     ("IMPORTACIONES", None, "anio", "IMPORTACIONES_ANIO", "ultimo"),
+    # IMIG/Hacienda via fetch_indec.py; ya convertida a miles de millones de $ (unidad del REM), anual.
+    # OJO: confirmar el nombre de variable ("RESULTADO_PRIMARIO_SPNF") y la unidad exacta contra
+    # rem_long.csv (build_data.py) antes de dar esto por bueno - no se verifico en esta sesion.
+    ("RESULTADO_PRIMARIO_SPNF", None, "anio", "RESULTADO_PRIMARIO_ANIO", "ultimo"),
 ]
 NIVELES = ["TC_NOMINAL", "EXPORTACIONES", "IMPORTACIONES"]  # error_rel_pct solo para niveles
 COLS = ["relevamiento", "variable", "unidad", "unidad_norm", "periodo_tipo", "fecha_objetivo",

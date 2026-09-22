@@ -63,6 +63,12 @@ SPECS = {
                           kw=["exportaciones"], freq="M"),
     "IMPORTACIONES": dict(id="74.3_IIT_0_M_25", q="importaciones intercambio comercial argentino mensual",
                           kw=["importaciones"], freq="M"),
+    # IMIG (Informe Mensual de Ingresos y Gastos), Secretaria de Hacienda: resultado primario del
+    # Sector Publico Nacional no financiero, base caja, mensual, en MILLONES de pesos corrientes.
+    # El REM lo releva ANUAL y en MILES DE MILLONES (ver find_series.py cmd_spnf); la conversion de
+    # unidad se hace en derive() de abajo, no en compute_errors.py.
+    "RESULTADO_PRIMARIO": dict(id="452.3_RESULTADO_RIO_0_M_18_54", q="IMIG resultado primario SPNF mensual",
+                               kw=["resultado primario"], freq="M"),
 }
 
 
@@ -223,6 +229,10 @@ def derive(base):
             m = per(base[key]["s"], "M")
             add(f"{tag}_MES", m)
             add(f"{tag}_ANIO", by_year(m, "sum", 12))
+    if "RESULTADO_PRIMARIO" in base:
+        # millones -> miles de millones (unidad en que el REM releva esta variable, anual)
+        m = per(base["RESULTADO_PRIMARIO"]["s"], "M") / 1000
+        add("RESULTADO_PRIMARIO_ANIO", by_year(m, "sum", 12))
     return out
 
 
