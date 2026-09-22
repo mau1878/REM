@@ -7,3 +7,4 @@ PIB_SA,3.2_OGP_D_2004_T_17,"Oferta global total a precios de comprador, en millo
 DESOCUPACION,45.2_ECTDT_0_T_33,Tasa de desempleo total. En porcentaje. | Principales variables ocupacionales. EPH continua. Desempleo,Porcentaje,Q,2014-03-31,2026-06-30,48,2026-09-21
 EXPORTACIONES,74.3_IET_0_M_16,Exportaciones totales. En millones de dólares. | Intercambio Comercial Argentino,Millones de dólares,M,2014-01-31,2026-07-31,151,2026-09-21
 IMPORTACIONES,74.3_IIT_0_M_25,Importaciones totales. En millones de dólares. | Intercambio Comercial Argentino,Millones de dólares,M,2014-01-31,2026-07-31,151,2026-09-21
+RESULTADO_PRIMARIO,452.3_RESULTADO_RIO_0_M_18_54,IMIG. Resultado primario | Informe Mensual de Ingresos y Gastos del Sector Público Nacional No Financiero (IMIG),Millones de pesos,M,2016-01-31,2026-07-31,127,2026-09-21
