@@ -123,7 +123,11 @@ def candidate_urls(y, m, style):
     combos = [(BASE_OLD, f"{y % 100:02d}", MESES[m - 1]), (BASE, str(y), MESES[m - 1]),
               (BASE_OLD, str(y), MESES[m - 1]), (BASE, f"{y % 100:02d}", MESES[m - 1]),
               (BASE_OLD, f"{y % 100:02d}", MESES_FULL[m - 1]), (BASE, str(y), MESES_FULL[m - 1])]
-    return [f"{b}tablas-relevamiento-expectativas-mercado-{mes}-{yy}.xlsx" for b, yy, mes in combos]
+    legacy = [f"{b}tablas-relevamiento-expectativas-mercado-{mes}-{yy}.xlsx" for b, yy, mes in combos]
+    # patron nuevo (sep-2026 en adelante): relevamiento-expectativas-mercado-tablas-YYYY-MM.xlsx en informes/
+    nuevo = [f"{BASE}relevamiento-expectativas-mercado-tablas-{y}-{m:02d}.xlsx",
+             f"{BASE_OLD}relevamiento-expectativas-mercado-tablas-{y}-{m:02d}.xlsx"]
+    return nuevo + legacy
 
 
 def download(start_year: int, exclude_years):
