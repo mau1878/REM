@@ -1279,3 +1279,15 @@ rem_2022-09.xlsx: sin hoja 'Cuadros de resultados' (hojas: ['Resultados', 'Resul
   RESULTADO_PRIMARIO_SPNF      2 filas
   DESOCUPACION                 5 filas
   PIB                          6 filas
+
+=== rem_2026-09.xlsx -> relevamiento 2026-09
+  hojas ignoradas: ['Resultados TOP 10', 'Notas Metodólogicas']
+  IPC_NG_NAC                  12 filas
+  IPC_NUCLEO_NAC              12 filas
+  TASA_TAMAR                   9 filas
+  TC_NOMINAL                   9 filas
+  EXPORTACIONES                9 filas
+  IMPORTACIONES                9 filas
+  RESULTADO_PRIMARIO_SPNF      2 filas
+  DESOCUPACION                 5 filas
+  PIB                          6 filas
