@@ -33,6 +33,21 @@ jobs:
           python build_data.py
           echo "--- missing.txt ---"; cat data/missing.txt || true
 
+      # El relevamiento del mes M se publica a principios de M+1: si el del mes anterior
+      # no quedo en rem_long.csv, el job falla en vez de seguir en verde sin el dato.
+      - name: Verificar que el ultimo REM este ingerido
+        run: |
+          python - <<'EOF'
+          import datetime as d
+          import pandas as pd
+
+          ultimo = pd.read_csv("data/rem_long.csv", usecols=["relevamiento"])["relevamiento"].max()
+          prev = d.date.today().replace(day=1) - d.timedelta(days=1)
+          esperado = f"{prev.year}-{prev.month:02d}"
+          assert ultimo >= esperado, f"REM {esperado} no ingerido (ultimo en rem_long.csv: {ultimo})"
+          print(f"OK: ultimo REM ingerido {ultimo} (esperado >= {esperado})")
+          EOF
+
       - name: Reales BCRA (v4.0)
         run: python fetch_actuals.py || python fetch_actuals.py --insecure   # fallback por cadena SSL incompleta de api.bcra.gob.ar
 
