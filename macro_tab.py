@@ -18,6 +18,11 @@ TRANSF = {  # transformaciones con sentido segun el tipo de serie
     "precio": ["Nivel", "Cambio mensual (%)", "Cambio interanual (%)"],
     "indicador": ["Nivel", "Cambio mensual (diferencia)"],
 }
+# Regimenes cambiarios (inicio y fin inclusive, por mes). Fechas de memoria: VERIFICAR y ajustar si hace falta.
+# Libre: tras la salida del cepo de dic-2015. Cepo: restricciones reimpuestas el 1/9/2019 (Decreto 609/2019).
+# Bandas: desde el 14/4/2025 (abr-2025 es un mes mixto: se lo asigna a Bandas).
+REGIMENES = [("Libre", "2016-01-01", "2019-08-01"), ("Cepo", "2019-09-01", "2025-03-01"), ("Bandas", "2025-04-01", None)]
+REG_COL = {"Libre": "rgba(46,160,67,0.12)", "Cepo": "rgba(214,69,65,0.12)", "Bandas": "rgba(47,128,237,0.12)"}
 METRICAS = {"Error con signo (real − mediana)": "error", "Error absoluto": "abs_error"}
 
 
@@ -175,6 +180,30 @@ def render(ERR, data_dir, var_names, show, unit_label):
                    "«none» = ya es mensual. Se descarta el mes en curso. Saldos y flujos en USD mn / ARS mn son nominales.")
 
 
+def regimen_de(ts):
+    for nombre, a, b in REGIMENES:
+        if ts >= pd.Timestamp(a) and (b is None or ts <= pd.Timestamp(b)):
+            return nombre
+    return "Previo"
+
+
+def _sombrear(fig, x0, x1):
+    """Sombrea los regimenes cambiarios que caen dentro de [x0, x1] (meses, inicio de mes)."""
+    for nombre, a, b in REGIMENES:
+        ini = max(pd.Timestamp(a), x0)
+        fin = min((pd.Timestamp(b) + pd.offsets.MonthBegin(1)) if b else x1 + pd.offsets.MonthBegin(1), x1 + pd.offsets.MonthBegin(1))
+        if ini < fin:
+            fig.add_vrect(x0=ini, x1=fin, fillcolor=REG_COL[nombre], line_width=0, layer="below",
+                          annotation_text=nombre, annotation_position="top left", annotation_font_size=11)
+
+
+def _corr_row(d, x, y):
+    n = len(d)
+    p = d[x].corr(d[y]) if n > 2 else np.nan
+    sp = d[x].rank().corr(d[y].rank()) if n > 2 else np.nan
+    return n, p, sp
+
+
 def _unidad(meta, u_tr):
     return meta["unidad"] if u_tr is None else (u_tr if u_tr == "%" else f"{meta['unidad']} (dif.)")
 
@@ -222,6 +251,18 @@ def render_cruce(data_dir, show):
         d0, d1 = st.select_slider("Período (mes de la serie A)", meses, value=(meses[0], meses[-1]), key=f"crx_rng|{a}|{b}|{k}")
         df = df[(df.index >= pd.Timestamp(d0 + "-01")) & (df.index <= pd.Timestamp(d1 + "-01"))]
 
+    reg = st.radio("Régimen cambiario", ["Todo"] + [r[0] for r in REGIMENES], horizontal=True, key="crx_reg",
+                   help="Filtra los meses por régimen (fechas en REGIMENES, macro_tab.py). Las correlaciones cambian mucho de un régimen a otro.")
+    por_reg = []
+    for nombre, *_ in REGIMENES:
+        sub = df[[regimen_de(t) == nombre for t in df.index]]
+        n_, p_, s_ = _corr_row(sub, "A", "B")
+        por_reg.append({"Régimen": nombre, "n": n_, "Pearson": None if p_ != p_ else round(p_, 2), "Spearman": None if s_ != s_ else round(s_, 2)})
+    if reg != "Todo":
+        df = df[[regimen_de(t) == reg for t in df.index]]
+        if df.empty:
+            st.warning("No hay meses de este régimen en el período elegido.")
+            return
     na, nb = et[a].split(" (")[0], et[b].split(" (")[0]
     uA, uB = _unidad(ma, ua), _unidad(mb, ub)
     ktxt = f" (B desplazada {k:+d} m)" if k else ""
@@ -242,6 +283,9 @@ def render_cruce(data_dir, show):
     if ta == "Nivel" and tb == "Nivel" and ma["tipo"] in tendencia and mb["tipo"] in tendencia:
         st.warning("Ambas series están en nivel y suelen tener tendencia (o inflación nominal de por medio): dos series que suben "
                    "con el tiempo se correlacionan fuerte aunque no tengan relación. Probá con cambio mensual o interanual.")
+    with st.expander("Correlación por régimen cambiario (período elegido)"):
+        st.dataframe(pd.DataFrame(por_reg), hide_index=True, width="stretch")
+        st.caption("Los regímenes con pocos meses (en especial Bandas) dan correlaciones muy inestables.")
     st.markdown('<div class="rem-callout">Lectura con cuidado: es una comparación descriptiva. Los meses consecutivos no son '
                 'independientes, así que las correlaciones suelen verse más firmes de lo que son, y unos pocos meses de crisis '
                 'pueden dominar el resultado. Que dos series se muevan juntas no dice cuál causa a cuál, ni si hay una tercera '
@@ -252,6 +296,7 @@ def render_cruce(data_dir, show):
                  secondary_y=False)
     f1.add_trace(go.Scatter(x=df.index, y=df["B"], mode="lines", name=f"B: {nb} · {tb}{ktxt}", line=dict(color=MAC_C, width=2.5)),
                  secondary_y=True)
+    _sombrear(f1, df.index.min(), df.index.max())
     f1.update_layout(title=f"{na} y {nb}", height=470, hovermode="x unified", legend=dict(orientation="h", y=-0.2),
                      xaxis_title="Mes de la serie A")
     f1.update_yaxes(title_text=uA, secondary_y=False)
@@ -292,3 +337,224 @@ def render_cruce(data_dir, show):
         ult["último mes"] = ult["fecha"].dt.strftime("%Y-%m")
         st.dataframe(ult[["variable", "etiqueta", "unidad", "fuente", "agregacion", "último mes"]].reset_index(drop=True),
                      width="stretch", hide_index=True)
+
+
+# ====================================================================== Termómetro de presión cambiaria
+# Cada componente: (variable, transformacion, signo). signo = +1 si MÁS valor => MÁS presión; -1 si MÁS valor => MENOS presión.
+# Los signos se definen a priori (no se estiman con el dólar). El dólar NO entra al índice: se usa solo para validarlo.
+COMPONENTES = {
+    "COMPRAS_BCRA": ("Nivel", -1, "Compras de divisas del BCRA"),
+    "RESERVAS_BRUTAS": ("Cambio mensual (%)", -1, "Reservas internacionales"),
+    "DEPOSITOS_USD_PRIV": ("Cambio mensual (%)", -1, "Depósitos en USD del sector privado"),
+    "CC_BIENES": ("Nivel", -1, "Cuenta corriente cambiaria: bienes"),
+    "CC_SERVICIOS": ("Nivel", -1, "Cuenta corriente cambiaria: servicios"),
+    "FAE_PRIV_NETA": ("Nivel", -1, "Formación de activos externos del sector privado (neta)"),
+    "RIESGO_PAIS": ("Cambio mensual (diferencia)", +1, "Riesgo país (fuente no oficial)"),
+}
+DEFAULT_ON = ["COMPRAS_BCRA", "RESERVAS_BRUTAS", "DEPOSITOS_USD_PRIV", "CC_BIENES", "CC_SERVICIOS", "FAE_PRIV_NETA"]
+Z_CLIP = 3.0
+MIN_Z = 12  # meses minimos de historia para estandarizar un componente
+
+
+def _zscore(x, modo):
+    """z-score sin mirar el futuro: expansivo (solo pasado) o móvil de 36 meses. Se usa la historia hasta el mes t inclusive."""
+    if modo == "Móvil de 36 meses":
+        mu, sd = x.rolling(36, min_periods=MIN_Z).mean(), x.rolling(36, min_periods=MIN_Z).std()
+    else:
+        mu, sd = x.expanding(MIN_Z).mean(), x.expanding(MIN_Z).std()
+    return ((x - mu) / sd.replace(0, np.nan)).clip(-Z_CLIP, Z_CLIP)
+
+
+def construir_indice(macro, vars_, modo):
+    """Devuelve (indice, aportes, panel_z). aportes: contribucion de cada componente al indice (signo aplicado, dividido por la cantidad
+    de componentes disponibles ese mes). Se exige al menos la mitad de los componentes para calcular el mes."""
+    cols = {}
+    for v in vars_:
+        modo_tr, signo, _ = COMPONENTES[v]
+        s, _ = transformar(macro[macro["variable"] == v].set_index("fecha")["valor"], modo_tr)
+        cols[v] = _zscore(s, modo) * signo
+    panel = pd.DataFrame(cols)
+    disp = panel.notna().sum(axis=1)
+    ok = disp >= max(1, int(np.ceil(len(vars_) / 2)))
+    aportes = panel.div(disp.replace(0, np.nan), axis=0).where(ok, np.nan)
+    idx = panel.mean(axis=1).where(ok)
+    return idx.dropna(), aportes.loc[idx.dropna().index], panel
+
+
+def pca_primer_componente(panel):
+    """Primer componente principal del panel (filas completas). Signo ajustado para correlacionar + con el promedio."""
+    d = panel.dropna()
+    if len(d) < 24 or d.shape[1] < 2:
+        return None, None, None
+    z = (d - d.mean()) / d.std().replace(0, np.nan)
+    z = z.dropna(axis=1)
+    if z.shape[1] < 2:
+        return None, None, None
+    w, V = np.linalg.eigh(np.corrcoef(z.values.T))
+    v = V[:, -1]
+    sc = pd.Series(z.values @ v, index=z.index)
+    if sc.corr(d.mean(axis=1)) < 0:
+        v, sc = -v, -sc
+    return sc, pd.Series(v, index=z.columns), float(w[-1] / w.sum())
+
+
+def oos_expansivo(x, y, h, min_train=36):
+    """Pronostico fuera de muestra de y(t+h) con regresion lineal de y(t+h) sobre x(t), reestimada cada mes con datos conocidos a t.
+    Benchmark: promedio historico de y. Devuelve DataFrame con error del modelo y del benchmark por mes de pronostico."""
+    d = pd.concat([x.rename("x"), y.rename("y")], axis=1).asfreq("MS")
+    xs, ys = d["x"].values, d["y"].values
+    filas = []
+    for t in range(len(d)):
+        tgt = t + h
+        if tgt >= len(d) or np.isnan(xs[t]) or np.isnan(ys[tgt]):
+            continue
+        idx = [s for s in range(t - h + 1) if s + h <= t and not (np.isnan(xs[s]) or np.isnan(ys[s + h]))]
+        if len(idx) < min_train or np.std(xs[idx]) == 0:
+            continue
+        k, b0 = np.polyfit(xs[idx], ys[np.array(idx) + h], 1)
+        bench = float(np.mean(ys[np.array(idx) + h]))
+        filas.append((d.index[tgt], (k * xs[t] + b0) - ys[tgt], bench - ys[tgt]))
+    return pd.DataFrame(filas, columns=["mes", "e_mod", "e_bench"]).set_index("mes")
+
+
+def render_termometro(data_dir, show):
+    path = Path(data_dir) / "macro.csv"
+    st.caption("Índice compuesto de presión cambiaria hecho con series macro (no incluye ninguna cotización del dólar). Se valida "
+               "contra el dólar que elijas. Es descriptivo: mide presión, no predice el dólar.")
+    if not path.exists():
+        st.info("Falta data/macro.csv. Correr fetch_macro.py y commitear data/.")
+        return
+    macro = load_macro(str(path), path.stat().st_mtime)
+    disp = [v for v in COMPONENTES if v in set(macro["variable"])]
+    if len(disp) < 2:
+        st.warning("data/macro.csv no tiene suficientes series para armar el índice.")
+        return
+
+    c1, c2 = st.columns(2)
+    sel = c1.multiselect("Componentes del índice", disp, default=[v for v in DEFAULT_ON if v in disp], key="ter_comp",
+                         format_func=lambda v: COMPONENTES[v][2])
+    modo_z = c2.radio("Estandarización", ["Expansiva (solo pasado)", "Móvil de 36 meses"], key="ter_z", horizontal=True,
+                      help="Cada mes se estandariza con la historia disponible hasta ese mes, para no usar información del futuro.")
+    if len(sel) < 2:
+        st.info("Elegí al menos dos componentes.")
+        return
+    with st.expander("Signos y transformaciones de cada componente"):
+        st.dataframe(pd.DataFrame([{"Componente": COMPONENTES[v][2], "Transformación": COMPONENTES[v][0],
+                                    "Más valor significa": "MÁS presión" if COMPONENTES[v][1] > 0 else "MENOS presión"}
+                                   for v in sel]), hide_index=True, width="stretch")
+        st.caption(f"Cada componente se estandariza (z-score, recortado a ±{Z_CLIP:g}) y se promedia con su signo. El índice es cero en "
+                   "la «normalidad histórica» de cada serie hasta ese mes: positivo = más presión que lo habitual, negativo = menos. "
+                   "Los signos son una decisión a priori, no se estiman con el dólar.")
+    idx, aportes, panel = construir_indice(macro, sel, "Móvil de 36 meses" if modo_z.startswith("Móvil") else "Expansiva")
+    if len(idx) < 24:
+        st.warning("Muy pocos meses para evaluar el índice.")
+        return
+
+    # ---- dólar de validación
+    vals = macro.drop_duplicates("variable").set_index("variable")
+    objetivos = [v for v in vals.index if v.startswith("DOLAR_") or v.startswith("BRECHA_")]
+    d1, d2, d3 = st.columns(3)
+    obj = d1.selectbox("Dólar para validar", objetivos, index=objetivos.index("DOLAR_CCL") if "DOLAR_CCL" in objetivos else 0,
+                       format_func=lambda v: vals.loc[v, "etiqueta"].split(" (")[0], key="ter_obj")
+    tr_opts = TRANSF.get(vals.loc[obj, "tipo"], ["Nivel"])
+    tr_obj = d2.selectbox("Transformación", tr_opts, index=min(1, len(tr_opts) - 1), key=f"ter_tr|{obj}")
+    reg = d3.radio("Régimen", ["Todo"] + [r[0] for r in REGIMENES], key="ter_reg", horizontal=False)
+    y, u_y = transformar(macro[macro["variable"] == obj].set_index("fecha")["valor"], tr_obj)
+    u_ylab = _unidad(vals.loc[obj], u_y)
+    if "ArgentinaDatos" in str(vals.loc[obj, "fuente"]):
+        st.caption(f"⚠️ **{vals.loc[obj, 'etiqueta']}** viene de una fuente no oficial ({vals.loc[obj, 'fuente']}).")
+
+    # ---- gráfico 1: índice + dólar
+    f1 = make_subplots(specs=[[{"secondary_y": True}]])
+    f1.add_trace(go.Scatter(x=idx.index, y=idx, mode="lines", name="Índice de presión", line=dict(color=REM_C, width=2.8)), secondary_y=False)
+    yy = y.reindex(idx.index)
+    f1.add_trace(go.Scatter(x=yy.index, y=yy, mode="lines", name=f"{vals.loc[obj, 'etiqueta'].split(' (')[0]} · {tr_obj}",
+                            line=dict(color=MAC_C, width=1.8), opacity=0.9), secondary_y=True)
+    f1.add_hline(y=0, line=dict(color="gray", width=1), secondary_y=False)
+    _sombrear(f1, idx.index.min(), idx.index.max())
+    f1.update_layout(title="Índice de presión cambiaria y dólar", height=480, hovermode="x unified", legend=dict(orientation="h", y=-0.2))
+    f1.update_yaxes(title_text="índice (desvíos estándar)", secondary_y=False)
+    f1.update_yaxes(title_text=u_ylab, secondary_y=True, showgrid=False)
+    show(f1)
+    st.caption("Sombreado: régimen cambiario. Cada línea tiene su eje: las escalas no son comparables a ojo.")
+
+    # ---- gráfico 2: aportes
+    f2 = go.Figure()
+    for v in aportes.columns:
+        f2.add_trace(go.Bar(x=aportes.index, y=aportes[v], name=COMPONENTES[v][2]))
+    f2.add_trace(go.Scatter(x=idx.index, y=idx, mode="lines", name="Índice", line=dict(color="black", width=1.8)))
+    f2.update_layout(title="Aporte de cada componente al índice", barmode="relative", height=430, hovermode="x unified",
+                     legend=dict(orientation="h", y=-0.3), yaxis_title="desvíos estándar")
+    show(f2)
+
+    # ---- correlaciones cruzadas
+    st.subheader("¿Anticipa o acompaña al dólar?")
+    base = pd.concat([idx.rename("idx"), y.rename("y")], axis=1).asfreq("MS")
+    lags = list(range(-6, 7))
+    filas = []
+    for k in lags:
+        d = pd.concat([base["idx"], base["y"].shift(-k)], axis=1).dropna()
+        d.columns = ["idx", "y"]
+        if reg != "Todo":
+            d = d[[regimen_de(t) == reg for t in d.index]]
+        n_, p_, s_ = _corr_row(d, "idx", "y")
+        filas.append((k, n_, p_, s_))
+    cc = pd.DataFrame(filas, columns=["k", "n", "pearson", "spearman"])
+    f3 = go.Figure(go.Bar(x=cc["k"], y=cc["pearson"], marker_color=[MAC_C if k == 0 else REM_C for k in cc["k"]],
+                           customdata=cc[["n", "spearman"]].values,
+                           hovertemplate="k=%{x}<br>Pearson %{y:+.2f}<br>Spearman %{customdata[1]:+.2f}<br>n=%{customdata[0]}<extra></extra>"))
+    f3.add_hline(y=0, line=dict(color="gray", width=1))
+    f3.update_layout(title=f"Correlación entre el índice del mes t y el dólar del mes t+k (régimen: {reg})", height=380,
+                     xaxis=dict(title="k (meses). k > 0: el índice antecede al dólar; k < 0: lo sigue", dtick=1), yaxis_title="Pearson")
+    show(f3)
+    n0 = int(cc.loc[cc["k"] == 0, "n"].iloc[0])
+    if n0 < 24:
+        st.warning(f"Solo {n0} meses en este régimen: las correlaciones son muy inestables.")
+    st.caption("Con varias combinaciones de rezagos y regímenes siempre aparece alguna barra «alta» por azar: lo que cuenta es un patrón "
+               "coherente y estable entre regímenes, no la barra más alta.")
+
+    # ---- fuera de muestra
+    st.subheader("Prueba fuera de muestra")
+    h = st.select_slider("Horizonte (meses hacia adelante)", [1, 2, 3, 6], value=1, key="ter_h")
+    oo = oos_expansivo(idx, y, h)
+    if len(oo) < 12:
+        st.info("No hay meses suficientes para la prueba fuera de muestra (se necesitan 36 de entrenamiento más al menos 12 de evaluación).")
+    else:
+        r2 = 1 - (oo["e_mod"] ** 2).sum() / (oo["e_bench"] ** 2).sum()
+        m = st.columns(3)
+        m[0].metric("R² fuera de muestra", f"{r2:+.1%}", help="Positivo: el índice mejora el pronóstico respecto de usar el promedio histórico. "
+                                                              "Negativo o cercano a cero: no agrega nada.")
+        m[1].metric("Meses evaluados", f"{len(oo):,}")
+        m[2].metric("Primer mes evaluado", f"{oo.index.min():%Y-%m}")
+        f4 = go.Figure(go.Scatter(x=oo.index, y=((oo["e_bench"] ** 2) - (oo["e_mod"] ** 2)).cumsum(), mode="lines", line=dict(color=REM_C, width=2.5)))
+        f4.add_hline(y=0, line=dict(color="gray", width=1))
+        _sombrear(f4, oo.index.min(), oo.index.max())
+        f4.update_layout(title="Ventaja acumulada del índice sobre el promedio histórico (suma de errores² evitados)", height=360,
+                         yaxis_title="acumulado (unidades²)")
+        show(f4)
+        st.caption("Si la línea sube de a saltos en pocos meses, la ventaja la explican uno o dos episodios; si sube de forma pareja, es más "
+                   "estable. Si no está claramente por encima de cero, el índice no mejoró el pronóstico.")
+        tab = []
+        for nombre, *_ in REGIMENES:
+            sub = oo[[regimen_de(t) == nombre for t in oo.index]]
+            if len(sub):
+                tab.append({"Régimen (mes pronosticado)": nombre, "Meses": len(sub),
+                            "R² fuera de muestra": f"{1 - (sub['e_mod'] ** 2).sum() / (sub['e_bench'] ** 2).sum():+.1%}"})
+        if tab:
+            st.dataframe(pd.DataFrame(tab), hide_index=True, width="stretch")
+
+    # ---- control con PCA y descarga
+    with st.expander("Control: primer componente principal (PCA) y datos"):
+        sc, carga, share = pca_primer_componente(panel)
+        if sc is None:
+            st.write("No hay suficientes meses completos para calcular el componente principal.")
+        else:
+            cr = sc.corr(idx.reindex(sc.index))
+            st.write(f"El primer componente explica **{share:.0%}** de la varianza del panel y su correlación con el índice transparente es "
+                     f"**{cr:+.2f}**. Si es baja, el promedio con signos a priori no está capturando el factor común de los datos. "
+                     "(El PCA usa toda la muestra: es solo un control, no un indicador utilizable en tiempo real.)")
+            st.dataframe(pd.DataFrame({"Componente": [COMPONENTES[v][2] for v in carga.index], "Peso": carga.round(3).values}),
+                         hide_index=True, width="stretch")
+        t = pd.concat([idx.rename("indice")], axis=1).join(aportes.add_prefix("aporte_"))
+        t.index = [f"{x:%Y-%m}" for x in t.index]
+        st.download_button("Descargar índice y aportes (CSV)", t.round(4).to_csv().encode("utf-8"), file_name="termometro_presion.csv", mime="text/csv")
