@@ -54,6 +54,11 @@ jobs:
       - name: Reales INDEC (datos.gob.ar)
         run: python fetch_indec.py   # sale con 1 si queda una serie base sin resolver (hoy PIB_SA)
 
+      # Contexto macro-financiero (BCRA, datos.gob.ar, ArgentinaDatos) -> data/macro.csv.
+      # Si falla una fuente oficial sale con 1 y no escribe nada; si fallan las de terceros conserva lo previo.
+      - name: Series macro-financieras -> data/macro.csv
+        run: python fetch_macro.py || python fetch_macro.py --insecure
+
       - name: Errores -> data/rem_errors.csv
         run: python compute_errors.py
 
