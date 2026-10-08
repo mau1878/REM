@@ -8,12 +8,14 @@ Fuentes:
   * BCRA, API Estadisticas Monetarias v4.0 (series diarias -> se agregan a mes).
   * datos.gob.ar, API de Series de Tiempo (Balance Cambiario, ya mensual).
   * ArgentinaDatos (terceros, NO oficial): dolar CCL, MEP (bolsa), blue y riesgo pais. Si falla, se conserva lo ya guardado.
-  * Derivadas: brechas CCL / MEP / blue contra el mayorista oficial (BCRA id 5).
+  * FRED (St. Louis Fed, CSV abierto): IPC de EE.UU. (CPIAUCSL). Cuenta como fuente de terceros.
+  * data/actuals_monthly.csv (lo genera fetch_actuals.py antes en el workflow): IPC mensual de Argentina, que se encadena en un indice.
+  * Derivadas: brechas CCL / MEP / blue contra el mayorista oficial (BCRA id 5) y tipo de cambio real bilateral con EE.UU.
 
 Politica de errores (pensada para el workflow mensual):
   * Si falla una serie OFICIAL (BCRA / datos.gob.ar): no se escribe nada y el script termina con codigo 1
     (el Action falla y no commitea datos a medias).
-  * Si falla una serie de TERCEROS: se conservan las filas previas de data/macro.csv y se avisa por pantalla.
+  * Si falla una serie de TERCEROS (ArgentinaDatos, FRED, IPC local): se conservan las filas previas de data/macro.csv y se avisa por pantalla.
 
 Solo usa libreria estandar + pandas. Uso:
     python fetch_macro.py                 # actualiza data/macro.csv
@@ -22,6 +24,7 @@ Variable de entorno opcional BCRA_CA_BUNDLE: ruta a un bundle de certificados si
 de la API del BCRA (no se desactiva nunca la verificacion TLS).
 """
 import argparse
+import io
 import json
 import os
 import ssl
@@ -42,6 +45,9 @@ UA = "rem-macro-fetch/1.0 (+https://github.com/mau1878/REM)"
 BCRA = "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias"
 DATOS = "https://apis.datos.gob.ar/series/api/series/"
 ARGDATOS = "https://api.argentinadatos.com/v1"
+FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv"
+ACTUALS = DATA / "actuals_monthly.csv"  # lo escribe fetch_actuals.py (serie IPC_MENSUAL, var. % mensual)
+BLANDAS = ("argdatos", "fred", "local")  # fuentes cuya falla conserva lo previo en vez de abortar
 MIN_MESES = 12  # una serie con menos meses que esto se considera fallida (respuesta vacia o truncada)
 
 # tipo: stock | flujo | precio | indicador  (la pestaña lo usa para ofrecer transformaciones con sentido)
@@ -81,6 +87,10 @@ SERIES = [
          etiqueta="Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)"),
     dict(var="DOLAR_BLUE", src="argdatos", id="blue", agg="mean", tipo="precio", unidad="ARS por USD",
          etiqueta="Dólar blue (promedio del mes, precio de venta)"),
+    dict(var="IPC_EEUU", src="fred", id="CPIAUCSL", agg="none", tipo="precio", unidad="índice 1982-84=100",
+         etiqueta="IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL)"),
+    dict(var="IPC_ARG", src="local", id="IPC_MENSUAL", agg="none", tipo="precio", unidad="índice (ene-2016 = 100)",
+         etiqueta="IPC de Argentina: índice encadenado desde la variación mensual (BCRA / INDEC)"),
     dict(var="RIESGO_PAIS", src="argdatos", id="riesgo-pais", agg="last", tipo="indicador", unidad="pb",
          etiqueta="Riesgo país (fin de mes)"),
 ]
@@ -93,6 +103,16 @@ BRECHAS = [
     dict(var="BRECHA_BLUE", base="DOLAR_BLUE", agg="mean", tipo="indicador", unidad="%", src="derivada",
          etiqueta="Brecha entre dólar blue y mayorista oficial (promedio del mes)"),
 ]
+# tipo de cambio real BILATERAL con EE.UU.: dolar * IPC EE.UU. / IPC Argentina, reescalado para que el promedio de todo el
+# periodo comun valga 100 (100 = nivel promedio 2016-hoy; mas alto = dolar mas caro en terminos reales; mas bajo = mas barato)
+TCR = [
+    dict(var="TCR_OFICIAL", base="DOLAR_OFICIAL", agg="none", tipo="precio", unidad="índice (promedio del período = 100)",
+         src="derivada", fuente="Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC)",
+         etiqueta="Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)"),
+    dict(var="TCR_CCL", base="DOLAR_CCL", agg="none", tipo="precio", unidad="índice (promedio del período = 100)",
+         src="derivada", fuente="Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC)",
+         etiqueta="Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)"),
+]
 OFICIAL = "DOLAR_OFICIAL"  # mayorista de referencia (insumo de las brechas)
 
 
@@ -100,7 +120,7 @@ OFICIAL = "DOLAR_OFICIAL"  # mayorista de referencia (insumo de las brechas)
 INSECURE = False  # solo con --insecure; afecta unicamente a api.bcra.gob.ar (cadena SSL incompleta)
 
 
-def http_json(url, params=None, retries=4, timeout=60):
+def http_json(url, params=None, retries=4, timeout=60, texto=False):
     if params:
         url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
     cafile = os.environ.get("BCRA_CA_BUNDLE")
@@ -111,9 +131,10 @@ def http_json(url, params=None, retries=4, timeout=60):
     last = None
     for i in range(retries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/csv" if texto else "application/json"})
             with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
-                return json.loads(r.read().decode("utf-8"))
+                cuerpo = r.read().decode("utf-8")
+                return cuerpo if texto else json.loads(cuerpo)
         except urllib.error.HTTPError as e:
             last = e
             if e.code in (400, 401, 403, 404):  # error del cliente: reintentar no ayuda
@@ -162,6 +183,34 @@ def fetch_argdatos(kind, start):
     return s[s.index >= pd.Timestamp(start)]
 
 
+def fetch_fred(series_id, start):
+    """CSV abierto de FRED (sin clave). Primera columna = fecha, segunda = valor ('.' = sin dato)."""
+    txt = http_json(FRED, {"id": series_id, "cosd": start}, texto=True)
+    df = pd.read_csv(io.StringIO(txt))
+    df = df.iloc[:, :2]
+    df.columns = ["fecha", "valor"]
+    df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
+    return _to_series(zip(df["fecha"], df["valor"].where(df["valor"].notna(), None)))
+
+
+def fetch_ipc_local(_id, _start):
+    """Indice de precios de Argentina: encadena la variacion mensual de data/actuals_monthly.csv (serie IPC_MENSUAL, columna 'ultimo').
+    Base ene-2016 = 100. Es un indice propio (empalme BCRA/INDEC): sirve para cocientes y variaciones, no como cifra oficial de nivel."""
+    if not ACTUALS.exists():
+        raise RuntimeError(f"falta {ACTUALS} (correr fetch_actuals.py antes)")
+    a = pd.read_csv(ACTUALS)
+    a = a[a["serie"] == "IPC_MENSUAL"].copy()
+    if a.empty:
+        raise RuntimeError("actuals_monthly.csv no tiene la serie IPC_MENSUAL")
+    a["mes"] = pd.to_datetime(a["periodo"]).dt.to_period("M").dt.to_timestamp()
+    v = a.drop_duplicates("mes", keep="last").set_index("mes")["ultimo"].astype(float).sort_index()
+    v = v.asfreq("MS")
+    if v.isna().any():  # un hueco rompe el encadenado: mejor fallar que inventar
+        raise RuntimeError("IPC_MENSUAL con meses faltantes: " + ", ".join(f"{t:%Y-%m}" for t in v[v.isna()].index[:6]))
+    idx = 100.0 * (1.0 + v / 100.0).cumprod()
+    return idx[idx.index >= pd.Timestamp(_start)]
+
+
 # ---------------------------------------------------------------- agregacion mensual
 def to_monthly(s, agg, today):
     """Diario -> mensual (inicio de mes). Se descarta el mes en curso: un mes incompleto no es comparable."""
@@ -197,14 +246,19 @@ def main(argv=None):
 
     for sp in SERIES:
         v = sp["var"]
-        if only and v not in only and not any(b["var"] in only and b["base"] == v for b in BRECHAS) \
-                and not (v == OFICIAL and any(b["var"] in only for b in BRECHAS)):
+        if only and v not in only and not any(b["var"] in only and b["base"] == v for b in BRECHAS + TCR) \
+                and not (v == OFICIAL and any(b["var"] in only for b in BRECHAS + TCR)) \
+                and not (v in ("IPC_EEUU", "IPC_ARG") and any(t["var"] in only for t in TCR)):
             continue
         try:
             if sp["src"] == "bcra":
                 raw = fetch_bcra(sp["id"], START, end)
             elif sp["src"] == "datos":
                 raw = fetch_datos(sp["id"], START)
+            elif sp["src"] == "fred":
+                raw = fetch_fred(sp["id"], START)
+            elif sp["src"] == "local":
+                raw = fetch_ipc_local(sp["id"], START)
             else:
                 raw = fetch_argdatos(sp["id"], START)
             daily[v] = raw
@@ -214,7 +268,7 @@ def main(argv=None):
             got[v] = m
             print(f"OK   {v:<22} {len(m):>3} meses  {m.index.min():%Y-%m} -> {m.index.max():%Y-%m}  ult={m.iloc[-1]:,.2f}")
         except Exception as e:  # noqa: BLE001
-            if sp["src"] == "argdatos":
+            if sp["src"] in BLANDAS:
                 prev = cache[cache["variable"] == v] if len(cache) else pd.DataFrame()
                 if len(prev):
                     got[v] = prev.set_index("fecha")["valor"]
@@ -244,6 +298,27 @@ def main(argv=None):
                 got[bv] = prev.set_index("fecha")["valor"]
             avisos.append(f"{bv}: sin {b['base']} nuevo; " + ("se conserva la previa" if len(prev) else "se omite"))
 
+    # tipo de cambio real bilateral (promedio del periodo comun = 100). Si falta algun insumo se conserva el valor previo.
+    for t in TCR:
+        tv = t["var"]
+        if only and tv not in only:
+            continue
+        try:
+            if not all(k in got for k in (t["base"], "IPC_EEUU", "IPC_ARG")):
+                raise RuntimeError("falta algun insumo (" + ", ".join(k for k in (t["base"], "IPC_EEUU", "IPC_ARG") if k not in got) + ")")
+            d = pd.concat([got[t["base"]].rename("d"), got["IPC_EEUU"].rename("us"), got["IPC_ARG"].rename("ar")],
+                          axis=1, join="inner").dropna()
+            if len(d) < MIN_MESES:
+                raise RuntimeError(f"solo {len(d)} meses en comun")
+            r = d["d"] * d["us"] / d["ar"]
+            got[tv] = 100.0 * r / r.mean()
+            print(f"OK   {tv:<22} {len(r):>3} meses  {r.index.min():%Y-%m} -> {r.index.max():%Y-%m}  ult={got[tv].iloc[-1]:,.1f} (prom.=100)")
+        except Exception as e:  # noqa: BLE001
+            prev = cache[cache["variable"] == tv] if len(cache) else pd.DataFrame()
+            if len(prev):
+                got[tv] = prev.set_index("fecha")["valor"]
+            avisos.append(f"{tv}: {e}; " + ("se conserva la previa" if len(prev) else "se omite"))
+
     for a in avisos:
         print("AVISO", a)
     if fallos_oficiales:
@@ -255,14 +330,15 @@ def main(argv=None):
         print("\n(--only: no se escribe el CSV)")
         return 0
 
-    meta = {s["var"]: s for s in SERIES + BRECHAS}
+    meta = {s["var"]: s for s in SERIES + BRECHAS + TCR}
     fuente = {"bcra": "BCRA", "datos": "datos.gob.ar (Balance Cambiario, BCRA)", "argdatos": "ArgentinaDatos (terceros)",
-              "derivada": "Calculada: CCL (ArgentinaDatos) / mayorista (BCRA)"}
+              "derivada": "Calculada: CCL (ArgentinaDatos) / mayorista (BCRA)",
+              "fred": "FRED (St. Louis Fed)", "local": "BCRA (IPC mensual, encadenado)"}
     frames = []
     for v, s in got.items():
         d = pd.DataFrame({"fecha": pd.to_datetime(s.index), "variable": v, "valor": s.values})
         m = meta[v]
-        d["etiqueta"], d["unidad"], d["fuente"] = m["etiqueta"], m["unidad"], fuente[m["src"]]
+        d["etiqueta"], d["unidad"], d["fuente"] = m["etiqueta"], m["unidad"], m.get("fuente") or fuente[m["src"]]
         d["tipo"], d["agregacion"] = m["tipo"], m["agg"]
         frames.append(d)
     out = pd.concat(frames, ignore_index=True).sort_values(["variable", "fecha"])
