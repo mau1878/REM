@@ -924,6 +924,134 @@ def _pct_hist(s, x):
     return float((s <= x).mean() * 100) if len(s) else np.nan
 
 
+FLUJOS = {  # clave: etiqueta (suma de 12 meses, USD mn; positivo = entran dolares, negativo = salen)
+    "SALDO_COMERCIAL": "Saldo comercial de bienes (exportaciones − importaciones)",
+    "SALDO_ENERGIA": "Saldo energético (exportaciones de combustibles y energía − importaciones de combustibles)",
+    "EXPO_TOTAL": "Exportaciones de bienes",
+    "IMPO_TOTAL": "Importaciones de bienes",
+    "EXPO_ENERGIA": "Exportaciones de combustibles y energía",
+    "EXPO_PRIMARIOS": "Exportaciones de productos primarios",
+    "EXPO_MOA": "Exportaciones de manufacturas de origen agropecuario",
+    "EXPO_COBRE": "Exportaciones de mineral de cobre y concentrados (único rubro minero mensual aislado)",
+    "CC_CAMBIARIA": "Cuenta corriente cambiaria (neta, Balance Cambiario)",
+    "CC_SERVICIOS": "Servicios en la cuenta corriente cambiaria (neto)",
+    "FAE_PRIV_NETA": "Formación de activos externos del sector privado (neta; negativo = salida)",
+    "COMPRAS_BCRA": "Compras de divisas del BCRA",
+    "DRESERVAS": "Variación de reservas brutas",
+}
+FLUJOS_DEFAULT = ["SALDO_COMERCIAL", "SALDO_ENERGIA", "CC_CAMBIARIA", "FAE_PRIV_NETA", "COMPRAS_BCRA"]
+PRECIOS = {
+    "TERMINOS_INTERCAMBIO": "Términos de intercambio (INDEC, trimestral)",
+    "PRECIO_COBRE": "Cobre (USD/t)",
+    "PRECIO_SOJA": "Soja (USD/t)",
+    "PRECIO_WTI": "Petróleo WTI (USD/barril)",
+}
+
+
+def _panel_flujos(macro, ser):
+    vs = set(macro["variable"])
+    cols = {v: ser(v) for v in ("EXPO_TOTAL", "IMPO_TOTAL", "EXPO_ENERGIA", "IMPO_COMBUSTIBLES", "EXPO_PRIMARIOS", "EXPO_MOA",
+                                "EXPO_COBRE", "CC_CAMBIARIA", "CC_SERVICIOS", "FAE_PRIV_NETA", "COMPRAS_BCRA") if v in vs}
+    df = pd.DataFrame(cols)
+    if {"EXPO_TOTAL", "IMPO_TOTAL"} <= set(df):
+        df["SALDO_COMERCIAL"] = df["EXPO_TOTAL"] - df["IMPO_TOTAL"]
+    if {"EXPO_ENERGIA", "IMPO_COMBUSTIBLES"} <= set(df):
+        df["SALDO_ENERGIA"] = df["EXPO_ENERGIA"] - df["IMPO_COMBUSTIBLES"]
+    if "RESERVAS_BRUTAS" in vs:
+        df["DRESERVAS"] = ser("RESERVAS_BRUTAS").sort_index().asfreq("MS").diff()
+    return df.sort_index().asfreq("MS")
+
+
+def _bloque_flujos(macro, ser, show):
+    """Sumas moviles de 12 meses de flujos de dolares, por regimen. Devuelve lineas para el TXT."""
+    st.subheader("Flujos de dólares: suma móvil de 12 meses")
+    df = _panel_flujos(macro, ser)
+    opciones = [k for k in FLUJOS if k in df.columns]
+    if not opciones:
+        st.info("Faltan las series de comercio exterior y balance cambiario en data/macro.csv.")
+        return []
+    sel = st.multiselect("Series", opciones, default=[k for k in FLUJOS_DEFAULT if k in opciones], format_func=lambda k: FLUJOS[k], key="tcr_fl")
+    if not sel:
+        return []
+    r12 = df[sel].rolling(12, min_periods=12).sum()
+    fig = go.Figure()
+    for k in sel:
+        x = r12[k].dropna()
+        fig.add_trace(go.Scatter(x=x.index, y=x, mode="lines", name=FLUJOS[k].split(" (")[0], line=dict(width=2.2)))
+    fig.add_hline(y=0, line=dict(color="gray", width=1))
+    if r12.dropna(how="all").shape[0]:
+        _sombrear(fig, r12.dropna(how="all").index.min(), r12.dropna(how="all").index.max())
+    fig.update_layout(title="Suma de los últimos 12 meses (millones de USD)", height=420, hovermode="x unified",
+                      legend=dict(orientation="h", y=-0.25), yaxis_title="USD mn, 12 meses", xaxis_title="Último mes de la ventana")
+    show(fig)
+    filas = []
+    for k in sel:
+        x = r12[k].dropna()
+        if x.empty:
+            continue
+        ultimo = x.index.max()
+        antes = x.get(ultimo - pd.DateOffset(years=1), np.nan)
+        fila = {"Serie": FLUJOS[k].split(" (")[0], "Hasta": f"{ultimo:%Y-%m}", "Último 12 m": round(x.iloc[-1]),
+                "Mismo mes año anterior": None if antes != antes else round(antes)}
+        for nombre, _, _ in REGIMENES:
+            sub = x[[regimen_de(t) == nombre for t in x.index]]
+            fila[f"Promedio {nombre}"] = round(sub.mean()) if len(sub) else None
+        filas.append(fila)
+    tabla = pd.DataFrame(filas)
+    st.dataframe(tabla, hide_index=True, width="stretch")
+    st.caption("Positivo = entran dólares; negativo = salen. Los promedios por régimen son de las sumas móviles ya calculadas, así que se solapan. "
+               "Reservas y compras del BCRA dependen de decisiones de política: no son un dato «exógeno». Las series de comercio exterior (INDEC) y del "
+               "Balance Cambiario (BCRA) tienen rezago de publicación distinto: mirá la columna «Hasta».")
+    return ["", "## Flujos de dolares (suma movil de 12 meses, USD mn)", tabla.to_csv(index=False).strip()]
+
+
+def _bloque_precios(macro, ser, show):
+    st.subheader("Términos de intercambio y precios internacionales")
+    vs = [k for k in PRECIOS if k in set(macro["variable"])]
+    if not vs:
+        st.info("Faltan términos de intercambio y precios de commodities en data/macro.csv (correr la Action con el fetch_macro.py nuevo).")
+        return []
+    fig = go.Figure()
+    filas = []
+    for k in vs:
+        x = ser(k).dropna()
+        x = x[x.index >= pd.Timestamp("2016-06-01")]
+        if x.empty:
+            continue
+        n = 100.0 * x / x.mean()
+        trimestral = k == "TERMINOS_INTERCAMBIO"
+        fig.add_trace(go.Scatter(x=n.index, y=n, mode="lines+markers" if trimestral else "lines", name=PRECIOS[k].split(" (")[0],
+                                 line=dict(width=2.6 if trimestral else 1.8), marker=dict(size=5)))
+        ult = x.index.max()
+        ant = x.get(ult - pd.DateOffset(years=1), np.nan)
+        filas.append({"Serie": PRECIOS[k], "Último dato": f"{ult:%Y-%m}", "Valor": round(float(x.iloc[-1]), 1),
+                      "Var. 12 meses (%)": None if ant != ant else round((x.iloc[-1] / ant - 1) * 100, 1),
+                      "Vs. promedio 2016–hoy (=100)": round(float(n.iloc[-1]), 1)})
+    fig.add_hline(y=100, line=dict(color="gray", width=1, dash="dot"))
+    _sombrear(fig, pd.Timestamp("2016-06-01"), max(ser(k).index.max() for k in vs))
+    fig.update_layout(title="Cada serie en índice (promedio 2016–hoy = 100)", height=380, hovermode="x unified",
+                      legend=dict(orientation="h", y=-0.25), yaxis_title="Índice", xaxis_title="Mes")
+    show(fig)
+    tabla = pd.DataFrame(filas)
+    st.dataframe(tabla, hide_index=True, width="stretch")
+    st.caption("Los términos de intercambio son trimestrales (la fecha es el inicio del trimestre). Soja, cobre y petróleo son aproximaciones: no capturan "
+               "oro, plata ni litio, ni las cantidades exportadas, ni el precio de lo que se importa.")
+    return ["", "## Terminos de intercambio y precios internacionales", tabla.to_csv(index=False).strip()]
+
+
+def _bloque_vencimientos(data_dir):
+    st.subheader("Vencimientos de deuda en dólares")
+    path = Path(data_dir) / "vencimientos_usd.csv"
+    if not path.exists():
+        st.info("No hay data/vencimientos_usd.csv. Columnas: anio, concepto, monto_usd_mn, fuente, fecha_dato, nota.")
+        return []
+    v = pd.read_csv(path)
+    st.dataframe(v, hide_index=True, width="stretch")
+    st.caption("Cargado a mano desde notas periodísticas: no se actualiza solo y puede estar desactualizado. Verificar con las fuentes oficiales "
+               "(Secretaría de Finanzas / Ministerio de Economía) antes de usarlo. Montos en millones de USD.")
+    return ["", "## Vencimientos de deuda en USD (carga manual, ver fuente y fecha)", v.to_csv(index=False).strip()]
+
+
 def render_tcr(data_dir, show):
     """Pestaña «Dólar y tipo de cambio real»: qué tan caro/barato está el dólar descontando inflación y qué dólar nominal
     sería compatible con distintos niveles de referencia. Descriptivo: no pronostica nada."""
@@ -1041,6 +1169,9 @@ def render_tcr(data_dir, show):
                 'histórico, pero estos datos no permiten estimar cuánto; (4) el IPC de Argentina es un índice encadenado desde variaciones mensuales; '
                 '(5) con pocos meses en Bandas, sus medianas y extremos son poco confiables.</div>', unsafe_allow_html=True)
 
+    st.header("Factores de contexto")
+    extra = _bloque_flujos(macro, ser, show) + _bloque_precios(macro, ser, show) + _bloque_vencimientos(data_dir)
+
     # --- exportable para compartir con Claude (mismo estilo que Termometro y Tension)
     ult = d.tail(24).copy()
     ult["IPC Argentina (var. % mensual)"] = ser("IPC_ARG").pct_change().reindex(ult.index) * 100
@@ -1057,6 +1188,6 @@ def render_tcr(data_dir, show):
                f"minimo={d['tcr'].min():.1f}; maximo={d['tcr'].max():.1f}; dolar_nominal={d0:,.0f}",
                "", "## Por regimen", pd.DataFrame(filas).to_csv(index=False).strip(),
                "", "## Dolar nominal compatible con cada referencia", pd.DataFrame(out).to_csv(index=False).strip(),
-               "", "## Ultimos 24 meses", ult.round(3).to_csv().strip()]
+               "", "## Ultimos 24 meses", ult.round(3).to_csv().strip()] + extra
     st.download_button("Descargar resumen del tipo de cambio real (TXT, para compartir con Claude)", "\n".join(informe).encode("utf-8"),
                        file_name="tcr_resumen.txt", mime="text/plain", key="tcr_dl")
