@@ -7,7 +7,8 @@ Genera data/macro.csv en formato largo (una fila por variable y mes):
 Fuentes:
   * BCRA, API Estadisticas Monetarias v4.0 (series diarias -> se agregan a mes).
   * datos.gob.ar, API de Series de Tiempo (Balance Cambiario, ya mensual).
-  * ArgentinaDatos (terceros, NO oficial): dolar CCL y riesgo pais. Si falla, se conserva lo ya guardado.
+  * ArgentinaDatos (terceros, NO oficial): dolar CCL, MEP (bolsa), blue y riesgo pais. Si falla, se conserva lo ya guardado.
+  * Derivadas: brechas CCL / MEP / blue contra el mayorista oficial (BCRA id 5).
 
 Politica de errores (pensada para el workflow mensual):
   * Si falla una serie OFICIAL (BCRA / datos.gob.ar): no se escribe nada y el script termina con codigo 1
@@ -71,16 +72,28 @@ SERIES = [
          etiqueta="Cuenta corriente cambiaria: total bienes"),
     dict(var="CC_SERVICIOS", src="datos", id="182.1_CUENTA_CORIOS_0_M_42", agg="none", tipo="flujo", unidad="USD mn",
          etiqueta="Cuenta corriente cambiaria: total servicios"),
+    dict(var="DOLAR_OFICIAL", src="bcra", id=5, agg="mean", tipo="precio", unidad="ARS por USD",
+         etiqueta="Dólar mayorista oficial, Com. A 3500 (promedio del mes)"),
     # ---- terceros (no oficial)
     dict(var="DOLAR_CCL", src="argdatos", id="contadoconliqui", agg="mean", tipo="precio", unidad="ARS por USD",
          etiqueta="Dólar CCL (promedio del mes, precio de venta)"),
+    dict(var="DOLAR_MEP", src="argdatos", id="bolsa", agg="mean", tipo="precio", unidad="ARS por USD",
+         etiqueta="Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)"),
+    dict(var="DOLAR_BLUE", src="argdatos", id="blue", agg="mean", tipo="precio", unidad="ARS por USD",
+         etiqueta="Dólar blue (promedio del mes, precio de venta)"),
     dict(var="RIESGO_PAIS", src="argdatos", id="riesgo-pais", agg="last", tipo="indicador", unidad="pb",
          etiqueta="Riesgo país (fin de mes)"),
 ]
-# derivada: brecha CCL / mayorista oficial (BCRA id 5), calculada dia a dia sobre dias habiles y luego promediada por mes
-BRECHA = dict(var="BRECHA_CCL", agg="mean", tipo="indicador", unidad="%", src="derivada",
-              etiqueta="Brecha entre dólar CCL y mayorista oficial (promedio del mes)")
-TCM_ID = 5  # tipo de cambio mayorista de referencia (insumo de la brecha)
+# derivadas: brecha contra el mayorista oficial, calculada dia a dia sobre dias habiles y luego promediada por mes
+BRECHAS = [
+    dict(var="BRECHA_CCL", base="DOLAR_CCL", agg="mean", tipo="indicador", unidad="%", src="derivada",
+         etiqueta="Brecha entre dólar CCL y mayorista oficial (promedio del mes)"),
+    dict(var="BRECHA_MEP", base="DOLAR_MEP", agg="mean", tipo="indicador", unidad="%", src="derivada",
+         etiqueta="Brecha entre dólar MEP y mayorista oficial (promedio del mes)"),
+    dict(var="BRECHA_BLUE", base="DOLAR_BLUE", agg="mean", tipo="indicador", unidad="%", src="derivada",
+         etiqueta="Brecha entre dólar blue y mayorista oficial (promedio del mes)"),
+]
+OFICIAL = "DOLAR_OFICIAL"  # mayorista de referencia (insumo de las brechas)
 
 
 # ---------------------------------------------------------------- HTTP
@@ -139,8 +152,8 @@ def fetch_datos(series_id, start):
 
 
 def fetch_argdatos(kind, start):
-    if kind == "contadoconliqui":
-        rows = http_json(f"{ARGDATOS}/cotizaciones/dolares/contadoconliqui")
+    if kind in ("contadoconliqui", "bolsa", "blue"):
+        rows = http_json(f"{ARGDATOS}/cotizaciones/dolares/{kind}")
         pairs = [(r["fecha"], r.get("venta")) for r in rows]
     else:  # riesgo pais
         rows = http_json(f"{ARGDATOS}/finanzas/indices/riesgo-pais")
@@ -184,7 +197,8 @@ def main(argv=None):
 
     for sp in SERIES:
         v = sp["var"]
-        if only and v not in only and not (v in ("DOLAR_CCL",) and "BRECHA_CCL" in only):
+        if only and v not in only and not any(b["var"] in only and b["base"] == v for b in BRECHAS) \
+                and not (v == OFICIAL and any(b["var"] in only for b in BRECHAS)):
             continue
         try:
             if sp["src"] == "bcra":
@@ -210,23 +224,25 @@ def main(argv=None):
             else:
                 fallos_oficiales.append(f"{v}: {e}")
 
-    # brecha CCL / mayorista (necesita el mayorista diario; si falla el CCL se conserva la brecha previa)
-    if not only or "BRECHA_CCL" in only:
-        try:
-            if "DOLAR_CCL" in daily:
-                tcm = fetch_bcra(TCM_ID, START, end)
-                b = brecha_mensual(daily["DOLAR_CCL"], tcm, today)
-                if len(b) < MIN_MESES:
-                    raise RuntimeError(f"solo {len(b)} meses")
-                got["BRECHA_CCL"] = b
-                print(f"OK   {'BRECHA_CCL':<22} {len(b):>3} meses  {b.index.min():%Y-%m} -> {b.index.max():%Y-%m}  ult={b.iloc[-1]:,.2f}")
-            else:
-                prev = cache[cache["variable"] == "BRECHA_CCL"] if len(cache) else pd.DataFrame()
-                if len(prev):
-                    got["BRECHA_CCL"] = prev.set_index("fecha")["valor"]
-                avisos.append("BRECHA_CCL: sin CCL nuevo; " + ("se conserva la previa" if len(prev) else "se omite"))
-        except Exception as e:  # noqa: BLE001  (el mayorista es del BCRA: si falla, es un fallo oficial)
-            fallos_oficiales.append(f"BRECHA_CCL (mayorista id {TCM_ID}): {e}")
+    # brechas contra el mayorista (si falla el dolar de terceros se conserva la brecha previa)
+    for b in BRECHAS:
+        bv = b["var"]
+        if only and bv not in only:
+            continue
+        if b["base"] in daily and OFICIAL in daily:
+            try:
+                br = brecha_mensual(daily[b["base"]], daily[OFICIAL], today)
+                if len(br) < MIN_MESES:
+                    raise RuntimeError(f"solo {len(br)} meses")
+                got[bv] = br
+                print(f"OK   {bv:<22} {len(br):>3} meses  {br.index.min():%Y-%m} -> {br.index.max():%Y-%m}  ult={br.iloc[-1]:,.2f}")
+            except Exception as e:  # noqa: BLE001
+                avisos.append(f"{bv}: fallo ({e}); se omite")
+        else:
+            prev = cache[cache["variable"] == bv] if len(cache) else pd.DataFrame()
+            if len(prev):
+                got[bv] = prev.set_index("fecha")["valor"]
+            avisos.append(f"{bv}: sin {b['base']} nuevo; " + ("se conserva la previa" if len(prev) else "se omite"))
 
     for a in avisos:
         print("AVISO", a)
@@ -239,7 +255,7 @@ def main(argv=None):
         print("\n(--only: no se escribe el CSV)")
         return 0
 
-    meta = {s["var"]: s for s in SERIES + [BRECHA]}
+    meta = {s["var"]: s for s in SERIES + BRECHAS}
     fuente = {"bcra": "BCRA", "datos": "datos.gob.ar (Balance Cambiario, BCRA)", "argdatos": "ArgentinaDatos (terceros)",
               "derivada": "Calculada: CCL (ArgentinaDatos) / mayorista (BCRA)"}
     frames = []
