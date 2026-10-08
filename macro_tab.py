@@ -913,3 +913,130 @@ def render_tension(data_dir, show):
                 'Es una verificación histórica sobre datos ya conocidos, no una garantía hacia adelante.</div>', unsafe_allow_html=True)
     st.download_button("Descargar resumen de tensión (TXT, para compartir con Claude)", "\n".join(informe).encode("utf-8"),
                        file_name="tension_resumen.txt", mime="text/plain", key="ten_dl")
+
+
+# ====================================================================== Dólar y tipo de cambio real
+TCR_NECESARIAS = ["TCR_OFICIAL", "TCR_CCL", "IPC_ARG", "IPC_EEUU", "DOLAR_OFICIAL", "DOLAR_CCL"]
+
+
+def _pct_hist(s, x):
+    """Porcentaje de meses de s con valor <= x (posicion de x dentro de la historia)."""
+    return float((s <= x).mean() * 100) if len(s) else np.nan
+
+
+def render_tcr(data_dir, show):
+    """Pestaña «Dólar y tipo de cambio real»: qué tan caro/barato está el dólar descontando inflación y qué dólar nominal
+    sería compatible con distintos niveles de referencia. Descriptivo: no pronostica nada."""
+    path = Path(data_dir) / "macro.csv"
+    st.caption("¿Qué tan caro o barato está el dólar descontando inflación, y qué dólar nominal sería compatible con distintos niveles "
+               "de referencia? Es un ejercicio de aritmética con la historia, no un pronóstico. No usa el REM ni los filtros de la barra lateral.")
+    if not path.exists():
+        st.info("Falta data/macro.csv. Correr fetch_macro.py y commitear data/.")
+        return
+    macro = load_macro(str(path), path.stat().st_mtime)
+    faltan = [v for v in TCR_NECESARIAS if v not in set(macro["variable"])]
+    if faltan:
+        st.info("Faltan series en data/macro.csv: " + ", ".join(faltan) + ". Correr la Action de ingesta (fetch_macro.py nuevo) y commitear data/.")
+        return
+
+    def ser(v):
+        return macro[macro["variable"] == v].set_index("fecha")["valor"].sort_index()
+
+    modo = st.radio("Dólar de referencia", ["Mayorista oficial", "CCL"], horizontal=True, key="tcr_dolar",
+                    help="Bajo cepo el oficial era un precio administrado: para 2019-2025 es más informativo el CCL. Con bandas, ambos están cerca.")
+    tv, dv = ("TCR_OFICIAL", "DOLAR_OFICIAL") if modo == "Mayorista oficial" else ("TCR_CCL", "DOLAR_CCL")
+    tcr, dol = ser(tv), ser(dv)
+    d = pd.concat([tcr.rename("tcr"), dol.rename("dol")], axis=1, join="inner").dropna()
+    if len(d) < 24:
+        st.warning("Hay menos de 24 meses con todos los insumos: no alcanza para comparar con la historia.")
+        return
+    base = d.index.max()
+    t0, d0 = float(d.loc[base, "tcr"]), float(d.loc[base, "dol"])
+    reg = pd.Series([regimen_de(t) for t in d.index], index=d.index)
+
+    c = st.columns(4)
+    c[0].metric(f"Tipo de cambio real ({base:%Y-%m})", f"{t0:.1f}", delta=f"{(t0 / 100 - 1) * 100:+.1f}% vs. promedio 2016–hoy (=100)", delta_color="off",
+                help="Índice: dólar × IPC EE.UU. ÷ IPC Argentina, reescalado para que el promedio de todo el período valga 100. Más alto = dólar más caro en términos reales.")
+    c[1].metric("Posición en la historia", f"{_pct_hist(d['tcr'], t0):.0f}%", help="Porcentaje de meses de la historia con un tipo de cambio real igual o menor al actual.")
+    c[2].metric("Mínimo / máximo histórico", f"{d['tcr'].min():.0f} / {d['tcr'].max():.0f}")
+    c[3].metric(f"Dólar nominal ({base:%Y-%m})", f"{d0:,.0f}", help="Promedio del mes, en pesos.")
+    st.caption("Último mes con todos los insumos (dólar, IPC Argentina e IPC EE.UU.). El IPC se publica con rezago, por eso puede ser anterior al último dato de dólar.")
+
+    # --- gráfico 1: tipo de cambio real por régimen
+    f1 = go.Figure(go.Scatter(x=d.index, y=d["tcr"], mode="lines", name="Tipo de cambio real", line=dict(color=MAC_C, width=2.5)))
+    f1.add_hline(y=100, line=dict(color="gray", width=1, dash="dot"), annotation_text="Promedio 2016–hoy", annotation_position="bottom right")
+    for nombre, _, _ in REGIMENES:
+        sub = d.loc[reg == nombre, "tcr"]
+        if len(sub) >= 3:
+            f1.add_trace(go.Scatter(x=[sub.index.min(), sub.index.max()], y=[sub.median()] * 2, mode="lines", name=f"Mediana {nombre}",
+                                    line=dict(color="rgba(80,80,80,0.8)", width=1.5, dash="dash"), hovertemplate=f"Mediana {nombre}: %{{y:.1f}}<extra></extra>"))
+    _sombrear(f1, d.index.min(), d.index.max())
+    f1.update_layout(title=f"Tipo de cambio real bilateral con EE.UU. ({modo}), promedio del período = 100", height=430, hovermode="x unified",
+                     legend=dict(orientation="h", y=-0.2), yaxis_title="Índice", xaxis_title="Mes")
+    show(f1)
+
+    # --- gráfico 2: dolar nominal vs el dolar que mantendria el TCR en su promedio
+    ref = d["dol"] * 100.0 / d["tcr"]
+    f2 = go.Figure()
+    f2.add_trace(go.Scatter(x=d.index, y=d["dol"], mode="lines", name="Dólar nominal", line=dict(color=REM_C, width=2.5)))
+    f2.add_trace(go.Scatter(x=ref.index, y=ref, mode="lines", name="Dólar con tipo de cambio real = promedio (100)",
+                            line=dict(color=MAC_C, width=2, dash="dash")))
+    _sombrear(f2, d.index.min(), d.index.max())
+    f2.update_layout(title="Dólar nominal y dólar que mantendría constante el tipo de cambio real", height=400, hovermode="x unified",
+                     legend=dict(orientation="h", y=-0.2), yaxis=dict(type="log", title="Pesos por USD (escala logarítmica)"), xaxis_title="Mes")
+    show(f2)
+    st.caption("La línea punteada es la inflación relativa Argentina/EE.UU. acumulada, anclada al nivel promedio de 2016–hoy. Cuando el dólar nominal "
+               "queda por encima, está caro en términos reales; por debajo, barato. Es una referencia mecánica, no un «dólar de equilibrio».")
+
+    # --- tabla por regimen
+    filas = []
+    for nombre, _, _ in REGIMENES:
+        sub = d.loc[reg == nombre, "tcr"]
+        if len(sub):
+            filas.append({"Régimen": nombre, "Meses": len(sub), "Mínimo": round(sub.min(), 1), "Mediana": round(sub.median(), 1),
+                          "Máximo": round(sub.max(), 1), "Último": round(sub.iloc[-1], 1)})
+    st.subheader("Tipo de cambio real por régimen")
+    st.dataframe(pd.DataFrame(filas), hide_index=True, width="stretch")
+    if modo == "Mayorista oficial":
+        st.caption("Con el oficial, Cepo refleja un precio administrado. Para ese período conviene cambiar a CCL.")
+    else:
+        st.caption("El CCL de Cepo incluye brechas de 50% a 150%: por eso su promedio está inflado y el nivel actual se ve bajo en comparación.")
+
+    # --- calculadora
+    st.subheader("¿Qué dólar nominal sería compatible con cada referencia?")
+    ipc_ar, ipc_us = ser("IPC_ARG"), ser("IPC_EEUU")
+    pi_ar0 = float(ipc_ar.pct_change().tail(3).mean() * 100)
+    pi_us0 = float(ipc_us.pct_change().tail(12).mean() * 100)
+    k = st.columns(3)
+    n_m = k[0].slider("Horizonte (meses desde el último dato)", 0, 24, 12, key="tcr_n")
+    p_ar = k[1].number_input("Inflación mensual Argentina (%)", value=round(pi_ar0, 2), step=0.1, min_value=-1.0, max_value=50.0, key="tcr_piar",
+                             help="Por defecto, el promedio de los últimos 3 meses de la serie de IPC. Es un supuesto tuyo: cámbialo.")
+    p_us = k[2].number_input("Inflación mensual EE.UU. (%)", value=round(pi_us0, 2), step=0.05, min_value=-1.0, max_value=5.0, key="tcr_pius",
+                             help="Por defecto, el promedio de los últimos 12 meses.")
+    custom = st.number_input("Nivel personalizado del tipo de cambio real (100 = promedio 2016–hoy)", value=100.0, step=1.0, min_value=10.0, max_value=400.0, key="tcr_custom")
+    factor = ((1 + p_ar / 100) / (1 + p_us / 100)) ** n_m
+
+    refs = [("Hoy (mismo tipo de cambio real)", t0), ("Promedio 2016–hoy", 100.0)]
+    for nombre, _, _ in REGIMENES:
+        sub = d.loc[reg == nombre, "tcr"]
+        if len(sub) >= 12:
+            refs.append((f"Mediana {nombre}", float(sub.median())))
+    bandas = d.loc[reg == "Bandas", "tcr"]
+    if len(bandas) >= 6:
+        refs.append(("Mínimo Bandas", float(bandas.min())))
+        refs.append(("Máximo Bandas", float(bandas.max())))
+    refs.append(("Personalizado", float(custom)))
+    out = []
+    for nombre, r_ in refs:
+        dn = d0 * (r_ / t0) * factor
+        out.append({"Referencia": nombre, "Tipo de cambio real": round(r_, 1), "Variación real vs. hoy (%)": round((r_ / t0 - 1) * 100, 1),
+                    "Dólar nominal compatible": round(dn), "Variación nominal vs. hoy (%)": round((dn / d0 - 1) * 100, 1)})
+    st.dataframe(pd.DataFrame(out), hide_index=True, width="stretch")
+    st.caption(f"Cuenta: dólar de hoy × (referencia ÷ tipo de cambio real de hoy) × ((1 + inflación Argentina) ÷ (1 + inflación EE.UU.))^{n_m} meses. "
+               f"Con {p_ar:.2f}% y {p_us:.2f}% mensual, la inflación relativa suma {(factor - 1) * 100:+.1f}% en {n_m} meses. Base: {base:%Y-%m}.")
+
+    st.markdown('<div class="rem-callout">Cómo leerlo: no dice dónde <b>va</b> el dólar sino dónde <b>estaría</b> si el tipo de cambio real volviera a '
+                'cada nivel de referencia. Límites: (1) es bilateral con EE.UU., no incluye Brasil ni China; (2) el promedio 2016–hoy incluye años de cepo y '
+                'crisis, no es un equilibrio; (3) mayores exportaciones de energía y minería podrían sostener un tipo de cambio real más bajo que el '
+                'histórico, pero estos datos no permiten estimar cuánto; (4) el IPC de Argentina es un índice encadenado desde variaciones mensuales; '
+                '(5) con pocos meses en Bandas, sus medianas y extremos son poco confiables.</div>', unsafe_allow_html=True)
