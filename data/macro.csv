@@ -123,6 +123,130 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-07-01,BASE_MONETARIA,46193622.0,Base monetaria (fin de mes),ARS mn,BCRA,stock,last
 2026-08-01,BASE_MONETARIA,47451537.0,Base monetaria (fin de mes),ARS mn,BCRA,stock,last
 2026-09-01,BASE_MONETARIA,46909419.0,Base monetaria (fin de mes),ARS mn,BCRA,stock,last
+2016-06-01,BRECHA_BLUE,1.4955140845874049,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2016-07-01,BRECHA_BLUE,1.6235405084816883,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2016-08-01,BRECHA_BLUE,2.2314819389596505,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2016-09-01,BRECHA_BLUE,2.326680367031113,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2016-10-01,BRECHA_BLUE,5.395441437554145,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2016-11-01,BRECHA_BLUE,1.8020889578613841,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2016-12-01,BRECHA_BLUE,4.893905217140185,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-01-01,BRECHA_BLUE,6.8759798278788615,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-02-01,BRECHA_BLUE,3.285164061514667,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-03-01,BRECHA_BLUE,3.071224884385711,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-04-01,BRECHA_BLUE,4.170204320211086,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-05-01,BRECHA_BLUE,1.961947524009119,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-06-01,BRECHA_BLUE,2.217228317171485,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-07-01,BRECHA_BLUE,2.6235943026237654,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-08-01,BRECHA_BLUE,3.3687723696692937,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-09-01,BRECHA_BLUE,4.379234183228938,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-10-01,BRECHA_BLUE,3.139198540001305,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-11-01,BRECHA_BLUE,2.9040462810880454,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2017-12-01,BRECHA_BLUE,2.3364691975427156,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-01-01,BRECHA_BLUE,1.04801833050771,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-02-01,BRECHA_BLUE,0.8136431834782392,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-03-01,BRECHA_BLUE,3.2720641367937757,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-04-01,BRECHA_BLUE,3.7851702531857505,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-05-01,BRECHA_BLUE,2.96590673534336,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-06-01,BRECHA_BLUE,2.9181907969337404,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-07-01,BRECHA_BLUE,4.646710426115257,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-08-01,BRECHA_BLUE,1.8373548537013447,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-09-01,BRECHA_BLUE,1.5963201415664423,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-10-01,BRECHA_BLUE,2.381960858419938,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-11-01,BRECHA_BLUE,0.030181336078155832,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-12-01,BRECHA_BLUE,1.0371280624484804,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-01-01,BRECHA_BLUE,4.258522175552899,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-02-01,BRECHA_BLUE,-0.015322820637687085,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-03-01,BRECHA_BLUE,0.2791310423966456,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-04-01,BRECHA_BLUE,2.7707826679645424,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-05-01,BRECHA_BLUE,2.3781147131309583,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-06-01,BRECHA_BLUE,3.0282010903385226,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-07-01,BRECHA_BLUE,3.087603263140948,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-08-01,BRECHA_BLUE,3.2635159812134047,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-09-01,BRECHA_BLUE,8.2941143456223,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-10-01,BRECHA_BLUE,11.614004951309857,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-11-01,BRECHA_BLUE,11.88943784717216,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-12-01,BRECHA_BLUE,20.499004207558745,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-01-01,BRECHA_BLUE,29.065741988933848,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-02-01,BRECHA_BLUE,27.600932610605835,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-03-01,BRECHA_BLUE,30.042845712701144,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-04-01,BRECHA_BLUE,52.24082863341808,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-05-01,BRECHA_BLUE,85.4922719693287,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-06-01,BRECHA_BLUE,80.98017367953135,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-07-01,BRECHA_BLUE,83.45532270303367,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-08-01,BRECHA_BLUE,82.67930300524242,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-09-01,BRECHA_BLUE,83.40734363400848,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-10-01,BRECHA_BLUE,119.86363605215294,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-11-01,BRECHA_BLUE,100.9268659597424,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-12-01,BRECHA_BLUE,85.3137252289493,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-01-01,BRECHA_BLUE,83.88967392030533,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-02-01,BRECHA_BLUE,68.25467860356648,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-03-01,BRECHA_BLUE,57.59247582755461,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-04-01,BRECHA_BLUE,57.40907654712005,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-05-01,BRECHA_BLUE,63.195743985621995,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-06-01,BRECHA_BLUE,70.05390609011098,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-07-01,BRECHA_BLUE,84.89787466645771,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-08-01,BRECHA_BLUE,85.94080284170721,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-09-01,BRECHA_BLUE,87.43874448776485,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-10-01,BRECHA_BLUE,90.73695316875911,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-11-01,BRECHA_BLUE,99.99804388013912,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-12-01,BRECHA_BLUE,96.62842730440164,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-01-01,BRECHA_BLUE,103.81382786838077,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-02-01,BRECHA_BLUE,101.07715360972678,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-03-01,BRECHA_BLUE,84.30546518681041,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-04-01,BRECHA_BLUE,76.18237407041293,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-05-01,BRECHA_BLUE,73.51693690390682,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-06-01,BRECHA_BLUE,77.89721557924743,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-07-01,BRECHA_BLUE,126.13176935173512,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-08-01,BRECHA_BLUE,116.42010226772642,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-09-01,BRECHA_BLUE,95.92043621730613,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-10-01,BRECHA_BLUE,88.85560858589017,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-11-01,BRECHA_BLUE,86.10947348905486,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-12-01,BRECHA_BLUE,89.53867371877428,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-01-01,BRECHA_BLUE,102.2732659071046,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-02-01,BRECHA_BLUE,96.98024810120529,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-03-01,BRECHA_BLUE,88.45151294538806,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-04-01,BRECHA_BLUE,96.03709291196975,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-05-01,BRECHA_BLUE,108.14598893039663,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-06-01,BRECHA_BLUE,97.09776755507613,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-07-01,BRECHA_BLUE,94.70894849156073,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-08-01,BRECHA_BLUE,108.97106982852101,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-09-01,BRECHA_BLUE,111.40235830452242,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-10-01,BRECHA_BLUE,176.06975977509467,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-11-01,BRECHA_BLUE,170.35397271764165,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-12-01,BRECHA_BLUE,77.05294351538326,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-01-01,BRECHA_BLUE,41.339173050205424,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-02-01,BRECHA_BLUE,33.32801301632156,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-03-01,BRECHA_BLUE,19.67512893258269,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-04-01,BRECHA_BLUE,17.344915078626233,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-05-01,BRECHA_BLUE,28.136442891586686,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-06-01,BRECHA_BLUE,43.39640043299434,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-07-01,BRECHA_BLUE,55.006771303382905,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-08-01,BRECHA_BLUE,43.74351835748625,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-09-01,BRECHA_BLUE,31.48728410785967,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-10-01,BRECHA_BLUE,23.088977160624726,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-11-01,BRECHA_BLUE,13.511298075765291,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-12-01,BRECHA_BLUE,10.706346069669973,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-01-01,BRECHA_BLUE,17.628189819821444,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-02-01,BRECHA_BLUE,15.567518796451585,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-03-01,BRECHA_BLUE,17.88196298630866,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-04-01,BRECHA_BLUE,13.556735587226866,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-05-01,BRECHA_BLUE,2.141987950671161,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-06-01,BRECHA_BLUE,0.9659008843822262,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-07-01,BRECHA_BLUE,2.2827959284603008,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-08-01,BRECHA_BLUE,0.6778242264276502,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-09-01,BRECHA_BLUE,1.5579159255267832,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-10-01,BRECHA_BLUE,2.802921999347967,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-11-01,BRECHA_BLUE,0.6625946925814987,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-12-01,BRECHA_BLUE,1.9265148806848225,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-01-01,BRECHA_BLUE,3.599596241146463,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-02-01,BRECHA_BLUE,1.9985628766896635,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-03-01,BRECHA_BLUE,1.7735443775201147,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-04-01,BRECHA_BLUE,1.9506641916812146,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-05-01,BRECHA_BLUE,1.5534697256240015,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-06-01,BRECHA_BLUE,1.5973125201233709,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-07-01,BRECHA_BLUE,3.4039618515811703,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-08-01,BRECHA_BLUE,3.2537727627312187,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-09-01,BRECHA_BLUE,2.4757824280178555,Brecha entre dólar blue y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
 2016-06-01,BRECHA_CCL,0.8661465343257756,Brecha entre dólar CCL y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
 2016-07-01,BRECHA_CCL,0.9043010130420381,Brecha entre dólar CCL y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
 2016-08-01,BRECHA_CCL,0.574924711304603,Brecha entre dólar CCL y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
@@ -247,6 +371,102 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-07-01,BRECHA_CCL,5.9144634215940854,Brecha entre dólar CCL y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
 2026-08-01,BRECHA_CCL,5.812526142845375,Brecha entre dólar CCL y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
 2026-09-01,BRECHA_CCL,5.622508461305663,Brecha entre dólar CCL y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-10-01,BRECHA_MEP,-0.2680610374888574,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-11-01,BRECHA_MEP,0.41418045593288294,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2018-12-01,BRECHA_MEP,0.39042908056522013,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-01-01,BRECHA_MEP,0.31430100478698864,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-02-01,BRECHA_MEP,0.3440994668219677,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-03-01,BRECHA_MEP,0.7204950831948018,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-04-01,BRECHA_MEP,0.518000540724368,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-05-01,BRECHA_MEP,-0.0891615241797675,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-06-01,BRECHA_MEP,-0.10479343406491666,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-07-01,BRECHA_MEP,0.17750901880216038,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-08-01,BRECHA_MEP,0.5854390772904294,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-09-01,BRECHA_MEP,11.296158443081623,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-10-01,BRECHA_MEP,17.684734990787543,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-11-01,BRECHA_MEP,21.017953076082176,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2019-12-01,BRECHA_MEP,21.105593117516797,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-01-01,BRECHA_MEP,32.25503272009364,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-02-01,BRECHA_MEP,32.83414722422552,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-03-01,BRECHA_MEP,34.966504369608415,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-04-01,BRECHA_MEP,55.63381391228744,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-05-01,BRECHA_MEP,68.26758537406563,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-06-01,BRECHA_MEP,53.39594090134786,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-07-01,BRECHA_MEP,57.68558559398183,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-08-01,BRECHA_MEP,69.75136240054121,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-09-01,BRECHA_MEP,68.54713417693695,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-10-01,BRECHA_MEP,91.5834661379548,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-11-01,BRECHA_MEP,79.77423420302897,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2020-12-01,BRECHA_MEP,70.17342168269326,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-01-01,BRECHA_MEP,69.3821947182944,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-02-01,BRECHA_MEP,64.22864791212747,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-03-01,BRECHA_MEP,57.83056750434267,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-04-01,BRECHA_MEP,57.37220443712039,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-05-01,BRECHA_MEP,65.25700367551605,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-06-01,BRECHA_MEP,68.77318920853695,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-07-01,BRECHA_MEP,72.87718151325782,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-08-01,BRECHA_MEP,74.53554203369647,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-09-01,BRECHA_MEP,75.1725073113285,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-10-01,BRECHA_MEP,79.16747798943251,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-11-01,BRECHA_MEP,90.97216444268963,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2021-12-01,BRECHA_MEP,94.15320365002736,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-01-01,BRECHA_MEP,99.64309649402193,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-02-01,BRECHA_MEP,92.80105955142042,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-03-01,BRECHA_MEP,77.43614791154936,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-04-01,BRECHA_MEP,73.89769942354059,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-05-01,BRECHA_MEP,77.07669377486482,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-06-01,BRECHA_MEP,84.01591196846276,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-07-01,BRECHA_MEP,127.22780983503692,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-08-01,BRECHA_MEP,108.74586560885876,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-09-01,BRECHA_MEP,99.4504208696196,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-10-01,BRECHA_MEP,92.98411249826405,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-11-01,BRECHA_MEP,87.2357171269283,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2022-12-01,BRECHA_MEP,87.94449848213911,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-01-01,BRECHA_MEP,87.13240989514271,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-02-01,BRECHA_MEP,85.34086163734683,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-03-01,BRECHA_MEP,86.63476886595548,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-04-01,BRECHA_MEP,90.81299126171004,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-05-01,BRECHA_MEP,93.34414691791025,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-06-01,BRECHA_MEP,91.77096359257486,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-07-01,BRECHA_MEP,85.88953922372633,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-08-01,BRECHA_MEP,87.10807568027572,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-09-01,BRECHA_MEP,94.33493017824902,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-10-01,BRECHA_MEP,139.96911815049563,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-11-01,BRECHA_MEP,151.36053463145885,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2023-12-01,BRECHA_MEP,73.54853821716151,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-01-01,BRECHA_MEP,42.1885006648286,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-02-01,BRECHA_MEP,34.45430682740196,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-03-01,BRECHA_MEP,20.224643843095834,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-04-01,BRECHA_MEP,16.868040991948472,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-05-01,BRECHA_MEP,26.198824965892484,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-06-01,BRECHA_MEP,42.36052636917748,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-07-01,BRECHA_MEP,46.074392752702025,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-08-01,BRECHA_MEP,37.54210149209385,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-09-01,BRECHA_MEP,27.904527912228343,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-10-01,BRECHA_MEP,18.278566654853737,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-11-01,BRECHA_MEP,10.312329525960438,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2024-12-01,BRECHA_MEP,8.079337620749092,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-01-01,BRECHA_MEP,11.778240962216778,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-02-01,BRECHA_MEP,13.163918621760255,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-03-01,BRECHA_MEP,18.41262584623148,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-04-01,BRECHA_MEP,12.04498859139924,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-05-01,BRECHA_MEP,0.9901767598019322,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-06-01,BRECHA_MEP,0.765193677367335,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-07-01,BRECHA_MEP,0.8495986621682369,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-08-01,BRECHA_MEP,0.4934271216682856,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-09-01,BRECHA_MEP,3.080683511792104,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-10-01,BRECHA_MEP,5.334551717667875,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-11-01,BRECHA_MEP,2.8702687769612405,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2025-12-01,BRECHA_MEP,2.887884754061774,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-01-01,BRECHA_MEP,2.1346049599365435,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-02-01,BRECHA_MEP,1.6463808533686835,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-03-01,BRECHA_MEP,2.147091606269492,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-04-01,BRECHA_MEP,3.3012261060590204,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-05-01,BRECHA_MEP,2.684584415187926,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-06-01,BRECHA_MEP,1.6854133725801257,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-07-01,BRECHA_MEP,2.4092855855699904,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-08-01,BRECHA_MEP,2.1307027661724485,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
+2026-09-01,BRECHA_MEP,1.6586504905804085,Brecha entre dólar MEP y mayorista oficial (promedio del mes),%,Calculada: CCL (ArgentinaDatos) / mayorista (BCRA),indicador,mean
 2016-06-01,CC_BIENES,358.0083000000004,Cuenta corriente cambiaria: total bienes,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-07-01,CC_BIENES,158.1849999999995,Cuenta corriente cambiaria: total bienes,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-08-01,CC_BIENES,414.7782000000007,Cuenta corriente cambiaria: total bienes,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
@@ -988,6 +1208,130 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-07-01,DEPOSITOS_USD_PRIV,40269.0,Depósitos en dólares del sector privado no financiero (fin de mes),USD mn,BCRA,stock,last
 2026-08-01,DEPOSITOS_USD_PRIV,40887.0,Depósitos en dólares del sector privado no financiero (fin de mes),USD mn,BCRA,stock,last
 2026-09-01,DEPOSITOS_USD_PRIV,41911.0,Depósitos en dólares del sector privado no financiero (fin de mes),USD mn,BCRA,stock,last
+2016-06-01,DOLAR_BLUE,14.3,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-07-01,DOLAR_BLUE,15.096774193548388,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-08-01,DOLAR_BLUE,15.129032258064516,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-09-01,DOLAR_BLUE,15.466666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-10-01,DOLAR_BLUE,16.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-11-01,DOLAR_BLUE,15.6,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-12-01,DOLAR_BLUE,16.548387096774192,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-01-01,DOLAR_BLUE,17.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-02-01,DOLAR_BLUE,16.071428571428573,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-03-01,DOLAR_BLUE,16.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-04-01,DOLAR_BLUE,16.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-05-01,DOLAR_BLUE,16.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-06-01,DOLAR_BLUE,16.5,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-07-01,DOLAR_BLUE,17.612903225806452,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-08-01,DOLAR_BLUE,18.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-09-01,DOLAR_BLUE,18.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-10-01,DOLAR_BLUE,18.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-11-01,DOLAR_BLUE,18.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2017-12-01,DOLAR_BLUE,18.129032258064516,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-01-01,DOLAR_BLUE,19.225806451612904,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-02-01,DOLAR_BLUE,20.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-03-01,DOLAR_BLUE,20.870967741935484,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-04-01,DOLAR_BLUE,21.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-05-01,DOLAR_BLUE,24.29032258064516,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-06-01,DOLAR_BLUE,27.366666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-07-01,DOLAR_BLUE,28.93548387096774,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-08-01,DOLAR_BLUE,30.419354838709676,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-09-01,DOLAR_BLUE,39.13333333333333,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-10-01,DOLAR_BLUE,37.935483870967744,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-11-01,DOLAR_BLUE,36.5,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-12-01,DOLAR_BLUE,38.483870967741936,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-01-01,DOLAR_BLUE,39.03225806451613,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-02-01,DOLAR_BLUE,38.42857142857143,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-03-01,DOLAR_BLUE,41.29032258064516,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-04-01,DOLAR_BLUE,44.266666666666666,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-05-01,DOLAR_BLUE,46.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-06-01,DOLAR_BLUE,45.06666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-07-01,DOLAR_BLUE,43.774193548387096,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-08-01,DOLAR_BLUE,54.38709677419355,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-09-01,DOLAR_BLUE,61.333333333333336,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-10-01,DOLAR_BLUE,65.61290322580645,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-11-01,DOLAR_BLUE,66.9,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-12-01,DOLAR_BLUE,72.70967741935483,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-01-01,DOLAR_BLUE,77.41935483870968,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-02-01,DOLAR_BLUE,78.3103448275862,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-03-01,DOLAR_BLUE,82.51612903225806,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-04-01,DOLAR_BLUE,98.56666666666666,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-05-01,DOLAR_BLUE,125.45161290322581,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-06-01,DOLAR_BLUE,126.16666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-07-01,DOLAR_BLUE,130.7741935483871,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-08-01,DOLAR_BLUE,134.19354838709677,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-09-01,DOLAR_BLUE,137.7,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-10-01,DOLAR_BLUE,170.93548387096774,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-11-01,DOLAR_BLUE,161.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-12-01,DOLAR_BLUE,153.38709677419354,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-01-01,DOLAR_BLUE,158.61290322580646,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-02-01,DOLAR_BLUE,149.03571428571428,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-03-01,DOLAR_BLUE,143.3548387096774,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-04-01,DOLAR_BLUE,145.2,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-05-01,DOLAR_BLUE,153.29032258064515,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-06-01,DOLAR_BLUE,162.4,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-07-01,DOLAR_BLUE,177.6451612903226,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-08-01,DOLAR_BLUE,180.83870967741936,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-09-01,DOLAR_BLUE,184.23333333333332,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-10-01,DOLAR_BLUE,189.1290322580645,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-11-01,DOLAR_BLUE,200.7,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-12-01,DOLAR_BLUE,200.5483870967742,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-01-01,DOLAR_BLUE,211.7741935483871,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-02-01,DOLAR_BLUE,213.42857142857142,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-03-01,DOLAR_BLUE,202.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-04-01,DOLAR_BLUE,199.06666666666666,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-05-01,DOLAR_BLUE,204.2258064516129,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-06-01,DOLAR_BLUE,217.16666666666666,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-07-01,DOLAR_BLUE,289.80645161290323,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-08-01,DOLAR_BLUE,293.06451612903226,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-09-01,DOLAR_BLUE,281.3333333333333,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-10-01,DOLAR_BLUE,287.258064516129,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-11-01,DOLAR_BLUE,302.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-12-01,DOLAR_BLUE,326.2258064516129,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-01-01,DOLAR_BLUE,368.64516129032256,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-02-01,DOLAR_BLUE,377.85714285714283,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-03-01,DOLAR_BLUE,382.258064516129,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-04-01,DOLAR_BLUE,420.96666666666664,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-05-01,DOLAR_BLUE,481.38709677419354,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-06-01,DOLAR_BLUE,490.23333333333335,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-07-01,DOLAR_BLUE,518.5806451612904,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-08-01,DOLAR_BLUE,670.9032258064516,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-09-01,DOLAR_BLUE,738.9333333333333,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-10-01,DOLAR_BLUE,974.0645161290323,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-11-01,DOLAR_BLUE,955.6666666666666,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-12-01,DOLAR_BLUE,989.3548387096774,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-01-01,DOLAR_BLUE,1150.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-02-01,DOLAR_BLUE,1118.448275862069,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-03-01,DOLAR_BLUE,1017.9032258064516,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-04-01,DOLAR_BLUE,1017.8333333333334,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-05-01,DOLAR_BLUE,1125.483870967742,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-06-01,DOLAR_BLUE,1292.8333333333333,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-07-01,DOLAR_BLUE,1436.774193548387,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-08-01,DOLAR_BLUE,1355.1612903225807,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-09-01,DOLAR_BLUE,1263.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-10-01,DOLAR_BLUE,1206.774193548387,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-11-01,DOLAR_BLUE,1140.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-12-01,DOLAR_BLUE,1138.225806451613,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-01-01,DOLAR_BLUE,1226.2903225806451,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-02-01,DOLAR_BLUE,1221.9642857142858,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-03-01,DOLAR_BLUE,1256.6129032258063,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-04-01,DOLAR_BLUE,1274.3333333333333,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-05-01,DOLAR_BLUE,1173.3870967741937,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-06-01,DOLAR_BLUE,1192.0,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-07-01,DOLAR_BLUE,1293.225806451613,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-08-01,DOLAR_BLUE,1333.0645161290322,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-09-01,DOLAR_BLUE,1425.6666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-10-01,DOLAR_BLUE,1474.3548387096773,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-11-01,DOLAR_BLUE,1433.6666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-12-01,DOLAR_BLUE,1477.5806451612902,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-01-01,DOLAR_BLUE,1502.258064516129,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-02-01,DOLAR_BLUE,1437.857142857143,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-03-01,DOLAR_BLUE,1420.483870967742,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-04-01,DOLAR_BLUE,1407.5,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-05-01,DOLAR_BLUE,1416.9354838709678,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-06-01,DOLAR_BLUE,1472.8333333333333,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-07-01,DOLAR_BLUE,1532.258064516129,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-08-01,DOLAR_BLUE,1548.0645161290322,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-09-01,DOLAR_BLUE,1550.6666666666667,"Dólar blue (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
 2016-06-01,DOLAR_CCL,14.192,"Dólar CCL (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
 2016-07-01,DOLAR_CCL,15.050645161290323,"Dólar CCL (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
 2016-08-01,DOLAR_CCL,14.93032258064516,"Dólar CCL (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
@@ -1112,6 +1456,226 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-07-01,DOLAR_CCL,1574.7935483870967,"Dólar CCL (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
 2026-08-01,DOLAR_CCL,1585.9451612903226,"Dólar CCL (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
 2026-09-01,DOLAR_CCL,1598.97,"Dólar CCL (promedio del mes, precio de venta)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-10-01,DOLAR_MEP,36.51,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-11-01,DOLAR_MEP,36.51866666666667,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2018-12-01,DOLAR_MEP,38.03322580645161,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-01-01,DOLAR_MEP,37.51548387096774,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-02-01,DOLAR_MEP,38.50678571428572,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-03-01,DOLAR_MEP,41.50709677419355,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-04-01,DOLAR_MEP,43.43933333333334,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-05-01,DOLAR_MEP,44.85645161290322,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-06-01,DOLAR_MEP,43.775,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-07-01,DOLAR_MEP,42.498064516129034,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-08-01,DOLAR_MEP,52.69064516129033,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-09-01,DOLAR_MEP,63.212,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-10-01,DOLAR_MEP,69.00483870967743,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-11-01,DOLAR_MEP,72.58999999999999,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2019-12-01,DOLAR_MEP,72.4574193548387,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-01-01,DOLAR_MEP,78.98935483870967,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-02-01,DOLAR_MEP,81.49137931034483,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-03-01,DOLAR_MEP,85.86354838709677,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-04-01,DOLAR_MEP,100.62766666666667,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-05-01,DOLAR_MEP,113.14741935483872,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-06-01,DOLAR_MEP,106.77199999999999,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-07-01,DOLAR_MEP,112.09,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-08-01,DOLAR_MEP,124.42870967741935,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-09-01,DOLAR_MEP,126.99266666666666,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-10-01,DOLAR_MEP,147.92129032258063,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-11-01,DOLAR_MEP,143.806,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2020-12-01,DOLAR_MEP,140.5932258064516,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-01-01,DOLAR_MEP,145.18451612903226,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-02-01,DOLAR_MEP,145.555,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-03-01,DOLAR_MEP,143.57290322580647,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-04-01,DOLAR_MEP,145.49033333333333,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-05-01,DOLAR_MEP,155.76967741935482,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-06-01,DOLAR_MEP,160.6843333333333,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-07-01,DOLAR_MEP,166.38548387096773,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-08-01,DOLAR_MEP,169.6258064516129,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-09-01,DOLAR_MEP,172.06466666666665,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-10-01,DOLAR_MEP,177.66645161290322,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-11-01,DOLAR_MEP,192.11066666666665,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2021-12-01,DOLAR_MEP,198.34870967741938,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-01-01,DOLAR_MEP,207.33129032258066,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-02-01,DOLAR_MEP,204.22678571428574,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-03-01,DOLAR_MEP,194.6883870967742,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-04-01,DOLAR_MEP,196.50833333333333,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-05-01,DOLAR_MEP,208.89709677419356,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-06-01,DOLAR_MEP,226.24366666666668,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-07-01,DOLAR_MEP,289.56225806451613,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-08-01,DOLAR_MEP,282.4690322580645,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-09-01,DOLAR_MEP,286.175,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-10-01,DOLAR_MEP,294.8545161290323,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-11-01,DOLAR_MEP,304.2006666666667,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2022-12-01,DOLAR_MEP,324.8809677419355,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-01-01,DOLAR_MEP,341.38516129032257,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-02-01,DOLAR_MEP,355.6914285714286,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-03-01,DOLAR_MEP,378.68032258064517,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-04-01,DOLAR_MEP,412.2566666666667,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-05-01,DOLAR_MEP,448.1051612903226,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-06-01,DOLAR_MEP,477.158,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-07-01,DOLAR_MEP,495.22645161290325,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-08-01,DOLAR_MEP,602.7929032258065,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-09-01,DOLAR_MEP,679.9363333333333,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-10-01,DOLAR_MEP,841.0064516129032,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-11-01,DOLAR_MEP,892.0013333333334,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2023-12-01,DOLAR_MEP,968.9554838709677,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-01-01,DOLAR_MEP,1158.8812903225805,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-02-01,DOLAR_MEP,1130.2758620689656,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-03-01,DOLAR_MEP,1025.088064516129,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-04-01,DOLAR_MEP,1016.3133333333333,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-05-01,DOLAR_MEP,1112.0225806451613,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-06-01,DOLAR_MEP,1280.3966666666668,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-07-01,DOLAR_MEP,1355.4612903225807,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-08-01,DOLAR_MEP,1298.8935483870966,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-09-01,DOLAR_MEP,1229.41,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-10-01,DOLAR_MEP,1158.5516129032258,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-11-01,DOLAR_MEP,1107.6133333333335,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2024-12-01,DOLAR_MEP,1110.725806451613,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-01-01,DOLAR_MEP,1165.851612903226,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-02-01,DOLAR_MEP,1195.0357142857142,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-03-01,DOLAR_MEP,1261.7774193548387,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-04-01,DOLAR_MEP,1250.1366666666665,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-05-01,DOLAR_MEP,1161.1903225806452,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-06-01,DOLAR_MEP,1189.7933333333335,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-07-01,DOLAR_MEP,1276.5290322580645,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-08-01,DOLAR_MEP,1337.4870967741936,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-09-01,DOLAR_MEP,1450.3333333333333,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-10-01,DOLAR_MEP,1508.7387096774194,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-11-01,DOLAR_MEP,1470.8366666666666,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2025-12-01,DOLAR_MEP,1490.741935483871,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-01-01,DOLAR_MEP,1481.7516129032258,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-02-01,DOLAR_MEP,1431.8535714285715,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-03-01,DOLAR_MEP,1427.3129032258064,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-04-01,DOLAR_MEP,1427.6633333333334,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-05-01,DOLAR_MEP,1435.6516129032257,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-06-01,DOLAR_MEP,1473.6866666666667,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-07-01,DOLAR_MEP,1524.8967741935485,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-08-01,DOLAR_MEP,1531.6903225806452,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2026-09-01,DOLAR_MEP,1539.4399999999998,"Dólar MEP (promedio del mes, precio de venta; datos desde oct-2018)",ARS por USD,ArgentinaDatos (terceros),precio,mean
+2016-06-01,DOLAR_OFICIAL,14.14075,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2016-07-01,DOLAR_OFICIAL,14.909385,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2016-08-01,DOLAR_OFICIAL,14.849809090909092,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2016-09-01,DOLAR_OFICIAL,15.100736363636365,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2016-10-01,DOLAR_OFICIAL,15.180995,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2016-11-01,DOLAR_OFICIAL,15.33990476190476,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2016-12-01,DOLAR_OFICIAL,15.829585,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-01-01,DOLAR_OFICIAL,15.9065,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-02-01,DOLAR_OFICIAL,15.59827222222222,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-03-01,DOLAR_OFICIAL,15.523672727272727,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-04-01,DOLAR_OFICIAL,15.359950000000001,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-05-01,DOLAR_OFICIAL,15.698138095238093,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-06-01,DOLAR_OFICIAL,16.116638095238095,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-07-01,DOLAR_OFICIAL,17.169042857142855,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-08-01,DOLAR_OFICIAL,17.41653181818182,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-09-01,DOLAR_OFICIAL,17.246466666666667,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-10-01,DOLAR_OFICIAL,17.45278095238095,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-11-01,DOLAR_OFICIAL,17.4925,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2017-12-01,DOLAR_OFICIAL,17.700052631578945,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-01-01,DOLAR_OFICIAL,19.029036363636365,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-02-01,DOLAR_OFICIAL,19.84092777777778,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-03-01,DOLAR_OFICIAL,20.2378,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-04-01,DOLAR_OFICIAL,20.23486842105263,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-05-01,DOLAR_OFICIAL,23.66874761904762,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-06-01,DOLAR_OFICIAL,26.534185,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-07-01,DOLAR_OFICIAL,27.624733333333335,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-08-01,DOLAR_OFICIAL,30.12450909090909,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-09-01,DOLAR_OFICIAL,38.590005000000005,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-10-01,DOLAR_OFICIAL,37.12021818181818,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-11-01,DOLAR_OFICIAL,36.45903684210526,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2018-12-01,DOLAR_OFICIAL,37.88518333333334,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-01-01,DOLAR_OFICIAL,37.40689090909091,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-02-01,DOLAR_OFICIAL,38.408550000000005,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-03-01,DOLAR_OFICIAL,41.362373684210525,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-04-01,DOLAR_OFICIAL,43.23376842105263,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-05-01,DOLAR_OFICIAL,44.93321363636364,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-06-01,DOLAR_OFICIAL,43.78935,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-07-01,DOLAR_OFICIAL,42.54340952380952,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-08-01,DOLAR_OFICIAL,52.72705714285714,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-09-01,DOLAR_OFICIAL,56.50141904761905,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-10-01,DOLAR_OFICIAL,58.53083636363636,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-11-01,DOLAR_OFICIAL,59.73807894736842,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2019-12-01,DOLAR_OFICIAL,59.8832,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-01-01,DOLAR_OFICIAL,60.01095909090909,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-02-01,DOLAR_OFICIAL,61.34840555555556,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-03-01,DOLAR_OFICIAL,63.12271052631579,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-04-01,DOLAR_OFICIAL,65.76197499999999,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-05-01,DOLAR_OFICIAL,67.72552631578948,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-06-01,DOLAR_OFICIAL,69.54071428571429,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-07-01,DOLAR_OFICIAL,71.47491904761905,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-08-01,DOLAR_OFICIAL,73.29299999999999,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-09-01,DOLAR_OFICIAL,75.19863636363635,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-10-01,DOLAR_OFICIAL,77.56929047619047,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-11-01,DOLAR_OFICIAL,79.93323684210527,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2020-12-01,DOLAR_OFICIAL,82.63787222222223,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-01-01,DOLAR_OFICIAL,85.970835,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-02-01,DOLAR_OFICIAL,88.67462222222223,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-03-01,DOLAR_OFICIAL,91.06636818181818,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-04-01,DOLAR_OFICIAL,92.863845,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-05-01,DOLAR_OFICIAL,94.10482631578948,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-06-01,DOLAR_OFICIAL,95.25429047619048,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-07-01,DOLAR_OFICIAL,96.23778095238096,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-08-01,DOLAR_OFICIAL,97.21381428571428,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-09-01,DOLAR_OFICIAL,98.28499545454544,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-10-01,DOLAR_OFICIAL,99.24912631578948,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-11-01,DOLAR_OFICIAL,100.31007142857143,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2021-12-01,DOLAR_OFICIAL,101.8885,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-01-01,DOLAR_OFICIAL,103.98460000000001,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-02-01,DOLAR_OFICIAL,106.3071105263158,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-03-01,DOLAR_OFICIAL,109.45849999999999,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-04-01,DOLAR_OFICIAL,113.33447368421052,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-05-01,DOLAR_OFICIAL,117.77367,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-06-01,DOLAR_OFICIAL,122.73574,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-07-01,DOLAR_OFICIAL,128.44539047619048,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-08-01,DOLAR_OFICIAL,135.29029545454546,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-09-01,DOLAR_OFICIAL,143.62523333333334,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-10-01,DOLAR_OFICIAL,152.5928947368421,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-11-01,DOLAR_OFICIAL,162.11833333333334,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2022-12-01,DOLAR_OFICIAL,172.90316,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-01-01,DOLAR_OFICIAL,182.24409090909091,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-02-01,DOLAR_OFICIAL,191.89239444444445,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-03-01,DOLAR_OFICIAL,203.10553636363636,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-04-01,DOLAR_OFICIAL,216.55591666666666,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-05-01,DOLAR_OFICIAL,231.19083500000002,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-06-01,DOLAR_OFICIAL,248.76167,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-07-01,DOLAR_OFICIAL,266.4646857142857,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-08-01,DOLAR_OFICIAL,322.1341,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-09-01,DOLAR_OFICIAL,349.9980142857143,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-10-01,DOLAR_OFICIAL,350.020415,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-11-01,DOLAR_OFICIAL,353.84040999999996,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2023-12-01,DOLAR_OFICIAL,641.9947315789474,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-01-01,DOLAR_OFICIAL,818.3454545454545,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-02-01,DOLAR_OFICIAL,834.9140368421052,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-03-01,DOLAR_OFICIAL,850.3377210526315,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-04-01,DOLAR_OFICIAL,868.958335,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-05-01,DOLAR_OFICIAL,886.8636363636364,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-06-01,DOLAR_OFICIAL,903.7794176470588,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-07-01,DOLAR_OFICIAL,923.7651545454545,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-08-01,DOLAR_OFICIAL,942.9204454545455,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-09-01,DOLAR_OFICIAL,961.8254047619048,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-10-01,DOLAR_OFICIAL,981.5681772727272,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-11-01,DOLAR_OFICIAL,1001.8377157894737,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2024-12-01,DOLAR_OFICIAL,1020.7061421052632,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-01-01,DOLAR_OFICIAL,1043.5643954545455,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-02-01,DOLAR_OFICIAL,1058.4625,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-03-01,DOLAR_OFICIAL,1069.0347222222222,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-04-01,DOLAR_OFICIAL,1121.5679842105264,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-05-01,DOLAR_OFICIAL,1147.52916,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-06-01,DOLAR_OFICIAL,1181.3552631578948,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-07-01,DOLAR_OFICIAL,1267.022731818182,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-08-01,DOLAR_OFICIAL,1329.537495,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-09-01,DOLAR_OFICIAL,1399.8977363636363,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-10-01,DOLAR_OFICIAL,1432.0227272727273,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-11-01,DOLAR_OFICIAL,1427.6176470588234,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2025-12-01,DOLAR_OFICIAL,1447.8377210526317,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-01-01,DOLAR_OFICIAL,1449.334661904762,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-02-01,DOLAR_OFICIAL,1409.6571,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-03-01,DOLAR_OFICIAL,1396.338715,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-04-01,DOLAR_OFICIAL,1381.45228,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-05-01,DOLAR_OFICIAL,1397.2372368421052,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-06-01,DOLAR_OFICIAL,1450.2727761904762,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-07-01,DOLAR_OFICIAL,1487.0038095238097,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-08-01,DOLAR_OFICIAL,1499.962935,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
+2026-09-01,DOLAR_OFICIAL,1513.886972727273,"Dólar mayorista oficial, Com. A 3500 (promedio del mes)",ARS por USD,BCRA,precio,mean
 2016-06-01,FAE_PRIV_EGRESOS,2085.4116,Formación de activos externos del sector privado: egresos,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-07-01,FAE_PRIV_EGRESOS,2332.2285,Formación de activos externos del sector privado: egresos,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-08-01,FAE_PRIV_EGRESOS,2292.6852,Formación de activos externos del sector privado: egresos,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
