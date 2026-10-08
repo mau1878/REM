@@ -422,6 +422,42 @@ def oos_expansivo(x, y, h, min_train=36, delta=False):
     return pd.DataFrame(filas, columns=["mes", "e_mod", "e_bench"]).set_index("mes")
 
 
+# Variables que se comparan una a una en el estudio de eventos: los componentes del índice y candidatos «de mercado».
+# (variable, transformacion, signo [+1: más valor = más presión], etiqueta)
+CANDIDATOS = [(v, tr, sg, lab) for v, (tr, sg, lab) in COMPONENTES.items()] + [
+    ("RIESGO_PAIS", "Nivel", +1, "Riesgo país: nivel (fuente no oficial)"),
+    ("BRECHA_CCL", "Nivel", +1, "Brecha CCL: nivel (incluye una cotización del dólar)"),
+    ("BRECHA_MEP", "Nivel", +1, "Brecha MEP: nivel (incluye una cotización del dólar)"),
+]
+
+
+def por_componente(macro, ev, modo_z, items, desde=-3, hasta=-1):
+    """Para cada item: z-score (signo aplicado, sin mirar el futuro) promedio en e+desde..e+hasta sobre los eventos, contra el promedio de
+    todos los meses. Devuelve un DataFrame con una fila por item."""
+    filas = []
+    for v, tr, sg, lab in items:
+        if v not in set(macro["variable"]):
+            continue
+        x, _ = transformar(macro[macro["variable"] == v].set_index("fecha")["valor"], tr)
+        z = (_zscore(x, modo_z) * sg).dropna()
+        if len(z) < 24:
+            continue
+        W = ventana_evento(z, ev, desde, 0)
+        pre = W[list(range(desde, hasta + 1))]
+        un_mes = W[-1].dropna()
+        n = len(un_mes)
+        base = float(z.mean())
+        t_aprox = (un_mes.mean() - base) / (z.std() / np.sqrt(n)) if n >= 3 and z.std() > 0 else np.nan
+        fila = {"Variable": lab, "Eventos con dato": n, "Promedio 1 mes antes": un_mes.mean() if n else np.nan,
+                "Promedio 1 a 3 meses antes": np.nanmean(pre.values) if pre.notna().any().any() else np.nan,
+                "Promedio de todos los meses": base, "% eventos > 0 (1 mes antes)": (un_mes > 0).mean() * 100 if n else np.nan,
+                "% de todos los meses > 0": (z > 0).mean() * 100, "t aprox.": t_aprox}
+        for j in range(desde, hasta + 1):
+            fila[f"m{j}"] = W[j].mean()
+        filas.append(fila)
+    return pd.DataFrame(filas)
+
+
 def eventos_saltos(jump, umbral, sep=3):
     """Meses con salto >= umbral. Eventos a menos de `sep` meses del anterior se consideran el mismo episodio (se usa el primero)."""
     ev = []
@@ -612,6 +648,31 @@ def render_termometro(data_dir, show):
         st.caption("Si el índice sirviera de alerta, las líneas deberían estar claramente por encima del promedio de todos los meses "
                    "(línea punteada) *antes* del mes 0. Con pocos eventos, un par de casos pueden mover todo el promedio: mirá la tabla y "
                    "las líneas individuales (grises), no solo el promedio.")
+
+        st.markdown("**Una variable por vez:** ¿alguna de las series que componen el índice (o un candidato de mercado) marcaba presión "
+                    "antes de los saltos? Cada serie se mide en desvíos estándar con el signo «más valor = más presión» (positivo = más presión "
+                    "que lo habitual).")
+        pc = por_componente(macro, ev, "Móvil de 36 meses" if modo_z.startswith("Móvil") else "Expansiva", CANDIDATOS)
+        if pc.empty:
+            st.info("No hay series suficientes para esta comparación.")
+        else:
+            f6 = go.Figure()
+            for j, col in ((-3, "#9bbcf2"), (-2, "#5b94ec"), (-1, REM_C)):
+                f6.add_trace(go.Bar(x=pc["Variable"], y=pc[f"m{j}"], name=f"{-j} mes{'es' if j < -1 else ''} antes", marker_color=col))
+            f6.add_hline(y=0, line=dict(color="gray", width=1))
+            f6.update_layout(title=f"Presión media de cada serie antes de los {len(ev)} saltos", barmode="group", height=470,
+                             yaxis_title="desvíos estándar (signo: más = más presión)", legend=dict(orientation="h", y=-0.55),
+                             xaxis=dict(tickangle=-35))
+            show(f6)
+            tb = pc[["Variable", "Eventos con dato", "Promedio 1 mes antes", "Promedio 1 a 3 meses antes", "Promedio de todos los meses",
+                     "% eventos > 0 (1 mes antes)", "% de todos los meses > 0", "t aprox."]].copy()
+            for c_ in tb.columns[2:]:
+                tb[c_] = tb[c_].round(2)
+            st.dataframe(tb, hide_index=True, width="stretch")
+            st.caption("«t aprox.» compara el promedio de 1 mes antes con el promedio de todos los meses, usando la dispersión de la serie: "
+                       "valores por encima de ±2 serían llamativos, pero con 8 a 10 eventos y 9 series probadas siempre puede aparecer una "
+                       "por azar, y los meses vecinos no son independientes. Tomalo como pista para mirar, no como prueba. Las brechas "
+                       "incluyen una cotización del dólar: si «anticipan», en parte es persistencia del propio dólar.")
 
     # ---- control con PCA y descarga
     with st.expander("Control: primer componente principal (PCA) y datos"):
