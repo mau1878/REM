@@ -508,6 +508,11 @@ def render_termometro(data_dir, show):
         st.warning("Muy pocos meses para evaluar el índice.")
         return
 
+    informe = []  # secciones de texto para el archivo descargable (para poder leerlo/compartirlo sin capturas)
+
+    def _sec(titulo, obj=None):
+        informe.append(f"## {titulo}\n" + ("" if obj is None else (obj if isinstance(obj, str) else obj.to_csv(index=not isinstance(obj.index, pd.RangeIndex)))))
+
     # ---- dólar de validación
     vals = macro.drop_duplicates("variable").set_index("variable")
     objetivos = [v for v in vals.index if v.startswith("DOLAR_") or v.startswith("BRECHA_")]
@@ -519,6 +524,10 @@ def render_termometro(data_dir, show):
     reg = d3.radio("Régimen", ["Todo"] + [r[0] for r in REGIMENES], key="ter_reg", horizontal=False)
     y, u_y = transformar(macro[macro["variable"] == obj].set_index("fecha")["valor"], tr_obj)
     u_ylab = _unidad(vals.loc[obj], u_y)
+    _sec("Parametros", f"dolar_validacion={obj} ({vals.loc[obj, 'etiqueta']}); transformacion={tr_obj}; regimen_filtro_correlacion={reg}\n"
+                       f"componentes={', '.join(sel)}; estandarizacion={modo_z}; ultimo_mes_macro={macro['fecha'].max():%Y-%m}; "
+                       f"meses_indice={len(idx)} ({idx.index.min():%Y-%m} a {idx.index.max():%Y-%m})\n"
+                       "regimenes=" + "; ".join(f"{n_}: {a_[:7]} a {(b_ or 'hoy')[:7]}" for n_, a_, b_ in REGIMENES) + "\n")
     if "ArgentinaDatos" in str(vals.loc[obj, "fuente"]):
         st.caption(f"⚠️ **{vals.loc[obj, 'etiqueta']}** viene de una fuente no oficial ({vals.loc[obj, 'fuente']}).")
 
@@ -565,6 +574,7 @@ def render_termometro(data_dir, show):
     f3.update_layout(title=f"Correlación entre el índice del mes t y el dólar del mes t+k (régimen: {reg})", height=380,
                      xaxis=dict(title="k (meses). k > 0: el índice antecede al dólar; k < 0: lo sigue", dtick=1), yaxis_title="Pearson")
     show(f3)
+    _sec(f"Correlacion cruzada indice(t) vs dolar(t+k), regimen={reg}", cc.round(4))
     n0 = int(cc.loc[cc["k"] == 0, "n"].iloc[0])
     if n0 < 24:
         st.warning(f"Solo {n0} meses en este régimen: las correlaciones son muy inestables.")
@@ -584,6 +594,8 @@ def render_termometro(data_dir, show):
     else:
         r2 = 1 - (oo["e_mod"] ** 2).sum() / (oo["e_bench"] ** 2).sum()
         m = st.columns(3)
+        _sec(f"Fuera de muestra (h={h}, objetivo={'cambio' if delta else 'valor'} en t+h)", f"r2_oos={r2:.4f}; meses={len(oo)}; "
+             f"primer_mes={oo.index.min():%Y-%m}\n")
         m[0].metric("R² fuera de muestra", f"{r2:+.1%}", help="Positivo: el índice mejora el pronóstico respecto de usar el promedio histórico. "
                                                               "Negativo o cercano a cero: no agrega nada.")
         m[1].metric("Meses evaluados", f"{len(oo):,}")
@@ -604,6 +616,7 @@ def render_termometro(data_dir, show):
                             "R² fuera de muestra": f"{1 - (sub['e_mod'] ** 2).sum() / (sub['e_bench'] ** 2).sum():+.1%}"})
         if tab:
             st.dataframe(pd.DataFrame(tab), hide_index=True, width="stretch")
+            _sec("Fuera de muestra por regimen", pd.DataFrame(tab))
 
     # ---- estudio de eventos
     st.subheader("Estudio de eventos: ¿qué marcaba el índice antes de los saltos?")
@@ -641,10 +654,15 @@ def render_termometro(data_dir, show):
         c[1].metric("Índice promedio 1 a 3 meses antes", f"{np.nanmean(pre.values):+.2f}")
         c[2].metric("Eventos con índice > 0 un mes antes", f"{(W[-1] > 0).sum()} de {int(W[-1].notna().sum())}",
                     help=f"En el {pos:.0%} de todos los meses el índice es positivo: esa es la referencia, no 50%.")
+        _sec(f"Estudio de eventos: umbral={um:g} {uj}, eventos={len(ev)}; indice promedio/mediana por mes relativo (0 = mes del salto); "
+             f"promedio de todos los meses={base_media:.3f}",
+             pd.DataFrame({"mes_relativo": W.columns, "promedio": W.mean().round(3).values, "mediana": W.median().round(3).values,
+                           "n": W.notna().sum().values}))
         tabla = pd.DataFrame({"Mes del salto": [f"{e:%Y-%m}" for e in W.index], f"Salto ({uj})": [round(float(jump[e]), 1) for e in W.index],
                               "Régimen": [regimen_de(e) for e in W.index],
                               "Índice 1 mes antes": W[-1].round(2).values, "Índice 3 meses antes": W[-3].round(2).values})
         st.dataframe(tabla, hide_index=True, width="stretch")
+        _sec("Eventos (mes, salto, regimen, indice 1 y 3 meses antes)", tabla)
         st.caption("Si el índice sirviera de alerta, las líneas deberían estar claramente por encima del promedio de todos los meses "
                    "(línea punteada) *antes* del mes 0. Con pocos eventos, un par de casos pueden mover todo el promedio: mirá la tabla y "
                    "las líneas individuales (grises), no solo el promedio.")
@@ -669,6 +687,7 @@ def render_termometro(data_dir, show):
             for c_ in tb.columns[2:]:
                 tb[c_] = tb[c_].round(2)
             st.dataframe(tb, hide_index=True, width="stretch")
+            _sec("Una variable por vez (z-score con signo; m-3..m-1 = promedio de eventos 3..1 meses antes)", pc.round(3))
             st.caption("«t aprox.» compara el promedio de 1 mes antes con el promedio de todos los meses, usando la dispersión de la serie: "
                        "valores por encima de ±2 serían llamativos, pero con 8 a 10 eventos y 9 series probadas siempre puede aparecer una "
                        "por azar, y los meses vecinos no son independientes. Tomalo como pista para mirar, no como prueba. Las brechas "
@@ -689,3 +708,7 @@ def render_termometro(data_dir, show):
         t = pd.concat([idx.rename("indice")], axis=1).join(aportes.add_prefix("aporte_"))
         t.index = [f"{x:%Y-%m}" for x in t.index]
         st.download_button("Descargar índice y aportes (CSV)", t.round(4).to_csv().encode("utf-8"), file_name="termometro_presion.csv", mime="text/csv")
+
+    st.download_button("Descargar resumen del termómetro (TXT, para compartir con Claude)", ("\n".join(informe)).encode("utf-8"),
+                       file_name="termometro_resumen.txt", mime="text/plain", key="ter_dl",
+                       help="Parámetros, correlación cruzada, prueba fuera de muestra y estudio de eventos de lo que estás viendo, en texto plano.")
