@@ -399,9 +399,10 @@ else:
                 help="Compara el error del REM con el de un pronóstico sin esfuerzo: repetir el último dato conocido. Menor a 1: el REM se equivoca menos que el ingenuo. Mayor a 1: no le gana.")
     st.markdown(f'<div class="rem-callout">{esc(frase(unidad, m["n"], h0, h1, m))}</div>', unsafe_allow_html=True)
 
-t_res, t_evo, t_hor, t_tie, t_mac, t_crx, t_ter, t_met = st.tabs(["Resumen general", "Evolución de proyecciones", "Error por horizonte",
+t_res, t_evo, t_hor, t_tie, t_mac, t_crx, t_ter, t_ten, t_met = st.tabs(["Resumen general", "Evolución de proyecciones", "Error por horizonte",
                                                     "Errores en el tiempo", "Contexto macro-financiero",
                                                     "Cruce de series macro", "Termómetro cambiario",
+                                                    "Tensión de mercado",
                                                     "Metodología y límites"])
 
 # ---------------------------------------------------------------- resumen general (portada)
@@ -710,6 +711,10 @@ with t_crx:
 with t_ter:
     macro_tab.render_termometro(DATA, show)
 
+# ---------------------------------------------------------------- tension de mercado (panel de alerta)
+with t_ten:
+    macro_tab.render_tension(DATA, show)
+
 # ---------------------------------------------------------------- metodologia y limites
 with t_met:
     st.markdown("""
@@ -729,6 +734,7 @@ fuentes originales antes de usarla o citarla.
 - **Resultados reales:** series del BCRA (tipo de cambio mayorista, tasas, inflación) y del INDEC vía datos.gob.ar (inflación
   núcleo y GBA, PIB, desocupación, exportaciones e importaciones). Los datos se actualizan una vez por mes de forma automática.
 - **Cruce de series macro:** cualquier par de series de `data/macro.csv` entre sí, con transformaciones, desfase y correlación móvil (descriptivo).
+- **Tensión de mercado:** panel de alerta con riesgo país y brechas: cuántas veces, tras una señal de tensión, hubo un salto del dólar en los meses siguientes (verificación histórica, con falsas alarmas a la vista).
 - **Termómetro cambiario:** índice compuesto de presión cambiaria (promedio de z-scores con signos a priori, sin usar el dólar), validado contra el dólar elegido por correlación cruzada y prueba fuera de muestra (descriptivo).
 - **Contexto macro-financiero:** reservas, compras de divisas, base monetaria, M2 y depósitos (API de estadísticas monetarias del BCRA);
   formación de activos externos y cuenta corriente cambiaria (Balance Cambiario del BCRA, vía datos.gob.ar); dólar CCL y riesgo país
