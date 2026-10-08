@@ -398,23 +398,45 @@ def pca_primer_componente(panel):
     return sc, pd.Series(v, index=z.columns), float(w[-1] / w.sum())
 
 
-def oos_expansivo(x, y, h, min_train=36):
+def oos_expansivo(x, y, h, min_train=36, delta=False):
     """Pronostico fuera de muestra de y(t+h) con regresion lineal de y(t+h) sobre x(t), reestimada cada mes con datos conocidos a t.
-    Benchmark: promedio historico de y. Devuelve DataFrame con error del modelo y del benchmark por mes de pronostico."""
+    delta=True: se pronostica el cambio y(t+h) - y(t) (util para niveles persistentes como la brecha, donde «el promedio
+    historico» seria un benchmark muy flojo). Benchmark: promedio historico del objetivo. Devuelve DataFrame con error del modelo y del benchmark por mes de pronostico."""
     d = pd.concat([x.rename("x"), y.rename("y")], axis=1).asfreq("MS")
-    xs, ys = d["x"].values, d["y"].values
+    xs, y0 = d["x"].values, d["y"].values
+    # objetivo asociado al mes t: z[t] = y(t+h) (o y(t+h) - y(t) si delta)
+    zs = np.full(len(d), np.nan)
+    if len(d) > h:
+        zs[:len(d) - h] = y0[h:] - (y0[:len(d) - h] if delta else 0.0)
     filas = []
     for t in range(len(d)):
         tgt = t + h
-        if tgt >= len(d) or np.isnan(xs[t]) or np.isnan(ys[tgt]):
+        if tgt >= len(d) or np.isnan(xs[t]) or np.isnan(zs[t]):
             continue
-        idx = [s for s in range(t - h + 1) if s + h <= t and not (np.isnan(xs[s]) or np.isnan(ys[s + h]))]
+        idx = [s for s in range(t - h + 1) if not (np.isnan(xs[s]) or np.isnan(zs[s]))]  # pares (x_s, z_s) con s + h <= t: ya conocidos
         if len(idx) < min_train or np.std(xs[idx]) == 0:
             continue
-        k, b0 = np.polyfit(xs[idx], ys[np.array(idx) + h], 1)
-        bench = float(np.mean(ys[np.array(idx) + h]))
-        filas.append((d.index[tgt], (k * xs[t] + b0) - ys[tgt], bench - ys[tgt]))
+        k, b0 = np.polyfit(xs[idx], zs[idx], 1)
+        bench = float(np.mean(zs[idx]))
+        filas.append((d.index[tgt], (k * xs[t] + b0) - zs[t], bench - zs[t]))
     return pd.DataFrame(filas, columns=["mes", "e_mod", "e_bench"]).set_index("mes")
+
+
+def eventos_saltos(jump, umbral, sep=3):
+    """Meses con salto >= umbral. Eventos a menos de `sep` meses del anterior se consideran el mismo episodio (se usa el primero)."""
+    ev = []
+    for t in jump.index[jump >= umbral]:
+        if not ev or (t.year - ev[-1].year) * 12 + (t.month - ev[-1].month) >= sep:
+            ev.append(t)
+    return ev
+
+
+def ventana_evento(idx, ev, desde=-6, hasta=3):
+    """Matriz eventos x meses relativos con el valor del indice en e+j (NaN si no hay dato)."""
+    m = {}
+    for e in ev:
+        m[e] = [idx.get(e + pd.offsets.MonthBegin(j) if j >= 0 else e - pd.offsets.MonthBegin(-j), np.nan) for j in range(desde, hasta + 1)]
+    return pd.DataFrame(m, index=range(desde, hasta + 1)).T
 
 
 def render_termometro(data_dir, show):
@@ -516,7 +538,11 @@ def render_termometro(data_dir, show):
     # ---- fuera de muestra
     st.subheader("Prueba fuera de muestra")
     h = st.select_slider("Horizonte (meses hacia adelante)", [1, 2, 3, 6], value=1, key="ter_h")
-    oo = oos_expansivo(idx, y, h)
+    delta = tr_obj == "Nivel"
+    oo = oos_expansivo(idx, y, h, delta=delta)
+    if delta:
+        st.caption("Como el dólar elegido está en nivel (serie persistente), se pronostica el **cambio** entre el mes t y t+h, y el "
+                   "benchmark es el cambio promedio histórico. Así no se premia al índice por la persistencia de la serie.")
     if len(oo) < 12:
         st.info("No hay meses suficientes para la prueba fuera de muestra (se necesitan 36 de entrenamiento más al menos 12 de evaluación).")
     else:
@@ -542,6 +568,50 @@ def render_termometro(data_dir, show):
                             "R² fuera de muestra": f"{1 - (sub['e_mod'] ** 2).sum() / (sub['e_bench'] ** 2).sum():+.1%}"})
         if tab:
             st.dataframe(pd.DataFrame(tab), hide_index=True, width="stretch")
+
+    # ---- estudio de eventos
+    st.subheader("Estudio de eventos: ¿qué marcaba el índice antes de los saltos?")
+    raw_obj = macro[macro["variable"] == obj].set_index("fecha")["valor"].sort_index().asfreq("MS")
+    es_pct = vals.loc[obj, "tipo"] == "precio"
+    jump = (raw_obj.pct_change(1, fill_method=None) * 100) if es_pct else raw_obj.diff()
+    jump = jump.dropna()
+    uj = "%" if es_pct else "pp"
+    um = st.slider(f"Umbral del salto mensual ({uj})", 5.0, 40.0, 15.0 if es_pct else 10.0, 1.0, key=f"ter_um|{obj}",
+                   help="Un evento es un mes en que el dólar (o la brecha) sube al menos este valor. Los meses seguidos (a menos de 3 de "
+                        "distancia) cuentan como un solo episodio.")
+    ev = [e for e in eventos_saltos(jump, um) if e in idx.index or (e - pd.offsets.MonthBegin(1)) in idx.index]
+    if len(ev) < 3:
+        st.info(f"Solo {len(ev)} eventos con salto ≥ {um:g} {uj}: bajá el umbral para tener algo que mirar.")
+    else:
+        W = ventana_evento(idx, ev)
+        base_media = float(idx.mean())
+        f5 = go.Figure()
+        for e in W.index:
+            f5.add_trace(go.Scatter(x=W.columns, y=W.loc[e], mode="lines", line=dict(color="rgba(150,150,150,0.45)", width=1),
+                                    name=f"{e:%Y-%m}", hovertemplate=f"{e:%Y-%m}" + "<br>mes %{x}: %{y:+.2f}<extra></extra>", showlegend=False))
+        f5.add_trace(go.Scatter(x=W.columns, y=W.mean(), mode="lines+markers", line=dict(color=MAC_C, width=3.2), name="Promedio de los eventos"))
+        f5.add_trace(go.Scatter(x=W.columns, y=W.median(), mode="lines", line=dict(color=REM_C, width=2.2, dash="dot"), name="Mediana"))
+        f5.add_hline(y=base_media, line=dict(color="gray", dash="dash", width=1.5),
+                     annotation_text="promedio de todos los meses", annotation_position="bottom right")
+        f5.add_vline(x=0, line=dict(color="gray", width=1))
+        f5.update_layout(title=f"Índice de presión alrededor de {len(ev)} saltos de al menos {um:g} {uj}", height=430,
+                         xaxis=dict(title="Meses respecto del salto (0 = mes del salto)", dtick=1), yaxis_title="índice (desvíos estándar)",
+                         legend=dict(orientation="h", y=-0.25))
+        show(f5)
+        pre = W[[-3, -2, -1]]
+        pos = (idx > 0).mean()
+        c = st.columns(3)
+        c[0].metric("Índice promedio 1 mes antes", f"{W[-1].mean():+.2f}", help=f"Promedio de todos los meses: {base_media:+.2f}")
+        c[1].metric("Índice promedio 1 a 3 meses antes", f"{np.nanmean(pre.values):+.2f}")
+        c[2].metric("Eventos con índice > 0 un mes antes", f"{(W[-1] > 0).sum()} de {int(W[-1].notna().sum())}",
+                    help=f"En el {pos:.0%} de todos los meses el índice es positivo: esa es la referencia, no 50%.")
+        tabla = pd.DataFrame({"Mes del salto": [f"{e:%Y-%m}" for e in W.index], f"Salto ({uj})": [round(float(jump[e]), 1) for e in W.index],
+                              "Régimen": [regimen_de(e) for e in W.index],
+                              "Índice 1 mes antes": W[-1].round(2).values, "Índice 3 meses antes": W[-3].round(2).values})
+        st.dataframe(tabla, hide_index=True, width="stretch")
+        st.caption("Si el índice sirviera de alerta, las líneas deberían estar claramente por encima del promedio de todos los meses "
+                   "(línea punteada) *antes* del mes 0. Con pocos eventos, un par de casos pueden mover todo el promedio: mirá la tabla y "
+                   "las líneas individuales (grises), no solo el promedio.")
 
     # ---- control con PCA y descarga
     with st.expander("Control: primer componente principal (PCA) y datos"):
