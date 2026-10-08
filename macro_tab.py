@@ -932,7 +932,11 @@ FLUJOS = {  # clave: etiqueta (suma de 12 meses, USD mn; positivo = entran dolar
     "EXPO_ENERGIA": "Exportaciones de combustibles y energía",
     "EXPO_PRIMARIOS": "Exportaciones de productos primarios",
     "EXPO_MOA": "Exportaciones de manufacturas de origen agropecuario",
-    "EXPO_COBRE": "Exportaciones de mineral de cobre y concentrados (único rubro minero mensual aislado)",
+    "EXPO_PETROLEO": "Exportaciones de petróleo crudo",
+    "EXPO_GAS": "Exportaciones de gas y otros hidrocarburos",
+    "EXPO_METALES_PRECIOSOS": "Exportaciones de piedras y metales preciosos (sobre todo oro y plata)",
+    "EXPO_MINERIA_APROX": "Exportaciones mineras aproximadas (metales preciosos + cobre; sin litio)",
+    "EXPO_COBRE": "Exportaciones de mineral de cobre y concentrados",
     "CC_CAMBIARIA": "Cuenta corriente cambiaria (neta, Balance Cambiario)",
     "CC_SERVICIOS": "Servicios en la cuenta corriente cambiaria (neto)",
     "FAE_PRIV_NETA": "Formación de activos externos del sector privado (neta; negativo = salida)",
@@ -951,12 +955,16 @@ PRECIOS = {
 def _panel_flujos(macro, ser):
     vs = set(macro["variable"])
     cols = {v: ser(v) for v in ("EXPO_TOTAL", "IMPO_TOTAL", "EXPO_ENERGIA", "IMPO_COMBUSTIBLES", "EXPO_PRIMARIOS", "EXPO_MOA",
-                                "EXPO_COBRE", "CC_CAMBIARIA", "CC_SERVICIOS", "FAE_PRIV_NETA", "COMPRAS_BCRA") if v in vs}
+                                "EXPO_COBRE", "EXPO_PETROLEO", "EXPO_GAS", "EXPO_METALES_PRECIOSOS", "CC_CAMBIARIA", "CC_SERVICIOS", "FAE_PRIV_NETA",
+                                "COMPRAS_BCRA") if v in vs}
     df = pd.DataFrame(cols)
     if {"EXPO_TOTAL", "IMPO_TOTAL"} <= set(df):
         df["SALDO_COMERCIAL"] = df["EXPO_TOTAL"] - df["IMPO_TOTAL"]
     if {"EXPO_ENERGIA", "IMPO_COMBUSTIBLES"} <= set(df):
         df["SALDO_ENERGIA"] = df["EXPO_ENERGIA"] - df["IMPO_COMBUSTIBLES"]
+    mineria = [c for c in ("EXPO_METALES_PRECIOSOS", "EXPO_COBRE") if c in df]
+    if mineria:  # aproximacion: solo lo que el INDEC aísla por mes (no incluye litio)
+        df["EXPO_MINERIA_APROX"] = df[mineria].sum(axis=1, min_count=len(mineria))
     if "RESERVAS_BRUTAS" in vs:
         df["DRESERVAS"] = ser("RESERVAS_BRUTAS").sort_index().asfreq("MS").diff()
     return df.sort_index().asfreq("MS")
