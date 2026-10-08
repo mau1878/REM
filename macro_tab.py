@@ -356,13 +356,34 @@ Z_CLIP = 3.0
 MIN_Z = 12  # meses minimos de historia para estandarizar un componente
 
 
+def _modo(etiqueta):
+    """Etiqueta del radio de estandarización -> modo interno."""
+    if etiqueta.startswith("Móvil"):
+        return "Móvil de 36 meses"
+    if etiqueta.startswith("Dentro"):
+        return "Por régimen"
+    return "Expansiva"
+
+
 def _zscore(x, modo):
-    """z-score sin mirar el futuro: expansivo (solo pasado) o móvil de 36 meses. Se usa la historia hasta el mes t inclusive."""
+    """z-score sin mirar el futuro (usa la historia hasta el mes t inclusive).
+    «Expansiva»: toda la historia disponible. «Móvil de 36 meses»: ventana móvil. «Por régimen»: solo los meses ya transcurridos
+    del mismo régimen cambiario (evita confundir el nivel propio de cada régimen con presión); hasta tener MIN_Z meses del
+    régimen se usa la expansiva."""
+    x = x.sort_index()
     if modo == "Móvil de 36 meses":
         mu, sd = x.rolling(36, min_periods=MIN_Z).mean(), x.rolling(36, min_periods=MIN_Z).std()
-    else:
-        mu, sd = x.expanding(MIN_Z).mean(), x.expanding(MIN_Z).std()
-    return ((x - mu) / sd.replace(0, np.nan)).clip(-Z_CLIP, Z_CLIP)
+        return ((x - mu) / sd.replace(0, np.nan)).clip(-Z_CLIP, Z_CLIP)
+    mu, sd = x.expanding(MIN_Z).mean(), x.expanding(MIN_Z).std()
+    z = (x - mu) / sd.replace(0, np.nan)
+    if modo == "Por régimen":
+        reg = pd.Series([regimen_de(t) for t in x.index], index=x.index)
+        zr = pd.Series(np.nan, index=x.index)
+        for nombre in reg.unique():
+            seg = x[reg == nombre]
+            zr.loc[seg.index] = (seg - seg.expanding(MIN_Z).mean()) / seg.expanding(MIN_Z).std().replace(0, np.nan)
+        z = zr.fillna(z)
+    return z.clip(-Z_CLIP, Z_CLIP)
 
 
 def construir_indice(macro, vars_, modo):
@@ -491,8 +512,10 @@ def render_termometro(data_dir, show):
     c1, c2 = st.columns(2)
     sel = c1.multiselect("Componentes del índice", disp, default=[v for v in DEFAULT_ON if v in disp], key="ter_comp",
                          format_func=lambda v: COMPONENTES[v][2])
-    modo_z = c2.radio("Estandarización", ["Expansiva (solo pasado)", "Móvil de 36 meses"], key="ter_z", horizontal=True,
-                      help="Cada mes se estandariza con la historia disponible hasta ese mes, para no usar información del futuro.")
+    modo_z = c2.radio("Estandarización", ["Dentro del régimen", "Expansiva (solo pasado)", "Móvil de 36 meses"], key="ter_z", horizontal=True,
+                      help="Cada mes se estandariza con la historia disponible hasta ese mes, para no usar información del futuro. «Dentro del "
+                           "régimen» compara cada mes solo con meses anteriores del mismo régimen cambiario (hasta tener 12 meses del régimen "
+                           "usa la expansiva).")
     if len(sel) < 2:
         st.info("Elegí al menos dos componentes.")
         return
@@ -503,10 +526,19 @@ def render_termometro(data_dir, show):
         st.caption(f"Cada componente se estandariza (z-score, recortado a ±{Z_CLIP:g}) y se promedia con su signo. El índice es cero en "
                    "la «normalidad histórica» de cada serie hasta ese mes: positivo = más presión que lo habitual, negativo = menos. "
                    "Los signos son una decisión a priori, no se estiman con el dólar.")
-    idx, aportes, panel = construir_indice(macro, sel, "Móvil de 36 meses" if modo_z.startswith("Móvil") else "Expansiva")
+    idx_all, aportes, panel = construir_indice(macro, sel, _modo(modo_z))
+    # meses finales con componentes que faltan (p. ej. el Balance Cambiario publica con un mes de rezago): se muestran como
+    # provisorios y NO entran en las pruebas (correlación, fuera de muestra, eventos), para no comparar un mes incompleto con completos
+    completo = panel.reindex(idx_all.index).notna().sum(axis=1) == len(sel)
+    ult_completo = completo[completo].index.max() if completo.any() else None
+    idx = idx_all[idx_all.index <= ult_completo] if ult_completo is not None else idx_all.iloc[0:0]
+    prov = idx_all[idx_all.index > ult_completo] if ult_completo is not None else idx_all
     if len(idx) < 24:
         st.warning("Muy pocos meses para evaluar el índice.")
         return
+    if len(prov):
+        st.caption(f"⚠️ {', '.join(f'{t:%Y-%m}' for t in prov.index)}: provisorio (faltan componentes que se publican con rezago). "
+                   "Se muestra en los gráficos, pero no entra en las pruebas.")
 
     informe = []  # secciones de texto para el archivo descargable (para poder leerlo/compartirlo sin capturas)
 
@@ -526,7 +558,7 @@ def render_termometro(data_dir, show):
     u_ylab = _unidad(vals.loc[obj], u_y)
     _sec("Parametros", f"dolar_validacion={obj} ({vals.loc[obj, 'etiqueta']}); transformacion={tr_obj}; regimen_filtro_correlacion={reg}\n"
                        f"componentes={', '.join(sel)}; estandarizacion={modo_z}; ultimo_mes_macro={macro['fecha'].max():%Y-%m}; "
-                       f"meses_indice={len(idx)} ({idx.index.min():%Y-%m} a {idx.index.max():%Y-%m})\n"
+                       f"meses_indice={len(idx)} ({idx.index.min():%Y-%m} a {idx.index.max():%Y-%m}); provisorios_excluidos={','.join(f'{t:%Y-%m}' for t in prov.index) or 'ninguno'}\n"
                        "regimenes=" + "; ".join(f"{n_}: {a_[:7]} a {(b_ or 'hoy')[:7]}" for n_, a_, b_ in REGIMENES) + "\n")
     if "ArgentinaDatos" in str(vals.loc[obj, "fuente"]):
         st.caption(f"⚠️ **{vals.loc[obj, 'etiqueta']}** viene de una fuente no oficial ({vals.loc[obj, 'fuente']}).")
@@ -537,8 +569,11 @@ def render_termometro(data_dir, show):
     yy = y.reindex(idx.index)
     f1.add_trace(go.Scatter(x=yy.index, y=yy, mode="lines", name=f"{vals.loc[obj, 'etiqueta'].split(' (')[0]} · {tr_obj}",
                             line=dict(color=MAC_C, width=1.8), opacity=0.9), secondary_y=True)
+    if len(prov):
+        f1.add_trace(go.Scatter(x=prov.index, y=prov, mode="markers", name="Provisorio (faltan componentes)",
+                                marker=dict(color=REM_C, size=9, symbol="circle-open", line=dict(width=2))), secondary_y=False)
     f1.add_hline(y=0, line=dict(color="gray", width=1), secondary_y=False)
-    _sombrear(f1, idx.index.min(), idx.index.max())
+    _sombrear(f1, idx_all.index.min(), idx_all.index.max())
     f1.update_layout(title="Índice de presión cambiaria y dólar", height=480, hovermode="x unified", legend=dict(orientation="h", y=-0.2))
     f1.update_yaxes(title_text="índice (desvíos estándar)", secondary_y=False)
     f1.update_yaxes(title_text=u_ylab, secondary_y=True, showgrid=False)
@@ -549,7 +584,7 @@ def render_termometro(data_dir, show):
     f2 = go.Figure()
     for v in aportes.columns:
         f2.add_trace(go.Bar(x=aportes.index, y=aportes[v], name=COMPONENTES[v][2]))
-    f2.add_trace(go.Scatter(x=idx.index, y=idx, mode="lines", name="Índice", line=dict(color="black", width=1.8)))
+    f2.add_trace(go.Scatter(x=idx_all.index, y=idx_all, mode="lines", name="Índice", line=dict(color="black", width=1.8)))
     f2.update_layout(title="Aporte de cada componente al índice", barmode="relative", height=430, hovermode="x unified",
                      legend=dict(orientation="h", y=-0.3), yaxis_title="desvíos estándar")
     show(f2)
@@ -670,7 +705,7 @@ def render_termometro(data_dir, show):
         st.markdown("**Una variable por vez:** ¿alguna de las series que componen el índice (o un candidato de mercado) marcaba presión "
                     "antes de los saltos? Cada serie se mide en desvíos estándar con el signo «más valor = más presión» (positivo = más presión "
                     "que lo habitual).")
-        pc = por_componente(macro, ev, "Móvil de 36 meses" if modo_z.startswith("Móvil") else "Expansiva", CANDIDATOS)
+        pc = por_componente(macro, ev, _modo(modo_z), CANDIDATOS)
         if pc.empty:
             st.info("No hay series suficientes para esta comparación.")
         else:
@@ -705,10 +740,176 @@ def render_termometro(data_dir, show):
                      "(El PCA usa toda la muestra: es solo un control, no un indicador utilizable en tiempo real.)")
             st.dataframe(pd.DataFrame({"Componente": [COMPONENTES[v][2] for v in carga.index], "Peso": carga.round(3).values}),
                          hide_index=True, width="stretch")
-        t = pd.concat([idx.rename("indice")], axis=1).join(aportes.add_prefix("aporte_"))
+        t = pd.concat([idx_all.rename("indice")], axis=1).join(aportes.add_prefix("aporte_"))
+        t["provisorio"] = [int(x in prov.index) for x in t.index]
         t.index = [f"{x:%Y-%m}" for x in t.index]
         st.download_button("Descargar índice y aportes (CSV)", t.round(4).to_csv().encode("utf-8"), file_name="termometro_presion.csv", mime="text/csv")
 
     st.download_button("Descargar resumen del termómetro (TXT, para compartir con Claude)", ("\n".join(informe)).encode("utf-8"),
                        file_name="termometro_resumen.txt", mime="text/plain", key="ter_dl",
                        help="Parámetros, correlación cruzada, prueba fuera de muestra y estudio de eventos de lo que estás viendo, en texto plano.")
+
+
+# ====================================================================== Tensión de mercado (panel de alerta)
+SENALES = {  # clave: (variable, transformacion, signo, etiqueta)
+    "RIESGO_PAIS|Nivel": ("RIESGO_PAIS", "Nivel", +1, "Riesgo país (nivel)"),
+    "BRECHA_CCL|Nivel": ("BRECHA_CCL", "Nivel", +1, "Brecha CCL (nivel)"),
+    "BRECHA_MEP|Nivel": ("BRECHA_MEP", "Nivel", +1, "Brecha MEP (nivel)"),
+    "BRECHA_BLUE|Nivel": ("BRECHA_BLUE", "Nivel", +1, "Brecha blue (nivel)"),
+    "RIESGO_PAIS|Cambio mensual (diferencia)": ("RIESGO_PAIS", "Cambio mensual (diferencia)", +1, "Riesgo país (cambio mensual)"),
+}
+SENALES_DEFAULT = ["RIESGO_PAIS|Nivel", "BRECHA_CCL|Nivel"]
+
+
+def senal_z(macro, clave, modo):
+    v, tr, sg, _ = SENALES[clave]
+    x, _ = transformar(macro[macro["variable"] == v].set_index("fecha")["valor"], tr)
+    return (_zscore(x, modo) * sg).dropna()
+
+
+def evaluar_alerta(z, jump, th, h, cut):
+    """Alerta en el mes t si z(t) > cut. Resultado a acertar: salto >= th en alguno de los meses t+1..t+h.
+    Se evalúa solo donde hay datos de los h meses siguientes. Devuelve un dict de métricas y la serie de aciertos."""
+    jump = jump.sort_index()
+    z = z.reindex(jump.index)
+    y = pd.Series(np.nan, index=jump.index)
+    vals = jump.values
+    for i in range(len(vals) - h):
+        w = vals[i + 1:i + 1 + h]
+        y.iloc[i] = float(np.any(w >= th)) if not np.all(np.isnan(w)) else np.nan
+    d = pd.concat([z.rename("z"), y.rename("y")], axis=1).dropna()
+    al = d[d["z"] > cut]
+    sin = d[d["z"] <= cut]
+    ev = eventos_saltos(jump.dropna(), th)
+    cap = 0
+    elig = 0
+    for e in ev:
+        pre = [e - pd.offsets.MonthBegin(j) for j in range(1, h + 1)]
+        zs = [z.get(t, np.nan) for t in pre]
+        if np.all(np.isnan(zs)):
+            continue
+        elig += 1
+        cap += int(np.nanmax(zs) > cut)
+    pos = d["y"].sum()
+    return {
+        "n": len(d), "tasa_base": d["y"].mean() if len(d) else np.nan,
+        "alertas": len(al), "aciertos": int(al["y"].sum()), "falsas": int(len(al) - al["y"].sum()),
+        "precision": al["y"].mean() if len(al) else np.nan, "sin_alerta": sin["y"].mean() if len(sin) else np.nan,
+        "recall": (al["y"].sum() / pos) if pos else np.nan, "meses_previos": int(pos),
+        "episodios": elig, "episodios_con_alerta": cap, "d": d,
+    }
+
+
+def render_tension(data_dir, show):
+    path = Path(data_dir) / "macro.csv"
+    st.caption("Panel de alerta con variables de mercado (riesgo país y brechas). Mide qué tan seguido, tras una señal de tensión, hubo un salto "
+               "del dólar en los meses siguientes. Es una prueba histórica y descriptiva: no es un pronóstico.")
+    if not path.exists():
+        st.info("Falta data/macro.csv. Correr fetch_macro.py y commitear data/.")
+        return
+    macro = load_macro(str(path), path.stat().st_mtime)
+    have = set(macro["variable"])
+    claves = [k for k, v in SENALES.items() if v[0] in have]
+    dolares = [v for v in ("DOLAR_CCL", "DOLAR_MEP", "DOLAR_BLUE", "DOLAR_OFICIAL") if v in have]
+    if not claves or not dolares:
+        st.warning("data/macro.csv no tiene riesgo país, brechas o cotizaciones del dólar suficientes.")
+        return
+    et = macro.drop_duplicates("variable").set_index("variable")["etiqueta"].to_dict()
+    c1, c2, c3 = st.columns(3)
+    sel = c1.multiselect("Señales", claves, default=[k for k in SENALES_DEFAULT if k in claves], key="ten_sel",
+                         format_func=lambda k: SENALES[k][3])
+    tgt = c2.selectbox("Dólar cuyo salto se quiere anticipar", dolares, key="ten_tgt", format_func=lambda v: et[v].split(" (")[0])
+    th = c3.slider("Salto mensual (≥ %)", 5, 40, 10, 1, key="ten_th", help="Variación del promedio mensual del dólar respecto del mes anterior.")
+    c4, c5, c6 = st.columns(3)
+    h = c4.slider("Ventana de aviso (meses)", 1, 6, 3, 1, key="ten_h", help="Una alerta «acierta» si hay un salto en alguno de los h meses siguientes.")
+    cut = c5.slider("Umbral de alerta (z >)", 0.0, 2.0, 1.0, 0.25, key="ten_cut",
+                    help="Desvíos estándar sobre lo habitual (calculado solo con datos anteriores) a partir de los cuales hay alerta.")
+    modo_z = c6.radio("Estandarización", ["Expansiva (solo pasado)", "Móvil de 36 meses"], key="ten_z", help="Cada mes se compara solo con datos anteriores.")
+    if not sel:
+        st.info("Elegí al menos una señal.")
+        return
+    modo = _modo(modo_z)
+    zs = {SENALES[k][3]: senal_z(macro, k, modo) for k in sel}
+    if len(sel) >= 2:
+        zs["Combinada (promedio)"] = pd.concat(list(zs.values()), axis=1).mean(axis=1).dropna()
+    raw = macro[macro["variable"] == tgt].set_index("fecha")["valor"].sort_index().asfreq("MS")
+    jump = (raw.pct_change(1, fill_method=None) * 100)
+    if tgt == "DOLAR_CCL" and any("CCL" in k for k in sel) or tgt == "DOLAR_MEP" and any("MEP" in k for k in sel) \
+            or tgt == "DOLAR_BLUE" and any("BLUE" in k for k in sel):
+        st.caption("⚠️ La brecha elegida incluye la propia cotización del dólar que querés anticipar: parte de la «señal» es persistencia del precio.")
+    if "ArgentinaDatos" in str(macro[macro["variable"] == tgt]["fuente"].iloc[-1]):
+        st.caption(f"⚠️ **{et[tgt].split(' (')[0]}** y las brechas con dólares libres vienen de ArgentinaDatos (fuente no oficial).")
+
+    res = {n: evaluar_alerta(z, jump, th, h, cut) for n, z in zs.items()}
+    ev = eventos_saltos(jump.dropna(), th)
+    informe = [f"## Parametros\ndolar={tgt}; salto>={th}%; ventana={h} meses; alerta si z>{cut}; estandarizacion={modo_z}; "
+               f"senales={', '.join(sel)}; ultimo_mes={jump.dropna().index.max():%Y-%m}; episodios={len(ev)}\n"]
+    base_ref = next(iter(res.values()))["tasa_base"]
+
+    # ---- lectura actual
+    st.subheader("Lectura actual")
+    cols = st.columns(len(zs))
+    filas_act = []
+    for col, (n, z) in zip(cols, zs.items()):
+        ult = z.index.max()
+        val = float(z.iloc[-1])
+        col.metric(n, f"{val:+.2f}", delta="EN ALERTA" if val > cut else "fuera de alerta", delta_color="inverse" if val > cut else "off",
+                   help=f"Último dato: {ult:%Y-%m}. Desvíos estándar sobre lo habitual con datos anteriores.")
+        filas_act.append({"senal": n, "mes": f"{ult:%Y-%m}", "z": round(val, 3), "en_alerta": bool(val > cut)})
+    informe.append("## Lectura actual\n" + pd.DataFrame(filas_act).to_csv(index=False))
+
+    # ---- gráfico
+    f1 = go.Figure()
+    colores = {0: REM_C, 1: MAC_C, 2: "#8e6bd1", 3: "#2ea043", 4: "#d64541"}
+    for i, (n, z) in enumerate(zs.items()):
+        f1.add_trace(go.Scatter(x=z.index, y=z, mode="lines", name=n, line=dict(color=colores.get(i, "gray"), width=3 if n.startswith("Comb") else 1.8,
+                                                                               dash="dot" if n.startswith("Comb") else "solid")))
+    f1.add_hline(y=cut, line=dict(color="gray", dash="dash", width=1.5), annotation_text="umbral de alerta", annotation_position="top left")
+    for e in ev:
+        f1.add_vline(x=e, line=dict(color="rgba(214,69,65,0.55)", width=1.5))
+    allz = pd.concat(list(zs.values()))
+    _sombrear(f1, allz.index.min(), allz.index.max())
+    f1.update_layout(title=f"Señales de tensión y {len(ev)} saltos de al menos {th}% del dólar (líneas rojas)", height=470, hovermode="x unified",
+                     legend=dict(orientation="h", y=-0.2), yaxis_title="desvíos estándar sobre lo habitual")
+    show(f1)
+
+    # ---- tabla de aciertos
+    st.subheader("¿Cuánto acertó cada señal?")
+    fil = []
+    for n, r in res.items():
+        fil.append({"Señal": n, "Meses de alerta": r["alertas"], "Seguidos de salto": r["aciertos"], "Falsas alarmas": r["falsas"],
+                    "% de alertas con salto": None if r["precision"] != r["precision"] else round(r["precision"] * 100),
+                    "% sin alerta con salto": None if r["sin_alerta"] != r["sin_alerta"] else round(r["sin_alerta"] * 100),
+                    "Tasa base %": None if r["tasa_base"] != r["tasa_base"] else round(r["tasa_base"] * 100),
+                    "% meses previos a salto con alerta": None if r["recall"] != r["recall"] else round(r["recall"] * 100),
+                    "Episodios con alerta previa": f"{r['episodios_con_alerta']} de {r['episodios']}"})
+    tb = pd.DataFrame(fil)
+    st.dataframe(tb, hide_index=True, width="stretch")
+    informe.append("## Aciertos por senal\n" + tb.to_csv(index=False))
+    st.caption(f"Meses evaluados: {next(iter(res.values()))['n']} (los que tienen datos de los {h} meses siguientes). «Tasa base» es el % de meses "
+               f"con un salto en la ventana, haya o no alerta. Una señal sirve si «% de alertas con salto» supera claramente a «% sin alerta con "
+               f"salto» y a la tasa base, **sin** generar demasiadas falsas alarmas.")
+
+    # ---- por régimen
+    reg_f = []
+    for n, r in res.items():
+        d = r["d"]
+        for nombre, *_ in REGIMENES:
+            sub = d[[regimen_de(t) == nombre for t in d.index]]
+            al = sub[sub["z"] > cut]
+            if len(sub):
+                reg_f.append({"Señal": n, "Régimen": nombre, "Meses": len(sub), "Alertas": len(al), "Seguidas de salto": int(al["y"].sum()),
+                              "Meses con salto en ventana": int(sub["y"].sum())})
+    with st.expander("Desglose por régimen cambiario"):
+        rg = pd.DataFrame(reg_f)
+        st.dataframe(rg, hide_index=True, width="stretch")
+        st.caption("Con pocos meses o saltos en un régimen (en especial Bandas), las cuentas no permiten sacar conclusiones.")
+    informe.append("## Por regimen\n" + pd.DataFrame(reg_f).to_csv(index=False))
+    informe.append("## Episodios (primer mes de cada salto)\n" + "\n".join(f"{e:%Y-%m},{jump[e]:.1f}%,{regimen_de(e)}" for e in ev) + "\n")
+
+    st.markdown('<div class="rem-callout">Lectura con cuidado: el umbral y la ventana se pueden mover hasta que el resultado se vea bien, y eso '
+                'infla los aciertos. Los meses seguidos de una misma crisis cuentan varias veces, pero hay pocos episodios independientes '
+                '(mirá «Episodios con alerta previa»). Si una señal acierta la mitad de las veces, la otra mitad son falsas alarmas. '
+                'Es una verificación histórica sobre datos ya conocidos, no una garantía hacia adelante.</div>', unsafe_allow_html=True)
+    st.download_button("Descargar resumen de tensión (TXT, para compartir con Claude)", "\n".join(informe).encode("utf-8"),
+                       file_name="tension_resumen.txt", mime="text/plain", key="ten_dl")
