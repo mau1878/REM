@@ -12,6 +12,8 @@ import plotly.graph_objects as go
 import streamlit as st
 from plotly.colors import sample_colorscale
 
+import macro_tab  # pestaña «Contexto macro-financiero» (usa data/macro.csv de fetch_macro.py)
+
 DATA = Path(__file__).parent / "data"
 KEY = ["relevamiento", "variable", "unidad_norm", "periodo_tipo", "fecha_objetivo"]
 NIVELES = {"TC_NOMINAL", "EXPORTACIONES", "IMPORTACIONES"}
@@ -397,8 +399,9 @@ else:
                 help="Compara el error del REM con el de un pronóstico sin esfuerzo: repetir el último dato conocido. Menor a 1: el REM se equivoca menos que el ingenuo. Mayor a 1: no le gana.")
     st.markdown(f'<div class="rem-callout">{esc(frase(unidad, m["n"], h0, h1, m))}</div>', unsafe_allow_html=True)
 
-t_res, t_evo, t_hor, t_tie, t_met = st.tabs(["Resumen general", "Evolución de proyecciones", "Error por horizonte",
-                                              "Errores en el tiempo", "Metodología y límites"])
+t_res, t_evo, t_hor, t_tie, t_mac, t_met = st.tabs(["Resumen general", "Evolución de proyecciones", "Error por horizonte",
+                                                    "Errores en el tiempo", "Contexto macro-financiero",
+                                                    "Metodología y límites"])
 
 # ---------------------------------------------------------------- resumen general (portada)
 with t_res:
@@ -694,6 +697,10 @@ with t_tie:
             cols_top.append("error_rel_pct")
         st.dataframe(top[cols_top].round(2), width="stretch", hide_index=True)
 
+# ---------------------------------------------------------------- contexto macro-financiero
+with t_mac:
+    macro_tab.render(ERR, DATA, VAR_NAMES, show, unit_label)
+
 # ---------------------------------------------------------------- metodologia y limites
 with t_met:
     st.markdown("""
@@ -712,6 +719,9 @@ fuentes originales antes de usarla o citarla.
   **mediana** de los analistas y, cuando existe, el rango **p10–p90**.
 - **Resultados reales:** series del BCRA (tipo de cambio mayorista, tasas, inflación) y del INDEC vía datos.gob.ar (inflación
   núcleo y GBA, PIB, desocupación, exportaciones e importaciones). Los datos se actualizan una vez por mes de forma automática.
+- **Contexto macro-financiero:** reservas, compras de divisas, base monetaria, M2 y depósitos (API de estadísticas monetarias del BCRA);
+  formación de activos externos y cuenta corriente cambiaria (Balance Cambiario del BCRA, vía datos.gob.ar); dólar CCL y riesgo país
+  (**ArgentinaDatos, una fuente de terceros, no oficial**). La brecha es el CCL contra el mayorista oficial, promediada por mes.
 - **Hitos** (líneas punteadas): fechas orientativas cargadas a mano; no son parte del análisis.
 
 ### Cómo se calcula
@@ -744,6 +754,11 @@ fuentes originales antes de usarla o citarla.
 10. **La «Tasa de interés de referencia del REM (EMPALME BADLAR → TAMAR)» también es un armado mío:** BADLAR y TAMAR son tasas de
    depósitos a plazo fijo de universos distintos; el REM hizo el cambio en dic-2024, pero no publica una serie única.
 11. **No es asesoramiento financiero ni una opinión política.** Es una exploración de datos públicos.
+12. **Las series macro tienen sus propios límites.** «Compras de divisas del BCRA» es la variación de reservas por compra de divisas que
+    publica el BCRA, no un registro oficial de intervención; las series del Balance Cambiario llegan con unas semanas de rezago; el dólar CCL
+    y el riesgo país vienen de una fuente de terceros que puede cambiar o fallar; y los saldos en pesos son nominales (conviene mirar variaciones).
+13. **Cruzar el error del REM con una serie macro no prueba causalidad.** Son correlaciones descriptivas entre meses que no son independientes;
+    con pocos meses o con unos pocos episodios de crisis, el resultado puede cambiar mucho al mover el período o el rezago.
 """)
     if REPO_URL:
         st.markdown(f"Código y datos: {REPO_URL}")
@@ -751,6 +766,6 @@ fuentes originales antes de usarla o citarla.
                 "**Correcciones y comentarios:** si encontrás un error, avisame por el mismo medio donde encontraste este link.")
 
 st.markdown(
-    f'<div class="rem-foot">Fuentes: REM y estadísticas monetarias (BCRA); INDEC vía datos.gob.ar. '
+    f'<div class="rem-foot">Fuentes: REM y estadísticas monetarias (BCRA); INDEC y Balance Cambiario vía datos.gob.ar; CCL y riesgo país: ArgentinaDatos (no oficial). '
     f'Último relevamiento cargado: {esc(LONG["relevamiento"].max())}. Herramienta exploratoria hecha con ayuda de IA; '
     f'puede contener errores (ver «Metodología y límites»).<br>© 2026 MTaurus • @MTaurus_ok • Buenos Aires</div>', unsafe_allow_html=True)
