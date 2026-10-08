@@ -1040,3 +1040,23 @@ def render_tcr(data_dir, show):
                 'crisis, no es un equilibrio; (3) mayores exportaciones de energía y minería podrían sostener un tipo de cambio real más bajo que el '
                 'histórico, pero estos datos no permiten estimar cuánto; (4) el IPC de Argentina es un índice encadenado desde variaciones mensuales; '
                 '(5) con pocos meses en Bandas, sus medianas y extremos son poco confiables.</div>', unsafe_allow_html=True)
+
+    # --- exportable para compartir con Claude (mismo estilo que Termometro y Tension)
+    ult = d.tail(24).copy()
+    ult["IPC Argentina (var. % mensual)"] = ser("IPC_ARG").pct_change().reindex(ult.index) * 100
+    ult["IPC EE.UU. (var. % mensual)"] = ser("IPC_EEUU").pct_change().reindex(ult.index) * 100
+    ult = ult.rename(columns={"dol": f"dolar_{'oficial' if modo.startswith('May') else 'ccl'}", "tcr": "tipo_cambio_real"})
+    ult.index = [f"{x:%Y-%m}" for x in ult.index]
+    ult.index.name = "mes"
+    informe = ["## Parametros",
+               f"dolar={modo}; base={base:%Y-%m}; horizonte={n_m} meses; inflacion_mensual_AR={p_ar:.2f}%; inflacion_mensual_EEUU={p_us:.2f}%; "
+               f"tcr_personalizado={custom:.1f}; promedio_del_periodo=100 ({d.index.min():%Y-%m} a {base:%Y-%m}, {len(d)} meses)",
+               f"regimenes={'; '.join(f'{n}: {a} a {b or 'hoy'}' for n, a, b in REGIMENES)}",
+               "", "## Lectura actual",
+               f"tipo_cambio_real={t0:.1f}; vs_promedio={(t0 / 100 - 1) * 100:+.1f}%; posicion_en_historia={_pct_hist(d['tcr'], t0):.0f}%; "
+               f"minimo={d['tcr'].min():.1f}; maximo={d['tcr'].max():.1f}; dolar_nominal={d0:,.0f}",
+               "", "## Por regimen", pd.DataFrame(filas).to_csv(index=False).strip(),
+               "", "## Dolar nominal compatible con cada referencia", pd.DataFrame(out).to_csv(index=False).strip(),
+               "", "## Ultimos 24 meses", ult.round(3).to_csv().strip()]
+    st.download_button("Descargar resumen del tipo de cambio real (TXT, para compartir con Claude)", "\n".join(informe).encode("utf-8"),
+                       file_name="tcr_resumen.txt", mime="text/plain", key="tcr_dl")
