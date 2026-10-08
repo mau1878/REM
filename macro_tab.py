@@ -1047,17 +1047,52 @@ def _bloque_precios(macro, ser, show):
     return ["", "## Terminos de intercambio y precios internacionales", tabla.to_csv(index=False).strip()]
 
 
-def _bloque_vencimientos(data_dir):
+def _bloque_vencimientos(data_dir, ser, show):
+    """Perfil oficial de vencimientos en moneda extranjera (data/perfil_vencimientos_usd.csv, generado con
+    generar_perfil_vencimientos.py desde el Excel de la Secretaría de Finanzas) + tabla manual de totales por fuente."""
     st.subheader("Vencimientos de deuda en dólares")
-    path = Path(data_dir) / "vencimientos_usd.csv"
-    if not path.exists():
-        st.info("No hay data/vencimientos_usd.csv. Columnas: anio, concepto, monto_usd_mn, fuente, fecha_dato, nota.")
-        return []
-    v = pd.read_csv(path)
-    st.dataframe(v, hide_index=True, width="stretch")
-    st.caption("Cargado a mano desde notas periodísticas: no se actualiza solo y puede estar desactualizado. Verificar con las fuentes oficiales "
-               "(Secretaría de Finanzas / Ministerio de Economía) antes de usarlo. Montos en millones de USD.")
-    return ["", "## Vencimientos de deuda en USD (carga manual, ver fuente y fecha)", v.to_csv(index=False).strip()]
+    extra = []
+    d = Path(data_dir)
+    p = d / "perfil_vencimientos_usd.csv"
+    if p.exists():
+        v = pd.read_csv(p, dtype={"periodo": str})
+        fuente = v["fuente"].iloc[0] if "fuente" in v else ""
+        mens = v[v["periodo"].str.fullmatch(r"\d{4}-\d{2}")].copy()
+        mens["fecha"] = pd.to_datetime(mens["periodo"] + "-01")
+        hoy = pd.Timestamp.today().normalize().replace(day=1)
+        prox = mens[(mens["fecha"] >= hoy) & (mens["fecha"] < hoy + pd.DateOffset(months=12))]
+        anual = v[~v["periodo"].str.fullmatch(r"\d{4}-\d{2}")].copy()
+        a27 = mens[mens["fecha"].dt.year == 2027]
+        try:
+            res = float(ser("RESERVAS_BRUTAS").dropna().iloc[-1])
+        except Exception:
+            res = float("nan")
+        c = st.columns(3)
+        c[0].metric("Próximos 12 meses (capital + interés)", f"USD {prox['total'].sum():,.0f} mn")
+        c[1].metric("Año 2027", f"USD {a27['total'].sum():,.0f} mn", help="Capital + interés en moneda extranjera de la Administración Central, según la fecha de corte de la fuente.")
+        if res == res and res > 0:
+            c[2].metric("2027 / reservas brutas", f"{a27['total'].sum() / res * 100:.0f}%", delta=f"reservas USD {res:,.0f} mn", delta_color="off")
+        import plotly.graph_objects as go
+        f = go.Figure()
+        f.add_bar(x=mens["fecha"], y=mens["capital"], name="Capital")
+        f.add_bar(x=mens["fecha"], y=mens["interes"], name="Interés")
+        f.update_layout(barmode="stack", title="Vencimientos mensuales en moneda extranjera (USD millones)", height=340, legend=dict(orientation="h"))
+        show(f)
+        t = pd.concat([mens[["periodo", "capital", "interes", "total"]], anual[["periodo", "capital", "interes", "total"]]])
+        st.dataframe(t.round(0), hide_index=True, width="stretch")
+        st.caption(f"Fuente: {fuente}. Incluye bonos (Bonares y Globales), letras en USD, FMI, organismos, bancos y avales. NO incluye los Bopreal "
+                   "(deuda del BCRA), los repos del BCRA ni el pago eventual de títulos vinculados al PBI. USD millones, deuda en situación de pago normal.")
+        extra += ["", f"## Perfil de vencimientos en moneda extranjera, USD millones ({fuente})", t.round(1).to_csv(index=False).strip()]
+    m = d / "vencimientos_usd.csv"
+    if m.exists():
+        w = pd.read_csv(m)
+        with st.expander("Estimaciones de consultoras (carga manual)"):
+            st.dataframe(w, hide_index=True, width="stretch")
+            st.caption("Cargado a mano desde notas periodísticas; difiere del perfil oficial según qué incluya (BCRA, repos, Bopreal). USD millones.")
+        extra += ["", "## Estimaciones de consultoras (carga manual)", w.to_csv(index=False).strip()]
+    if not extra:
+        st.info("Falta data/perfil_vencimientos_usd.csv. Generarlo con: python generar_perfil_vencimientos.py <excel de Finanzas>")
+    return extra
 
 
 def render_tcr(data_dir, show):
@@ -1178,7 +1213,7 @@ def render_tcr(data_dir, show):
                 '(5) con pocos meses en Bandas, sus medianas y extremos son poco confiables.</div>', unsafe_allow_html=True)
 
     st.header("Factores de contexto")
-    extra = _bloque_flujos(macro, ser, show) + _bloque_precios(macro, ser, show) + _bloque_vencimientos(data_dir)
+    extra = _bloque_flujos(macro, ser, show) + _bloque_precios(macro, ser, show) + _bloque_vencimientos(data_dir, ser, show)
 
     # --- exportable para compartir con Claude (mismo estilo que Termometro y Tension)
     ult = d.tail(24).copy()
