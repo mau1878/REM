@@ -173,3 +173,122 @@ def render(ERR, data_dir, var_names, show, unit_label):
                      width="stretch", hide_index=True)
         st.caption("Las series diarias se pasan a mensual: «last» = último dato del mes, «sum» = suma del mes, «mean» = promedio; "
                    "«none» = ya es mensual. Se descarta el mes en curso. Saldos y flujos en USD mn / ARS mn son nominales.")
+
+
+def _unidad(meta, u_tr):
+    return meta["unidad"] if u_tr is None else (u_tr if u_tr == "%" else f"{meta['unidad']} (dif.)")
+
+
+def render_cruce(data_dir, show):
+    """Pestaña «Cruce de series macro»: dos series de macro.csv entre sí (sin el error del REM)."""
+    path = Path(data_dir) / "macro.csv"
+    st.caption("Cruza dos series macro-financieras entre sí. No usa el REM. Tiene sus propios selectores: no depende de los filtros "
+               "de la barra lateral.")
+    if not path.exists():
+        st.info("Falta data/macro.csv. Correr fetch_macro.py y commitear data/.")
+        return
+    macro = load_macro(str(path), path.stat().st_mtime)
+    if macro.empty or macro["variable"].nunique() < 2:
+        st.warning("data/macro.csv no tiene al menos dos series para cruzar.")
+        return
+    et = macro.drop_duplicates("variable").set_index("variable")["etiqueta"].to_dict()
+    mvars = sorted(et, key=lambda x: et[x])
+
+    def _idx(k, alt):
+        return mvars.index(k) if k in mvars else alt
+
+    ca, cb = st.columns(2)
+    a = ca.selectbox("Serie A", mvars, index=_idx("RESERVAS_BRUTAS", 0), format_func=lambda x: et[x], key="crx_a")
+    b = cb.selectbox("Serie B", mvars, index=_idx("DOLAR_CCL", min(1, len(mvars) - 1)), format_func=lambda x: et[x], key="crx_b")
+    ma = macro[macro["variable"] == a].iloc[-1]
+    mb = macro[macro["variable"] == b].iloc[-1]
+    ta = ca.selectbox("Transformación de A", TRANSF.get(ma["tipo"], ["Nivel"]), index=min(1, len(TRANSF.get(ma["tipo"], ["Nivel"])) - 1),
+                      key=f"crx_ta|{a}")
+    tb = cb.selectbox("Transformación de B", TRANSF.get(mb["tipo"], ["Nivel"]), index=min(1, len(TRANSF.get(mb["tipo"], ["Nivel"])) - 1),
+                      key=f"crx_tb|{b}")
+    k = st.select_slider("Desfase de B respecto de A (meses)", list(range(-6, 13)), value=0, key="crx_k",
+                         help="k > 0: se compara A de un mes con B de k meses después (A «adelanta» a B). k < 0: al revés.")
+    if a == b and k == 0 and ta == tb:
+        st.warning("Elegiste la misma serie con la misma transformación y sin desfase: la correlación es trivialmente 1.")
+
+    sa, ua = transformar(macro[macro["variable"] == a].set_index("fecha")["valor"], ta)
+    sb, ub = transformar(macro[macro["variable"] == b].set_index("fecha")["valor"], tb)
+    df = pd.concat([sa.rename("A"), sb.shift(-k).rename("B")], axis=1, join="inner").dropna()
+    if df.empty:
+        st.warning("No hay meses en común entre las dos series con esta combinación.")
+        return
+    if len(df) > 1:
+        meses = [f"{t:%Y-%m}" for t in df.index]
+        d0, d1 = st.select_slider("Período (mes de la serie A)", meses, value=(meses[0], meses[-1]), key=f"crx_rng|{a}|{b}|{k}")
+        df = df[(df.index >= pd.Timestamp(d0 + "-01")) & (df.index <= pd.Timestamp(d1 + "-01"))]
+
+    na, nb = et[a].split(" (")[0], et[b].split(" (")[0]
+    uA, uB = _unidad(ma, ua), _unidad(mb, ub)
+    ktxt = f" (B desplazada {k:+d} m)" if k else ""
+    for m_ in (ma, mb):
+        if "ArgentinaDatos" in str(m_["fuente"]):
+            st.caption(f"⚠️ **{et[m_['variable']]}** viene de una fuente no oficial ({m_['fuente']}).")
+
+    n = len(df)
+    pear = df["A"].corr(df["B"]) if n > 2 else np.nan
+    spear = df["A"].rank().corr(df["B"].rank()) if n > 2 else np.nan
+    m = st.columns(3)
+    m[0].metric("Meses en la muestra (n)", f"{n:,}")
+    m[1].metric("Correlación de Pearson", f"{pear:+.2f}" if pear == pear else "s/d")
+    m[2].metric("Correlación de Spearman", f"{spear:+.2f}" if spear == spear else "s/d")
+    if n < 24:
+        st.warning(f"Solo {n} meses: con tan pocos datos cualquier correlación es muy inestable.")
+    tendencia = {"stock", "precio"}
+    if ta == "Nivel" and tb == "Nivel" and ma["tipo"] in tendencia and mb["tipo"] in tendencia:
+        st.warning("Ambas series están en nivel y suelen tener tendencia (o inflación nominal de por medio): dos series que suben "
+                   "con el tiempo se correlacionan fuerte aunque no tengan relación. Probá con cambio mensual o interanual.")
+    st.markdown('<div class="rem-callout">Lectura con cuidado: es una comparación descriptiva. Los meses consecutivos no son '
+                'independientes, así que las correlaciones suelen verse más firmes de lo que son, y unos pocos meses de crisis '
+                'pueden dominar el resultado. Que dos series se muevan juntas no dice cuál causa a cuál, ni si hay una tercera '
+                'detrás.</div>', unsafe_allow_html=True)
+
+    f1 = make_subplots(specs=[[{"secondary_y": True}]])
+    f1.add_trace(go.Scatter(x=df.index, y=df["A"], mode="lines", name=f"A: {na} · {ta}", line=dict(color=REM_C, width=2.5)),
+                 secondary_y=False)
+    f1.add_trace(go.Scatter(x=df.index, y=df["B"], mode="lines", name=f"B: {nb} · {tb}{ktxt}", line=dict(color=MAC_C, width=2.5)),
+                 secondary_y=True)
+    f1.update_layout(title=f"{na} y {nb}", height=470, hovermode="x unified", legend=dict(orientation="h", y=-0.2),
+                     xaxis_title="Mes de la serie A")
+    f1.update_yaxes(title_text=uA, secondary_y=False)
+    f1.update_yaxes(title_text=uB, secondary_y=True, showgrid=False)
+    show(f1)
+    st.caption("Cada serie tiene su propio eje: las escalas son distintas y no se pueden comparar a ojo.")
+
+    f2 = go.Figure(go.Scatter(
+        x=df["A"], y=df["B"], mode="markers", name="Meses",
+        marker=dict(size=8, color=df.index.year, colorscale="Viridis", showscale=True, colorbar=dict(title="Año")),
+        customdata=np.stack([df.index.strftime("%Y-%m")], axis=-1),
+        hovertemplate="Mes %{customdata[0]}<br>A: %{x:,.2f}<br>B: %{y:,.2f}<extra></extra>"))
+    if n >= 3 and df["A"].std() > 0:
+        kk, b0 = np.polyfit(df["A"], df["B"], 1)
+        xs = np.array([df["A"].min(), df["A"].max()])
+        f2.add_trace(go.Scatter(x=xs, y=kk * xs + b0, mode="lines", name="Recta de ajuste lineal",
+                                line=dict(color="gray", dash="dash"), hoverinfo="skip"))
+    f2.update_layout(title=f"{nb}{ktxt} vs. {na}", height=430, xaxis_title=f"A: {na} [{uA}]", yaxis_title=f"B: {nb} [{uB}]",
+                     legend=dict(orientation="h", y=-0.2))
+    show(f2)
+
+    if n >= 18:
+        rc = df["A"].rolling(12, min_periods=12).corr(df["B"]).dropna()
+        f3 = go.Figure(go.Scatter(x=rc.index, y=rc, mode="lines", line=dict(color=MAC_C, width=2.5), name="Pearson móvil 12 m"))
+        f3.add_hline(y=0, line=dict(color="gray", width=1))
+        f3.update_layout(title="Correlación de Pearson en ventana móvil de 12 meses", height=330, yaxis=dict(range=[-1, 1]),
+                         xaxis_title="Último mes de la ventana", yaxis_title="Pearson")
+        show(f3)
+        st.caption("Si la correlación cambia de signo o de magnitud según el período, la relación no es estable.")
+
+    with st.expander("Datos cruzados y descripción de las series"):
+        t = df.rename(columns={"A": f"A: {na} [{uA}]", "B": f"B: {nb} [{uB}]"}).copy()
+        t.index = [f"{x:%Y-%m}" for x in t.index]
+        t.index.name = "mes (serie A)"
+        st.dataframe(t.round(3), width="stretch")
+        st.download_button("Descargar datos cruzados (CSV)", t.to_csv().encode("utf-8"), file_name=f"{a}_vs_{b}.csv", mime="text/csv")
+        ult = macro[macro["variable"].isin([a, b])].sort_values("fecha").groupby("variable").tail(1).copy()
+        ult["último mes"] = ult["fecha"].dt.strftime("%Y-%m")
+        st.dataframe(ult[["variable", "etiqueta", "unidad", "fuente", "agregacion", "último mes"]].reset_index(drop=True),
+                     width="stretch", hide_index=True)
