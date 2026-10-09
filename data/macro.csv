@@ -836,6 +836,375 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-06-01,CC_SERVICIOS,-626.6524999999999,Cuenta corriente cambiaria: total servicios,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2026-07-01,CC_SERVICIOS,-900.1830000000004,Cuenta corriente cambiaria: total servicios,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2026-08-01,CC_SERVICIOS,-712.2184,Cuenta corriente cambiaria: total servicios,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-06-01,CF_TOTAL,1983.125969240802,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,CF_TOTAL,2743.204658175528,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,CF_TOTAL,-468.60391687799176,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,CF_TOTAL,-167.99928815768567,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,CF_TOTAL,9277.488837950788,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,CF_TOTAL,1673.6030032112114,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,CF_TOTAL,3451.817612143018,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,CF_TOTAL,8008.487868846427,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,CF_TOTAL,4527.208985925445,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,CF_TOTAL,784.6116520162066,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,CF_TOTAL,-872.9947478497272,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,CF_TOTAL,-1258.2203338650152,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,CF_TOTAL,3337.7910828953773,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,CF_TOTAL,-305.62200074729554,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,CF_TOTAL,2211.487557588774,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,CF_TOTAL,2658.7450242156824,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,CF_TOTAL,3368.9633781326306,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,CF_TOTAL,4822.7465790450005,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,CF_TOTAL,1253.7813436766578,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,CF_TOTAL,7829.529276205144,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,CF_TOTAL,118.46553466687112,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,CF_TOTAL,1252.6558313101975,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,CF_TOTAL,-4263.335983631271,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,CF_TOTAL,-4612.310777355856,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,CF_TOTAL,12229.939678326296,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,CF_TOTAL,-2897.5684104267148,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,CF_TOTAL,-5350.325943885796,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,CF_TOTAL,-4128.962135955412,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,CF_TOTAL,5258.887736127455,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,CF_TOTAL,-2736.5187308560544,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,CF_TOTAL,13763.762221930112,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,CF_TOTAL,-381.0084885949648,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,CF_TOTAL,274.5280032893368,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,CF_TOTAL,-2410.186015130404,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,CF_TOTAL,4851.964369805341,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,CF_TOTAL,-7140.843387297489,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,CF_TOTAL,-2499.665663985204,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,CF_TOTAL,2412.160988097904,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,CF_TOTAL,-14565.768749913534,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,CF_TOTAL,-6644.325689204393,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,CF_TOTAL,-5409.631496210734,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,CF_TOTAL,-936.942898602954,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,CF_TOTAL,181.28543536207465,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,CF_TOTAL,-243.4255923687775,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,CF_TOTAL,46.697899999999926,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,CF_TOTAL,-1094.5155,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,CF_TOTAL,-71.21529999999979,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,CF_TOTAL,-579.3340000000002,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,CF_TOTAL,-1235.082508554755,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,CF_TOTAL,-1087.1394245614938,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,CF_TOTAL,-450.6712302233205,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,CF_TOTAL,-952.8438539474172,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,CF_TOTAL,-1282.6583921292022,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,CF_TOTAL,-1057.6419498821344,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,CF_TOTAL,-52.41711651848891,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,CF_TOTAL,-516.2638708300595,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,CF_TOTAL,-362.7895972059316,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,CF_TOTAL,-1020.945668470486,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,CF_TOTAL,-1242.7526207406509,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,CF_TOTAL,-732.1896659485676,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,CF_TOTAL,-165.0981824020073,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,CF_TOTAL,-633.3863763891296,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,CF_TOTAL,3866.376578584531,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,CF_TOTAL,-2383.710261131197,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,CF_TOTAL,-840.8208636035088,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,CF_TOTAL,193.3151664167979,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,CF_TOTAL,-1954.7690106606972,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,CF_TOTAL,-1523.0985255070996,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,CF_TOTAL,-421.0347611343575,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,CF_TOTAL,5582.698644024801,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,CF_TOTAL,-323.6985956909604,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,CF_TOTAL,-643.5567872190352,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,CF_TOTAL,961.3087542576948,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,CF_TOTAL,-2998.1700358741973,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,CF_TOTAL,-341.81997260840467,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,CF_TOTAL,-3793.104372650504,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,CF_TOTAL,2241.0271137757045,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,CF_TOTAL,-303.3618806338916,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,CF_TOTAL,3669.064405027598,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,CF_TOTAL,-2219.1542067058003,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,CF_TOTAL,-733.7101282947067,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,CF_TOTAL,1854.5486483626032,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,CF_TOTAL,-4091.485400365254,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,CF_TOTAL,-2191.0949839625014,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,CF_TOTAL,-2915.0424896385966,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,CF_TOTAL,-3675.5202857628674,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,CF_TOTAL,4408.628705967763,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,CF_TOTAL,-1132.3107187979977,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,CF_TOTAL,-4254.118370153004,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,CF_TOTAL,-1630.7687794006968,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,CF_TOTAL,-1524.9580098342026,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,CF_TOTAL,2370.22940410256,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,CF_TOTAL,-2487.2194744666017,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,CF_TOTAL,-1565.2043999999996,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,CF_TOTAL,-2011.6100000000004,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,CF_TOTAL,-154.91727470049864,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,CF_TOTAL,633.6519669206959,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,CF_TOTAL,-1045.3076999999994,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,CF_TOTAL,1050.5273000000009,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,CF_TOTAL,660.9077250600011,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,CF_TOTAL,3128.0657212689985,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,CF_TOTAL,2973.360910281603,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,CF_TOTAL,777.3231000000003,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,CF_TOTAL,-539.2819997769686,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,CF_TOTAL,973.537199231762,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,CF_TOTAL,-1891.6276788102016,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,CF_TOTAL,14002.8408947037,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,CF_TOTAL,-2053.577853741998,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,CF_TOTAL,744.8883477871991,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,CF_TOTAL,-2433.859242580298,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,CF_TOTAL,1701.8438000000003,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,CF_TOTAL,-5587.4735832420665,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,CF_TOTAL,1184.208756333197,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,CF_TOTAL,1656.1848582192,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,CF_TOTAL,1505.2680616852576,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,CF_TOTAL,3209.017005791388,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,CF_TOTAL,198.480654798201,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,CF_TOTAL,-2240.761212310302,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,CF_TOTAL,797.2192979952085,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,CF_TOTAL,1762.5069351349905,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,CF_TOTAL,-3191.3527347188947,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,CF_TOTAL,2190.6088358358998,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,CF_TOTAL,-1061.2769462197966,Cuenta financiera cambiaria: total,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-06-01,CKF_TOTAL,1987.5975692408024,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,CKF_TOTAL,2785.6274581755274,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,CKF_TOTAL,-446.58811687799175,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,CKF_TOTAL,-156.77118815768566,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,CKF_TOTAL,9286.172737950788,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,CKF_TOTAL,1674.8155032112115,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,CKF_TOTAL,3456.515112143018,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,CKF_TOTAL,8029.665668846427,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,CKF_TOTAL,4541.288185925445,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,CKF_TOTAL,790.0084520162065,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,CKF_TOTAL,-868.0364478497272,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,CKF_TOTAL,-1251.380933865015,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,CKF_TOTAL,3344.4208828953774,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,CKF_TOTAL,-253.0232007472956,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,CKF_TOTAL,2212.139657588774,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,CKF_TOTAL,2699.1749242156825,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,CKF_TOTAL,3375.3463781326304,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,CKF_TOTAL,4843.7874790450005,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,CKF_TOTAL,1259.9063436766578,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,CKF_TOTAL,7842.519576205144,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,CKF_TOTAL,171.92883466687113,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,CKF_TOTAL,1262.7087313101974,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,CKF_TOTAL,-4242.023683631272,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,CKF_TOTAL,-4604.436777355856,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,CKF_TOTAL,12255.316778326296,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,CKF_TOTAL,-2863.054410426714,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,CKF_TOTAL,-5333.323043885795,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,CKF_TOTAL,-4116.326635955412,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,CKF_TOTAL,5020.615836127456,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,CKF_TOTAL,-2734.0207308560543,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,CKF_TOTAL,13773.373121930112,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,CKF_TOTAL,-320.3023885949648,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,CKF_TOTAL,280.55570328933675,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,CKF_TOTAL,-2406.565315130404,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,CKF_TOTAL,4865.8636698053415,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,CKF_TOTAL,-7126.46988729749,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,CKF_TOTAL,-2494.889963985204,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,CKF_TOTAL,2450.174788097904,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,CKF_TOTAL,-14558.669849913533,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,CKF_TOTAL,-6690.843489204392,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,CKF_TOTAL,-5387.411896210734,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,CKF_TOTAL,-922.512898602954,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,CKF_TOTAL,196.83163536207465,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,CKF_TOTAL,-215.1063923687775,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,CKF_TOTAL,55.533699999999925,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,CKF_TOTAL,-1091.3705,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,CKF_TOTAL,-62.80079999999978,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,CKF_TOTAL,-578.9110000000002,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,CKF_TOTAL,-1230.542308554755,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,CKF_TOTAL,-1085.1577245614938,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,CKF_TOTAL,-442.73183022332046,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,CKF_TOTAL,-947.8823539474172,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,CKF_TOTAL,-1274.116092129202,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,CKF_TOTAL,-1046.6457498821344,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,CKF_TOTAL,-49.24551651848891,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,CKF_TOTAL,-508.45637083005954,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,CKF_TOTAL,-357.04059720593153,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,CKF_TOTAL,-1006.989768470486,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,CKF_TOTAL,-1237.3770207406508,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,CKF_TOTAL,-729.7676659485676,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,CKF_TOTAL,-162.2154824020073,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,CKF_TOTAL,-624.5119763891296,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,CKF_TOTAL,3885.6279785845313,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,CKF_TOTAL,-2372.454461131197,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,CKF_TOTAL,-836.8899636035088,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,CKF_TOTAL,199.36276641679785,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,CKF_TOTAL,-1945.7643106606972,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,CKF_TOTAL,-1521.9238255070995,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,CKF_TOTAL,-412.4115611343575,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,CKF_TOTAL,5587.776144024801,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,CKF_TOTAL,-320.0195956909604,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,CKF_TOTAL,-642.2593872190351,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,CKF_TOTAL,963.3157542576946,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,CKF_TOTAL,-3000.4764358741973,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,CKF_TOTAL,-333.4777726084047,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,CKF_TOTAL,-3795.254972650504,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,CKF_TOTAL,2245.4528137757043,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,CKF_TOTAL,-302.4855806338916,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,CKF_TOTAL,3670.1835050275977,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,CKF_TOTAL,-2224.5492067058003,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,CKF_TOTAL,-737.8173282947067,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,CKF_TOTAL,1868.0876483626032,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,CKF_TOTAL,-4091.080600365254,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,CKF_TOTAL,-2184.7889839625013,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,CKF_TOTAL,-2918.5020896385968,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,CKF_TOTAL,-3670.685585762868,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,CKF_TOTAL,4410.961105967764,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,CKF_TOTAL,-1123.6358187979977,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,CKF_TOTAL,-4259.748470153005,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,CKF_TOTAL,-1636.0657794006968,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,CKF_TOTAL,-1524.6721098342025,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,CKF_TOTAL,2390.55220410256,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,CKF_TOTAL,-2474.306574466602,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,CKF_TOTAL,-1561.1894999999995,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,CKF_TOTAL,-2012.8730000000005,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,CKF_TOTAL,-144.02707470049864,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,CKF_TOTAL,636.818166920696,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,CKF_TOTAL,-1034.3910999999994,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,CKF_TOTAL,1042.6185000000007,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,CKF_TOTAL,657.6422250600011,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,CKF_TOTAL,3138.0861212689983,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,CKF_TOTAL,2975.653010281603,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,CKF_TOTAL,783.6355000000003,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,CKF_TOTAL,-533.8561997769687,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,CKF_TOTAL,995.336199231762,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,CKF_TOTAL,-1892.7416788102016,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,CKF_TOTAL,14009.8834947037,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,CKF_TOTAL,-2046.346453741998,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,CKF_TOTAL,757.9368477871991,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,CKF_TOTAL,-2404.751842580298,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,CKF_TOTAL,1776.7106000000003,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,CKF_TOTAL,-5577.057683242067,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,CKF_TOTAL,1194.107556333197,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,CKF_TOTAL,1658.4513582191998,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,CKF_TOTAL,1505.8841616852576,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,CKF_TOTAL,3221.162705791388,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,CKF_TOTAL,210.024754798201,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,CKF_TOTAL,-2222.0002123103022,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,CKF_TOTAL,798.2853979952085,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,CKF_TOTAL,1768.9236351349905,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,CKF_TOTAL,-3181.483434718895,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,CKF_TOTAL,2205.392735835899,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,CKF_TOTAL,-1056.0988462197963,Total cuenta capital y financiera cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-06-01,CK_CAMBIARIA,4.4716,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,CK_CAMBIARIA,42.4228,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,CK_CAMBIARIA,22.0158,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,CK_CAMBIARIA,11.2281,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,CK_CAMBIARIA,8.6839,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,CK_CAMBIARIA,1.2125,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,CK_CAMBIARIA,4.6975,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,CK_CAMBIARIA,21.1778,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,CK_CAMBIARIA,14.0792,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,CK_CAMBIARIA,5.3968,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,CK_CAMBIARIA,4.9583,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,CK_CAMBIARIA,6.8394,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,CK_CAMBIARIA,6.6298,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,CK_CAMBIARIA,52.5988,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,CK_CAMBIARIA,0.6521,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,CK_CAMBIARIA,40.4299,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,CK_CAMBIARIA,6.383,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,CK_CAMBIARIA,21.0409,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,CK_CAMBIARIA,6.125,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,CK_CAMBIARIA,12.9903,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,CK_CAMBIARIA,53.4633,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,CK_CAMBIARIA,10.0529,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,CK_CAMBIARIA,21.3123,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,CK_CAMBIARIA,7.874,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,CK_CAMBIARIA,25.3771,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,CK_CAMBIARIA,34.514,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,CK_CAMBIARIA,17.0029,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,CK_CAMBIARIA,12.6355,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,CK_CAMBIARIA,-238.2719,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,CK_CAMBIARIA,2.498,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,CK_CAMBIARIA,9.6109,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,CK_CAMBIARIA,60.7061,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,CK_CAMBIARIA,6.0277,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,CK_CAMBIARIA,3.6207,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,CK_CAMBIARIA,13.8993,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,CK_CAMBIARIA,14.3735,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,CK_CAMBIARIA,4.7757,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,CK_CAMBIARIA,38.0138,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,CK_CAMBIARIA,7.0989,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,CK_CAMBIARIA,-46.5178,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,CK_CAMBIARIA,22.2196,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,CK_CAMBIARIA,14.43,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,CK_CAMBIARIA,15.5462,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,CK_CAMBIARIA,28.3192,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,CK_CAMBIARIA,8.8358,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,CK_CAMBIARIA,3.145,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,CK_CAMBIARIA,8.4145,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,CK_CAMBIARIA,0.423,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,CK_CAMBIARIA,4.5402,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,CK_CAMBIARIA,1.9817,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,CK_CAMBIARIA,7.9394,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,CK_CAMBIARIA,4.9615,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,CK_CAMBIARIA,8.5423,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,CK_CAMBIARIA,10.9962,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,CK_CAMBIARIA,3.1716,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,CK_CAMBIARIA,7.8075,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,CK_CAMBIARIA,5.749,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,CK_CAMBIARIA,13.9559,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,CK_CAMBIARIA,5.3756,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,CK_CAMBIARIA,2.422,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,CK_CAMBIARIA,2.8827,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,CK_CAMBIARIA,8.8744,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,CK_CAMBIARIA,19.2514,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,CK_CAMBIARIA,11.2558,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,CK_CAMBIARIA,3.9309,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,CK_CAMBIARIA,6.0476,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,CK_CAMBIARIA,9.0047,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,CK_CAMBIARIA,1.1747,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,CK_CAMBIARIA,8.6232,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,CK_CAMBIARIA,5.0775,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,CK_CAMBIARIA,3.679,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,CK_CAMBIARIA,1.2974,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,CK_CAMBIARIA,2.007,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,CK_CAMBIARIA,-2.3064,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,CK_CAMBIARIA,8.3422,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,CK_CAMBIARIA,-2.1506,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,CK_CAMBIARIA,4.4257,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,CK_CAMBIARIA,0.8763,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,CK_CAMBIARIA,1.1191,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,CK_CAMBIARIA,-5.395,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,CK_CAMBIARIA,-4.1072,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,CK_CAMBIARIA,13.539,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,CK_CAMBIARIA,0.4048,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,CK_CAMBIARIA,6.306,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,CK_CAMBIARIA,-3.4596,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,CK_CAMBIARIA,4.8347,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,CK_CAMBIARIA,2.3324,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,CK_CAMBIARIA,8.6749,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,CK_CAMBIARIA,-5.6301,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,CK_CAMBIARIA,-5.297,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,CK_CAMBIARIA,0.2859,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,CK_CAMBIARIA,20.3228,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,CK_CAMBIARIA,12.9129,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,CK_CAMBIARIA,4.0149,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,CK_CAMBIARIA,-1.263,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,CK_CAMBIARIA,10.8902,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,CK_CAMBIARIA,3.1662,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,CK_CAMBIARIA,10.9166,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,CK_CAMBIARIA,-7.9088,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,CK_CAMBIARIA,-3.2655,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,CK_CAMBIARIA,10.0204,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,CK_CAMBIARIA,2.2921,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,CK_CAMBIARIA,6.3124,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,CK_CAMBIARIA,5.4258,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,CK_CAMBIARIA,21.799,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,CK_CAMBIARIA,-1.114,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,CK_CAMBIARIA,7.0426,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,CK_CAMBIARIA,7.2314,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,CK_CAMBIARIA,13.0485,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,CK_CAMBIARIA,29.1074,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,CK_CAMBIARIA,74.8668,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,CK_CAMBIARIA,10.4159,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,CK_CAMBIARIA,9.8988,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,CK_CAMBIARIA,2.2665,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,CK_CAMBIARIA,0.6161,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,CK_CAMBIARIA,12.1457,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,CK_CAMBIARIA,11.5441,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,CK_CAMBIARIA,18.761,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,CK_CAMBIARIA,1.0661,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,CK_CAMBIARIA,6.4167,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,CK_CAMBIARIA,9.8693,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,CK_CAMBIARIA,14.7839,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,CK_CAMBIARIA,5.1781,Cuenta de capital cambiaria,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-06-01,COBROS_EXPO_AGRO,2452.5008444,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
 2016-07-01,COBROS_EXPO_AGRO,2335.33927537,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
 2016-08-01,COBROS_EXPO_AGRO,2456.82676687,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
@@ -3887,6 +4256,129 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-06-01,FAE_PRIV_NETA,-2064.518,Formación de activos externos del sector privado no financiero (neta: ingresos − egresos; negativo = salida),USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2026-07-01,FAE_PRIV_NETA,-3143.2823,Formación de activos externos del sector privado no financiero (neta: ingresos − egresos; negativo = salida),USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2026-08-01,FAE_PRIV_NETA,-2677.482,Formación de activos externos del sector privado no financiero (neta: ingresos − egresos; negativo = salida),USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-06-01,IED_NETA,404.7117,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,IED_NETA,157.6507,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,IED_NETA,193.438,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,IED_NETA,111.3422,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,IED_NETA,228.1367,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,IED_NETA,272.6816,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,IED_NETA,282.9914,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,IED_NETA,247.0682,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,IED_NETA,97.4274,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,IED_NETA,372.8657,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,IED_NETA,144.16400000000002,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,IED_NETA,120.1865,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,IED_NETA,331.9178,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,IED_NETA,236.9463,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,IED_NETA,141.6824,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,IED_NETA,74.72900000000001,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,IED_NETA,119.419,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,IED_NETA,179.35729999999998,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,IED_NETA,280.5163,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,IED_NETA,105.4803,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,IED_NETA,109.8524,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,IED_NETA,167.5805,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,IED_NETA,121.8095,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,IED_NETA,181.6842,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,IED_NETA,221.1214,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,IED_NETA,151.7217,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,IED_NETA,231.5555,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,IED_NETA,199.7231,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,IED_NETA,539.689,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,IED_NETA,172.9566,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,IED_NETA,273.76590000000004,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,IED_NETA,230.099,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,IED_NETA,735.3805000000001,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,IED_NETA,349.1186,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,IED_NETA,127.4039,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,IED_NETA,148.4356,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,IED_NETA,144.7895,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,IED_NETA,176.2017,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,IED_NETA,131.9804,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,IED_NETA,95.5301,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,IED_NETA,127.7215,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,IED_NETA,166.0152,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,IED_NETA,83.0925,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,IED_NETA,84.3696,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,IED_NETA,170.34619999999998,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,IED_NETA,104.1412,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,IED_NETA,164.66639999999998,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,IED_NETA,81.28320000000001,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,IED_NETA,61.7076,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,IED_NETA,59.8415,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,IED_NETA,68.1781,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,IED_NETA,61.353,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,IED_NETA,54.2534,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,IED_NETA,63.848,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,IED_NETA,86.60650000000001,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,IED_NETA,71.1673,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,IED_NETA,58.1729,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,IED_NETA,65.19449999999999,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,IED_NETA,42.410500000000006,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,IED_NETA,52.4108,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,IED_NETA,66.1677,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,IED_NETA,64.9485,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,IED_NETA,54.0227,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,IED_NETA,82.4275,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,IED_NETA,67.522,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,IED_NETA,36.7867,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,IED_NETA,71.13380000000001,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,IED_NETA,61.6982,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,IED_NETA,48.5982,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,IED_NETA,87.20209999999999,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,IED_NETA,41.1565,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,IED_NETA,37.0741,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,IED_NETA,34.714400000000005,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,IED_NETA,43.3621,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,IED_NETA,32.3419,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,IED_NETA,41.3017,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,IED_NETA,39.8858,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,IED_NETA,37.2798,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,IED_NETA,65.5146,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,IED_NETA,52.5826,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,IED_NETA,54.5743,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,IED_NETA,38.1107,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,IED_NETA,59.0595,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,IED_NETA,54.0489,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,IED_NETA,223.8901,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,IED_NETA,45.1027,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,IED_NETA,69.3096,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,IED_NETA,85.3927,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,IED_NETA,91.07,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,IED_NETA,49.904500000000006,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,IED_NETA,89.95299999999999,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,IED_NETA,45.0998,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,IED_NETA,59.0712,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,IED_NETA,59.7702,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,IED_NETA,56.6721,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,IED_NETA,147.855,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,IED_NETA,74.16340000000001,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,IED_NETA,49.0029,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,IED_NETA,90.06609999999999,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,IED_NETA,68.5569,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,IED_NETA,88.881,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,IED_NETA,44.7,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,IED_NETA,-694.8706,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,IED_NETA,-178.3891,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,IED_NETA,-1048.6458,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,IED_NETA,97.0882,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,IED_NETA,-658.6708,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,IED_NETA,109.3625,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,IED_NETA,153.8685,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,IED_NETA,155.3102,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,IED_NETA,183.0822,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,IED_NETA,-437.4433,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,IED_NETA,124.3431,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,IED_NETA,79.2408,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,IED_NETA,139.41670000000002,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,IED_NETA,196.9403,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,IED_NETA,209.3894,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,IED_NETA,160.77720000000002,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,IED_NETA,145.2928,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,IED_NETA,-797.7285999999999,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,IED_NETA,-45.149400000000014,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,IED_NETA,40.4641,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,IED_NETA,-595.5561,"Inversión directa de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-06-01,IMPO_COMBUSTIBLES,764.0,Importaciones de combustibles y lubricantes,USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2016-07-01,IMPO_COMBUSTIBLES,809.0,Importaciones de combustibles y lubricantes,USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2016-08-01,IMPO_COMBUSTIBLES,546.0,Importaciones de combustibles y lubricantes,USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
@@ -4278,7 +4770,7 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2018-01-01,IPC_EEUU,248.85899999999995,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2018-02-01,IPC_EEUU,249.52900000000002,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2018-03-01,IPC_EEUU,249.577,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
-2018-04-01,IPC_EEUU,250.22700000000012,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
+2018-04-01,IPC_EEUU,250.2270000000001,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2018-05-01,IPC_EEUU,250.792,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2018-06-01,IPC_EEUU,251.01799999999992,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2018-07-01,IPC_EEUU,251.21400000000008,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
@@ -4318,9 +4810,9 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2021-05-01,IPC_EEUU,268.3829999999999,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2021-06-01,IPC_EEUU,270.654,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2021-07-01,IPC_EEUU,271.9029999999999,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
-2021-08-01,IPC_EEUU,272.67599999999993,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
+2021-08-01,IPC_EEUU,272.6759999999999,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2021-09-01,IPC_EEUU,273.90999999999997,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
-2021-10-01,IPC_EEUU,276.55000000000007,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
+2021-10-01,IPC_EEUU,276.55,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2021-11-01,IPC_EEUU,278.919,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2021-12-01,IPC_EEUU,280.845,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2022-01-01,IPC_EEUU,282.54299999999995,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
@@ -4354,7 +4846,7 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2024-05-01,IPC_EEUU,313.1749999999999,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2024-06-01,IPC_EEUU,313.04399999999987,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2024-07-01,IPC_EEUU,313.5690000000001,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
-2024-08-01,IPC_EEUU,314.0620000000001,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
+2024-08-01,IPC_EEUU,314.06200000000007,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2024-09-01,IPC_EEUU,314.7320000000001,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2024-10-01,IPC_EEUU,315.6309999999999,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
 2024-11-01,IPC_EEUU,316.5279999999999,"IPC de EE.UU., todos los ítems urbanos, desestacionalizado (índice, FRED CPIAUCSL; meses sin publicar se interpolan)",índice 1982-84=100,FRED (St. Louis Fed),precio,none
@@ -4503,6 +4995,129 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-07-01,M2,95273925.0,M2 (fin de mes),ARS mn,BCRA,stock,last
 2026-08-01,M2,95231750.0,M2 (fin de mes),ARS mn,BCRA,stock,last
 2026-09-01,M2,95871312.0,M2 (fin de mes),ARS mn,BCRA,stock,last
+2016-06-01,PORTAFOLIO_NETO,237.1328,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,PORTAFOLIO_NETO,129.2412,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,PORTAFOLIO_NETO,243.1902,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,PORTAFOLIO_NETO,200.1859,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,PORTAFOLIO_NETO,222.7515,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,PORTAFOLIO_NETO,39.8667,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,PORTAFOLIO_NETO,-174.99370000000002,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,PORTAFOLIO_NETO,159.64780000000002,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,PORTAFOLIO_NETO,490.4722,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,PORTAFOLIO_NETO,534.3454,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,PORTAFOLIO_NETO,297.3343000000001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,PORTAFOLIO_NETO,878.1319,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,PORTAFOLIO_NETO,1975.2388,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,PORTAFOLIO_NETO,217.5633999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,PORTAFOLIO_NETO,1010.2001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,PORTAFOLIO_NETO,1991.2261,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,PORTAFOLIO_NETO,823.8296000000001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,PORTAFOLIO_NETO,1112.8321,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,PORTAFOLIO_NETO,604.7149000000001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,PORTAFOLIO_NETO,533.0012999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,PORTAFOLIO_NETO,252.7764,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,PORTAFOLIO_NETO,263.66700000000003,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,PORTAFOLIO_NETO,-241.07989999999967,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,PORTAFOLIO_NETO,-1364.4102,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,PORTAFOLIO_NETO,-831.9173000000001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,PORTAFOLIO_NETO,-1072.4252,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,PORTAFOLIO_NETO,-645.4930999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,PORTAFOLIO_NETO,-1284.6109,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,PORTAFOLIO_NETO,-830.6602999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,PORTAFOLIO_NETO,-305.5878,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,PORTAFOLIO_NETO,-650.2743,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,PORTAFOLIO_NETO,-226.6956,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,PORTAFOLIO_NETO,175.57770000000005,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,PORTAFOLIO_NETO,-242.95130000000017,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,PORTAFOLIO_NETO,-138.06370000000015,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,PORTAFOLIO_NETO,-857.0612999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,PORTAFOLIO_NETO,-1407.3180000000002,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,PORTAFOLIO_NETO,-850.2216,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,PORTAFOLIO_NETO,-974.0639,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,PORTAFOLIO_NETO,2.962300000000001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,PORTAFOLIO_NETO,2.6048,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,PORTAFOLIO_NETO,-0.2029999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,PORTAFOLIO_NETO,6.1623,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,PORTAFOLIO_NETO,1.2334000000000005,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,PORTAFOLIO_NETO,1.66,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,PORTAFOLIO_NETO,4.8129,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,PORTAFOLIO_NETO,1.7623,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,PORTAFOLIO_NETO,2.8103,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,PORTAFOLIO_NETO,6.6068,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,PORTAFOLIO_NETO,11.7672,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,PORTAFOLIO_NETO,2.4522,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,PORTAFOLIO_NETO,2.751,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,PORTAFOLIO_NETO,-3.645,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,PORTAFOLIO_NETO,1.1551999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,PORTAFOLIO_NETO,-0.6567000000000001,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,PORTAFOLIO_NETO,-5.0723,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,PORTAFOLIO_NETO,1.4509999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,PORTAFOLIO_NETO,2.9483,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,PORTAFOLIO_NETO,1.396,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,PORTAFOLIO_NETO,1.3098,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,PORTAFOLIO_NETO,4.8065,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,PORTAFOLIO_NETO,0.2416999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,PORTAFOLIO_NETO,1.8518,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,PORTAFOLIO_NETO,2.0749,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,PORTAFOLIO_NETO,2.1980000000000004,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,PORTAFOLIO_NETO,-13.0539,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,PORTAFOLIO_NETO,-0.6960999999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,PORTAFOLIO_NETO,2.4288,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,PORTAFOLIO_NETO,-0.4114,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,PORTAFOLIO_NETO,1.7333,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,PORTAFOLIO_NETO,12.6483,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,PORTAFOLIO_NETO,2.3110000000000004,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,PORTAFOLIO_NETO,0.2395,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,PORTAFOLIO_NETO,1.9443,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,PORTAFOLIO_NETO,5.9572,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,PORTAFOLIO_NETO,0.4413,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,PORTAFOLIO_NETO,-0.6223999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,PORTAFOLIO_NETO,-3.2128,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,PORTAFOLIO_NETO,0.6725000000000003,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,PORTAFOLIO_NETO,-1.1091,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,PORTAFOLIO_NETO,3.4955000000000003,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,PORTAFOLIO_NETO,-0.5230999999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,PORTAFOLIO_NETO,-0.3838999999999997,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,PORTAFOLIO_NETO,-0.7519999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,PORTAFOLIO_NETO,-3.8911,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,PORTAFOLIO_NETO,0.1535999999999999,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,PORTAFOLIO_NETO,-0.6465999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,PORTAFOLIO_NETO,11.7897,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,PORTAFOLIO_NETO,1.428,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,PORTAFOLIO_NETO,-3.4636,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,PORTAFOLIO_NETO,-0.0438999999999998,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,PORTAFOLIO_NETO,3.881,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,PORTAFOLIO_NETO,1.4896999999999996,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,PORTAFOLIO_NETO,2.0383,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,PORTAFOLIO_NETO,8.1481,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,PORTAFOLIO_NETO,2.5617,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,PORTAFOLIO_NETO,-3.4643,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,PORTAFOLIO_NETO,-2.6677,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,PORTAFOLIO_NETO,-22.453,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,PORTAFOLIO_NETO,-13.5196,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,PORTAFOLIO_NETO,-13.0112,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,PORTAFOLIO_NETO,-27.985100000000003,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,PORTAFOLIO_NETO,-12.3442,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,PORTAFOLIO_NETO,-13.3557,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,PORTAFOLIO_NETO,-2.9636,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,PORTAFOLIO_NETO,-7.1431,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,PORTAFOLIO_NETO,-23.2027,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,PORTAFOLIO_NETO,-2.3042,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,PORTAFOLIO_NETO,-205.23710000000003,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,PORTAFOLIO_NETO,-59.8117,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,PORTAFOLIO_NETO,-57.7308,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,PORTAFOLIO_NETO,-141.5216,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,PORTAFOLIO_NETO,1924.2892,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,PORTAFOLIO_NETO,-57.336,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,PORTAFOLIO_NETO,-85.0094,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,PORTAFOLIO_NETO,-16.6766,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,PORTAFOLIO_NETO,-23.077600000000004,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,PORTAFOLIO_NETO,8.488099999999996,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,PORTAFOLIO_NETO,-33.3399,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,PORTAFOLIO_NETO,-36.2629,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,PORTAFOLIO_NETO,-123.4831,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,PORTAFOLIO_NETO,3113.0655,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,PORTAFOLIO_NETO,-15.560200000000007,"Inversión de portafolio de no residentes (total, neta)",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-06-01,PRECIO_COBRE,4641.965909090909,"Precio internacional del cobre (FRED/FMI, promedio mensual)",USD por tonelada,FRED (St. Louis Fed),precio,none
 2016-07-01,PRECIO_COBRE,4864.904761904762,"Precio internacional del cobre (FRED/FMI, promedio mensual)",USD por tonelada,FRED (St. Louis Fed),precio,none
 2016-08-01,PRECIO_COBRE,4751.670454545455,"Precio internacional del cobre (FRED/FMI, promedio mensual)",USD por tonelada,FRED (St. Louis Fed),precio,none
@@ -4871,6 +5486,252 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-07-01,PRECIO_WTI,80.46,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
 2026-08-01,PRECIO_WTI,83.9,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
 2026-09-01,PRECIO_WTI,97.31,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-06-01,PRESTAMOS_EGR,1564.5346,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,PRESTAMOS_EGR,1283.0583,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,PRESTAMOS_EGR,1027.6153,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,PRESTAMOS_EGR,840.182,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,PRESTAMOS_EGR,1014.8897,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,PRESTAMOS_EGR,1103.1777,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,PRESTAMOS_EGR,1444.0566,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,PRESTAMOS_EGR,1249.3674,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,PRESTAMOS_EGR,1097.6784,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,PRESTAMOS_EGR,1304.9685,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,PRESTAMOS_EGR,1036.1142,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,PRESTAMOS_EGR,1316.7171,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,PRESTAMOS_EGR,1467.1066,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,PRESTAMOS_EGR,1427.2255,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,PRESTAMOS_EGR,2452.3955,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,PRESTAMOS_EGR,1584.4815,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,PRESTAMOS_EGR,2031.6747,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,PRESTAMOS_EGR,2236.8962,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,PRESTAMOS_EGR,2151.2502,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,PRESTAMOS_EGR,2829.6712,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,PRESTAMOS_EGR,1834.5247,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,PRESTAMOS_EGR,3102.2331,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,PRESTAMOS_EGR,2812.2119,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,PRESTAMOS_EGR,1686.6845,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,PRESTAMOS_EGR,2087.166,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,PRESTAMOS_EGR,1757.2354,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,PRESTAMOS_EGR,2097.6878,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,PRESTAMOS_EGR,2593.3351,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,PRESTAMOS_EGR,3582.5127,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,PRESTAMOS_EGR,2567.9919,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,PRESTAMOS_EGR,1567.9605,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,PRESTAMOS_EGR,4484.3685,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,PRESTAMOS_EGR,4851.4905,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,PRESTAMOS_EGR,2205.8136,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,PRESTAMOS_EGR,2280.6619,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,PRESTAMOS_EGR,2027.3967,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,PRESTAMOS_EGR,2463.2251,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,PRESTAMOS_EGR,1727.8454,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,PRESTAMOS_EGR,1572.3515,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,PRESTAMOS_EGR,1964.6346,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,PRESTAMOS_EGR,1832.2309,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,PRESTAMOS_EGR,1241.9434,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,PRESTAMOS_EGR,1370.6085,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,PRESTAMOS_EGR,1201.3467,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,PRESTAMOS_EGR,1343.493,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,PRESTAMOS_EGR,787.6342,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,PRESTAMOS_EGR,914.2098,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,PRESTAMOS_EGR,861.2634,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,PRESTAMOS_EGR,712.5948,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,PRESTAMOS_EGR,776.6794,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,PRESTAMOS_EGR,861.6207,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,PRESTAMOS_EGR,656.2839,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,PRESTAMOS_EGR,659.3373,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,PRESTAMOS_EGR,713.7817,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,PRESTAMOS_EGR,504.7178,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,PRESTAMOS_EGR,498.0084,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,PRESTAMOS_EGR,630.5456,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,PRESTAMOS_EGR,901.6729,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,PRESTAMOS_EGR,446.8347,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,PRESTAMOS_EGR,471.6096,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,PRESTAMOS_EGR,1008.1591,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,PRESTAMOS_EGR,474.8189,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,PRESTAMOS_EGR,481.8756,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,PRESTAMOS_EGR,541.4942,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,PRESTAMOS_EGR,475.8997,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,PRESTAMOS_EGR,722.0436,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,PRESTAMOS_EGR,611.5275,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,PRESTAMOS_EGR,585.4996,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,PRESTAMOS_EGR,425.5517,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,PRESTAMOS_EGR,1096.9592,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,PRESTAMOS_EGR,742.9307,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,PRESTAMOS_EGR,737.4592,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,PRESTAMOS_EGR,601.1312,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,PRESTAMOS_EGR,743.4459,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,PRESTAMOS_EGR,877.6328,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,PRESTAMOS_EGR,734.3152,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,PRESTAMOS_EGR,1143.6268,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,PRESTAMOS_EGR,873.472,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,PRESTAMOS_EGR,916.9245,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,PRESTAMOS_EGR,762.654,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,PRESTAMOS_EGR,1046.3531,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,PRESTAMOS_EGR,988.3171,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,PRESTAMOS_EGR,963.2827,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,PRESTAMOS_EGR,877.408,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,PRESTAMOS_EGR,927.9106,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,PRESTAMOS_EGR,779.5335,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,PRESTAMOS_EGR,1031.595,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,PRESTAMOS_EGR,779.6201,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,PRESTAMOS_EGR,1043.7048,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,PRESTAMOS_EGR,910.7902,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,PRESTAMOS_EGR,745.3833,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,PRESTAMOS_EGR,667.3394,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,PRESTAMOS_EGR,996.3763,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,PRESTAMOS_EGR,707.0343,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,PRESTAMOS_EGR,973.8882,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,PRESTAMOS_EGR,834.3353,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,PRESTAMOS_EGR,818.0915,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,PRESTAMOS_EGR,1023.2593,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,PRESTAMOS_EGR,1178.6381,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,PRESTAMOS_EGR,1767.0149,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,PRESTAMOS_EGR,1325.2297,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,PRESTAMOS_EGR,923.8612,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,PRESTAMOS_EGR,1645.61,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,PRESTAMOS_EGR,2148.6106,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,PRESTAMOS_EGR,2531.8455,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,PRESTAMOS_EGR,1668.0041,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,PRESTAMOS_EGR,1892.7702,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,PRESTAMOS_EGR,2345.0632,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,PRESTAMOS_EGR,2361.0411,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,PRESTAMOS_EGR,3247.9262,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,PRESTAMOS_EGR,4225.2871,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,PRESTAMOS_EGR,2748.5013,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,PRESTAMOS_EGR,2815.1379,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,PRESTAMOS_EGR,2372.1914,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,PRESTAMOS_EGR,2181.1582,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,PRESTAMOS_EGR,2643.7209,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,PRESTAMOS_EGR,2683.3717,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,PRESTAMOS_EGR,1928.761,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,PRESTAMOS_EGR,2015.1836,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,PRESTAMOS_EGR,2521.5923,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,PRESTAMOS_EGR,2946.3033,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,PRESTAMOS_EGR,2523.3274,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,PRESTAMOS_EGR,3116.7334,"Préstamos financieros, títulos de deuda y líneas de crédito: egresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-06-01,PRESTAMOS_ING,4774.7509,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-07-01,PRESTAMOS_ING,4516.0269,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-08-01,PRESTAMOS_ING,1983.4999,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-09-01,PRESTAMOS_ING,1207.3884,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-10-01,PRESTAMOS_ING,2466.4467,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-11-01,PRESTAMOS_ING,2207.681,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-12-01,PRESTAMOS_ING,1128.529,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-01-01,PRESTAMOS_ING,984.4718,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-02-01,PRESTAMOS_ING,3977.6063,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-03-01,PRESTAMOS_ING,2297.3518,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-04-01,PRESTAMOS_ING,1793.001,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-05-01,PRESTAMOS_ING,2291.0944,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-06-01,PRESTAMOS_ING,1900.8864,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-07-01,PRESTAMOS_ING,3413.6391,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-08-01,PRESTAMOS_ING,2495.7247,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-09-01,PRESTAMOS_ING,1956.5597,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-10-01,PRESTAMOS_ING,2118.1104,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-11-01,PRESTAMOS_ING,3505.5029,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2017-12-01,PRESTAMOS_ING,2889.8748,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-01-01,PRESTAMOS_ING,3094.934,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-02-01,PRESTAMOS_ING,2059.2635,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-03-01,PRESTAMOS_ING,3178.4603,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-04-01,PRESTAMOS_ING,3099.7503,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-05-01,PRESTAMOS_ING,1894.0289,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-06-01,PRESTAMOS_ING,2116.9327,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-07-01,PRESTAMOS_ING,1117.7615,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-08-01,PRESTAMOS_ING,1845.1741,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-09-01,PRESTAMOS_ING,2098.7517,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-10-01,PRESTAMOS_ING,3786.0711,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-11-01,PRESTAMOS_ING,2207.8722,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2018-12-01,PRESTAMOS_ING,1637.2182,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-01-01,PRESTAMOS_ING,4617.9853,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-02-01,PRESTAMOS_ING,4490.1644,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-03-01,PRESTAMOS_ING,2351.024,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-04-01,PRESTAMOS_ING,1793.545,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-05-01,PRESTAMOS_ING,1644.9287,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-06-01,PRESTAMOS_ING,1511.5003,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-07-01,PRESTAMOS_ING,1610.7992,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-08-01,PRESTAMOS_ING,950.5456,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-09-01,PRESTAMOS_ING,631.6186,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-10-01,PRESTAMOS_ING,501.3062,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-11-01,PRESTAMOS_ING,415.7201,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2019-12-01,PRESTAMOS_ING,620.5151,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-01-01,PRESTAMOS_ING,605.1328,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-02-01,PRESTAMOS_ING,383.2303,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-03-01,PRESTAMOS_ING,422.2497,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-04-01,PRESTAMOS_ING,293.3502,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-05-01,PRESTAMOS_ING,106.7794,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-06-01,PRESTAMOS_ING,235.1906,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-07-01,PRESTAMOS_ING,95.1759,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-08-01,PRESTAMOS_ING,303.219,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-09-01,PRESTAMOS_ING,89.9619,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-10-01,PRESTAMOS_ING,123.2009,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-11-01,PRESTAMOS_ING,88.7077,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2020-12-01,PRESTAMOS_ING,145.7846,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-01-01,PRESTAMOS_ING,146.9202,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-02-01,PRESTAMOS_ING,69.199,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-03-01,PRESTAMOS_ING,374.1966,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-04-01,PRESTAMOS_ING,167.8684,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-05-01,PRESTAMOS_ING,167.2847,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-06-01,PRESTAMOS_ING,332.2128,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-07-01,PRESTAMOS_ING,189.2722,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-08-01,PRESTAMOS_ING,219.3946,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-09-01,PRESTAMOS_ING,91.6419,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-10-01,PRESTAMOS_ING,57.212,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-11-01,PRESTAMOS_ING,228.5542,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2021-12-01,PRESTAMOS_ING,221.1167,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-01-01,PRESTAMOS_ING,90.6375,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-02-01,PRESTAMOS_ING,105.9722,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-03-01,PRESTAMOS_ING,135.2688,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-04-01,PRESTAMOS_ING,370.805,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-05-01,PRESTAMOS_ING,287.4725,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-06-01,PRESTAMOS_ING,341.4276,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-07-01,PRESTAMOS_ING,323.8583,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-08-01,PRESTAMOS_ING,340.2621,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-09-01,PRESTAMOS_ING,400.2866,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-10-01,PRESTAMOS_ING,704.0731,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-11-01,PRESTAMOS_ING,370.1763,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2022-12-01,PRESTAMOS_ING,801.4045,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-01-01,PRESTAMOS_ING,567.4873,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-02-01,PRESTAMOS_ING,377.3629,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-03-01,PRESTAMOS_ING,497.5112,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-04-01,PRESTAMOS_ING,484.9691,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-05-01,PRESTAMOS_ING,398.9418,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-06-01,PRESTAMOS_ING,785.6684,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-07-01,PRESTAMOS_ING,462.135,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-08-01,PRESTAMOS_ING,530.5995,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-09-01,PRESTAMOS_ING,334.5932,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-10-01,PRESTAMOS_ING,415.7626,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-11-01,PRESTAMOS_ING,357.3259,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2023-12-01,PRESTAMOS_ING,271.5798,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-01-01,PRESTAMOS_ING,811.995,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-02-01,PRESTAMOS_ING,510.3092,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-03-01,PRESTAMOS_ING,1265.6988,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-04-01,PRESTAMOS_ING,1613.9599,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-05-01,PRESTAMOS_ING,1034.1545,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-06-01,PRESTAMOS_ING,682.1588,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-07-01,PRESTAMOS_ING,970.3223,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-08-01,PRESTAMOS_ING,1415.5419,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-09-01,PRESTAMOS_ING,2172.4133,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-10-01,PRESTAMOS_ING,2354.7504,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-11-01,PRESTAMOS_ING,1852.801,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2024-12-01,PRESTAMOS_ING,3693.2562,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-01-01,PRESTAMOS_ING,3635.2235,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-02-01,PRESTAMOS_ING,4828.3992,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-03-01,PRESTAMOS_ING,2023.0917,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-04-01,PRESTAMOS_ING,2514.8547,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-05-01,PRESTAMOS_ING,3675.5023,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-06-01,PRESTAMOS_ING,3720.6939,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-07-01,PRESTAMOS_ING,4905.6025,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-08-01,PRESTAMOS_ING,5933.779,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-09-01,PRESTAMOS_ING,4172.9227,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-10-01,PRESTAMOS_ING,3307.2158,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-11-01,PRESTAMOS_ING,3783.0292,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2025-12-01,PRESTAMOS_ING,3446.5033,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-01-01,PRESTAMOS_ING,4673.2571,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-02-01,PRESTAMOS_ING,4412.7008,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-03-01,PRESTAMOS_ING,3677.188,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-04-01,PRESTAMOS_ING,4130.5013,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-05-01,PRESTAMOS_ING,4722.6978,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-06-01,PRESTAMOS_ING,3907.117,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-07-01,PRESTAMOS_ING,3489.0846,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2026-08-01,PRESTAMOS_ING,4413.7001,"Préstamos financieros, títulos de deuda y líneas de crédito: ingresos",USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2016-06-01,RESERVAS_BRUTAS,30507.0,Reservas internacionales (fin de mes),USD mn,BCRA,stock,last
 2016-07-01,RESERVAS_BRUTAS,32511.0,Reservas internacionales (fin de mes),USD mn,BCRA,stock,last
 2016-08-01,RESERVAS_BRUTAS,31150.0,Reservas internacionales (fin de mes),USD mn,BCRA,stock,last
@@ -5181,9 +6042,9 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2021-05-01,TCR_CCL,141.6918936256171,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-06-01,TCR_CCL,142.5296260281725,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-07-01,TCR_CCL,140.68764901142552,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
-2021-08-01,TCR_CCL,139.4370655323544,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
+2021-08-01,TCR_CCL,139.43706553235438,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-09-01,TCR_CCL,137.73634871390672,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
-2021-10-01,TCR_CCL,138.71320723396394,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
+2021-10-01,TCR_CCL,138.71320723396389,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-11-01,TCR_CCL,151.82708278983543,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-12-01,TCR_CCL,155.22739463084196,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2022-01-01,TCR_CCL,156.23543705210716,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
@@ -5217,7 +6078,7 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2024-05-01,TCR_CCL,91.27635269600911,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-06-01,TCR_CCL,99.03669774788125,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-07-01,TCR_CCL,99.7569114112652,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
-2024-08-01,TCR_CCL,91.65064442055079,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
+2024-08-01,TCR_CCL,91.65064442055078,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-09-01,TCR_CCL,85.19309638922483,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-10-01,TCR_CCL,79.31606496385525,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-11-01,TCR_CCL,74.37459088151056,"Tipo de cambio real bilateral con EE.UU., dólar CCL (promedio del período = 100)",índice (promedio del período = 100),Calculada: CCL (ArgentinaDatos) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
@@ -5264,7 +6125,7 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2018-01-01,TCR_OFICIAL,80.48182563923278,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2018-02-01,TCR_OFICIAL,82.1695138248271,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2018-03-01,TCR_OFICIAL,81.94452478230457,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
-2018-04-01,TCR_OFICIAL,79.98640752462605,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
+2018-04-01,TCR_OFICIAL,79.98640752462603,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2018-05-01,TCR_OFICIAL,91.84274452282413,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2018-06-01,TCR_OFICIAL,99.37742901433377,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2018-07-01,TCR_OFICIAL,100.42929337767907,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
@@ -5304,7 +6165,7 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2021-05-01,TCR_OFICIAL,116.3823823840419,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-06-01,TCR_OFICIAL,115.11704727396918,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-07-01,TCR_OFICIAL,113.43916478864033,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
-2021-08-01,TCR_OFICIAL,112.11260739887095,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
+2021-08-01,TCR_OFICIAL,112.11260739887094,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-09-01,TCR_OFICIAL,110.01054472073646,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-10-01,TCR_OFICIAL,108.36753897877006,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2021-11-01,TCR_OFICIAL,107.76993706253957,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
@@ -5340,7 +6201,7 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2024-05-01,TCR_OFICIAL,98.98813498234003,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-06-01,TCR_OFICIAL,96.39962711763242,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-07-01,TCR_OFICIAL,94.90058312188515,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
-2024-08-01,TCR_OFICIAL,93.11012498068969,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
+2024-08-01,TCR_OFICIAL,93.11012498068966,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-09-01,TCR_OFICIAL,91.96091007879566,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-10-01,TCR_OFICIAL,91.64226040643187,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
 2024-11-01,TCR_OFICIAL,91.60205692695928,"Tipo de cambio real bilateral con EE.UU., dólar mayorista oficial (promedio del período = 100)",índice (promedio del período = 100),Calculada: mayorista (BCRA) × IPC EE.UU. (FRED) ÷ IPC Argentina (BCRA/INDEC),precio,none
