@@ -1104,12 +1104,59 @@ def _bloque_vencimientos(data_dir, ser, show):
     return extra
 
 
+def _rem_actual(data_dir):
+    """Ultimo relevamiento del REM (data/rem_long.csv): inflacion e dolar esperados (medianas y cuartiles)."""
+    p = Path(data_dir) / "rem_long.csv"
+    if not p.exists():
+        return None
+    try:
+        r = pd.read_csv(p, usecols=["relevamiento", "variable", "periodo_tipo", "fecha_objetivo", "horizonte_meses", "mediana", "p25", "p75"])
+    except Exception:
+        return None
+    r = r[r["relevamiento"] == r["relevamiento"].max()]
+    ipc, tc = r[r["variable"] == "IPC_NG_NAC"], r[r["variable"] == "TC_NOMINAL"]
+    if ipc.empty or tc.empty or not (ipc["periodo_tipo"] == "prox_12m").any() or not (tc["periodo_tipo"] == "prox_12m").any():
+        return None
+    return {"sv": pd.Period(r["relevamiento"].iloc[0], "M"), "ipc": ipc, "tc": tc,
+            "y12": float(ipc.loc[ipc["periodo_tipo"] == "prox_12m", "mediana"].iloc[0])}
+
+
+def _rem_trayectoria(rem, base, d0, t0, p_ar, p_us):
+    """Tipo de cambio real implicito en el dolar que espera el REM, usando la inflacion que espera el propio REM
+    (meses sueltos hasta +6 y la variacion de los proximos 12 meses). Meses sin dato del REM: supuesto p_ar."""
+    S, B = rem["sv"], pd.Period(base, "M")
+    ipc, tc = rem["ipc"], rem["tc"]
+    mes = {pd.Period(f, "M"): float(v) for f, v in zip(ipc.loc[ipc["periodo_tipo"] == "mes", "fecha_objetivo"], ipc.loc[ipc["periodo_tipo"] == "mes", "mediana"])}
+    tcm = tc[tc["periodo_tipo"] == "mes"]
+    tcm = {pd.Period(f, "M"): (a, b, c) for f, a, b, c in zip(tcm["fecha_objetivo"], tcm["mediana"], tcm["p25"], tcm["p75"])}
+    filas, cum, m, cum_s = [], 1.0, B + 1, None
+    while m <= (max(mes) if mes else S):
+        cum *= 1 + mes.get(m, p_ar) / 100
+        if m == S:
+            cum_s = cum
+        if m in tcm and m > S - 1:
+            filas.append((m, *tcm[m], cum))
+        m += 1
+    if cum_s is None:  # el relevamiento es anterior a la base: no se puede encadenar
+        return []
+    t12 = tc[tc["periodo_tipo"] == "prox_12m"].iloc[0]
+    filas.append((S + 12, float(t12["mediana"]), float(t12["p25"]), float(t12["p75"]), cum_s * (1 + rem["y12"] / 100)))
+    out = []
+    for m, e, e25, e75, c in filas:
+        n = (m - B).n
+        f = (1 + p_us / 100) ** n / c
+        out.append({"Mes": str(m), "Dólar REM (mediana)": round(e), "p25": round(e25), "p75": round(e75), "Inflación acumulada AR (%)": round((c - 1) * 100, 1),
+                    "Tipo de cambio real implícito": round(t0 * (e / d0) * f, 1), "p25 real": round(t0 * (e25 / d0) * f, 1), "p75 real": round(t0 * (e75 / d0) * f, 1),
+                    "Variación real vs. hoy (%)": round((e / d0 * f - 1) * 100, 1), "Variación nominal vs. hoy (%)": round((e / d0 - 1) * 100, 1)})
+    return out
+
+
 def render_tcr(data_dir, show):
     """Pestaña «Dólar y tipo de cambio real»: qué tan caro/barato está el dólar descontando inflación y qué dólar nominal
     sería compatible con distintos niveles de referencia. Descriptivo: no pronostica nada."""
     path = Path(data_dir) / "macro.csv"
     st.caption("¿Qué tan caro o barato está el dólar descontando inflación, y qué dólar nominal sería compatible con distintos niveles "
-               "de referencia? Es un ejercicio de aritmética con la historia, no un pronóstico. No usa el REM ni los filtros de la barra lateral.")
+               "de referencia? Es un ejercicio de aritmética con la historia, no un pronóstico. Solo usa del REM la inflación y el dólar esperados (último relevamiento); no usa los filtros de la barra lateral.")
     if not path.exists():
         st.info("Falta data/macro.csv. Correr fetch_macro.py y commitear data/.")
         return
@@ -1187,10 +1234,13 @@ def render_tcr(data_dir, show):
     ipc_ar, ipc_us = ser("IPC_ARG"), ser("IPC_EEUU")
     pi_ar0 = float(ipc_ar.pct_change().tail(3).mean() * 100)
     pi_us0 = float(ipc_us.pct_change().tail(12).mean() * 100)
+    rem = _rem_actual(data_dir)
+    if rem is not None:  # supuesto por defecto: la inflacion que espera el REM para los proximos 12 meses
+        pi_ar0 = ((1 + rem["y12"] / 100) ** (1 / 12) - 1) * 100
     k = st.columns(3)
     n_m = k[0].slider("Horizonte (meses desde el último dato)", 0, 24, 12, key="tcr_n")
     p_ar = k[1].number_input("Inflación mensual Argentina (%)", value=round(pi_ar0, 2), step=0.1, min_value=-1.0, max_value=50.0, key="tcr_piar",
-                             help="Por defecto, el promedio de los últimos 3 meses de la serie de IPC. Es un supuesto tuyo: cámbialo.")
+                             help="Por defecto, la inflación que espera el REM para los próximos 12 meses (convertida a mensual); si no hay REM, el promedio de los últimos 3 meses del IPC. Es un supuesto tuyo: cámbialo.")
     p_us = k[2].number_input("Inflación mensual EE.UU. (%)", value=round(pi_us0, 2), step=0.05, min_value=-1.0, max_value=5.0, key="tcr_pius",
                              help="Por defecto, el promedio de los últimos 12 meses.")
     custom = st.number_input("Nivel personalizado del tipo de cambio real (100 = promedio 2016–hoy)", value=100.0, step=1.0, min_value=10.0, max_value=400.0, key="tcr_custom")
@@ -1211,6 +1261,15 @@ def render_tcr(data_dir, show):
         dn = d0 * (r_ / t0) * factor
         out.append({"Referencia": nombre, "Tipo de cambio real": round(r_, 1), "Variación real vs. hoy (%)": round((r_ / t0 - 1) * 100, 1),
                     "Dólar nominal compatible": round(dn), "Variación nominal vs. hoy (%)": round((dn / d0 - 1) * 100, 1)})
+    rem_tray = []
+    if rem is not None and modo == "Mayorista oficial":
+        rem_tray = _rem_trayectoria(rem, base, d0, t0, p_ar, p_us)
+        if rem_tray:
+            u = rem_tray[-1]
+            for et, e, r_ in (("mediana", u["Dólar REM (mediana)"], u["Tipo de cambio real implícito"]), ("p25", u["p25"], u["p25 real"]), ("p75", u["p75"], u["p75 real"])):
+                out.append({"Referencia": f"Expectativa REM {u['Mes']} ({et})", "Tipo de cambio real": r_,
+                            "Variación real vs. hoy (%)": round((r_ / t0 - 1) * 100, 1), "Dólar nominal compatible": e,
+                            "Variación nominal vs. hoy (%)": round((e / d0 - 1) * 100, 1)})
     st.dataframe(pd.DataFrame(out), hide_index=True, width="stretch")
     st.caption(f"Cuenta: dólar de hoy × (referencia ÷ tipo de cambio real de hoy) × ((1 + inflación Argentina) ÷ (1 + inflación EE.UU.))^{n_m} meses. "
                f"Con {p_ar:.2f}% y {p_us:.2f}% mensual, la inflación relativa suma {(factor - 1) * 100:+.1f}% en {n_m} meses. Base: {base:%Y-%m}.")
@@ -1220,6 +1279,16 @@ def render_tcr(data_dir, show):
                 'crisis, no es un equilibrio; (3) mayores exportaciones de energía y minería podrían sostener un tipo de cambio real más bajo que el '
                 'histórico, pero estos datos no permiten estimar cuánto; (4) el IPC de Argentina es un índice encadenado desde variaciones mensuales; '
                 '(5) con pocos meses en Bandas, sus medianas y extremos son poco confiables.</div>', unsafe_allow_html=True)
+
+    if rem_tray:
+        st.subheader(f"¿Qué espera el mercado? Dólar del REM {rem['sv']} y tipo de cambio real que implica")
+        st.dataframe(pd.DataFrame(rem_tray), hide_index=True, width="stretch")
+        st.caption("El tipo de cambio real implícito usa la inflación que espera el propio REM (meses sueltos y variación de los próximos 12 meses) y la "
+                   f"de EE.UU. que ingresaste ({p_us:.2f}% mensual). Si ahí queda cerca del de hoy, el mercado espera un dólar real estable; si sube, espera "
+                   "una suba real. Es lo que opina el mercado, no un pronóstico: en la época libre 2016–2019 el REM subestimó la suba del dólar a 12 meses ~21% en promedio, "
+                   "y en los últimos 12 meses la sobreestimó ~15%.")
+    elif modo != "Mayorista oficial" and rem is not None:
+        st.caption("El REM proyecta el dólar mayorista: la comparación con las expectativas solo se muestra con «Mayorista oficial».")
 
     st.header("Factores de contexto")
     extra = _bloque_flujos(macro, ser, show) + _bloque_precios(macro, ser, show) + _bloque_vencimientos(data_dir, ser, show)
@@ -1240,6 +1309,9 @@ def render_tcr(data_dir, show):
                f"minimo={d['tcr'].min():.1f}; maximo={d['tcr'].max():.1f}; dolar_nominal={d0:,.0f}",
                "", "## Por regimen", pd.DataFrame(filas).to_csv(index=False).strip(),
                "", "## Dolar nominal compatible con cada referencia", pd.DataFrame(out).to_csv(index=False).strip(),
-               "", "## Ultimos 24 meses", ult.round(3).to_csv().strip()] + extra
+               "", "## Ultimos 24 meses", ult.round(3).to_csv().strip()]
+    if rem_tray:
+        informe += ["", f"## Expectativa REM {rem['sv']} (dolar mayorista) y tipo de cambio real implicito", pd.DataFrame(rem_tray).to_csv(index=False).strip()]
+    informe += extra
     st.download_button("Descargar resumen del tipo de cambio real (TXT, para compartir con Claude)", "\n".join(informe).encode("utf-8"),
                        file_name="tcr_resumen.txt", mime="text/plain", key="tcr_dl")
