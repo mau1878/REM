@@ -1,7 +1,7 @@
 serie,id,descripcion,unidad,periodicidad,desde,hasta,n,descargado
-IPC_MENSUAL,27,Inflación mensual.,En porcentaje,M,2016-01-31,2026-08-31,128,2026-10-08
-IPC_INTERANUAL,28,Inflación interanual.,En porcentaje,M,2016-01-31,2026-08-31,128,2026-10-08
-TC_MAYORISTA,5,Tipo de cambio mayorista de referencia,Pesos argentinos por dólar estadounidense,D,2016-01-04,2026-10-08,2621,2026-10-08
-BADLAR,7,Tasa de interés BADLAR de bancos privados,En porcentaje nominal anual,D,2016-01-04,2026-10-07,2620,2026-10-08
-TAMAR,44,Tasa de interes TAMAR de bancos privados ,En porcentaje nominal anual,D,2024-10-01,2026-10-07,487,2026-10-08
-TASA_POLITICA,160,Tasas de interés de política monetaria,En porcentaje nominal anual,D,2016-01-04,2025-07-10,2318,2026-10-08
+IPC_MENSUAL,27,Inflación mensual.,En porcentaje,M,2016-01-31,2026-08-31,128,2026-10-09
+IPC_INTERANUAL,28,Inflación interanual.,En porcentaje,M,2016-01-31,2026-08-31,128,2026-10-09
+TC_MAYORISTA,5,Tipo de cambio mayorista de referencia,Pesos argentinos por dólar estadounidense,D,2016-01-04,2026-10-08,2621,2026-10-09
+BADLAR,7,Tasa de interés BADLAR de bancos privados,En porcentaje nominal anual,D,2016-01-04,2026-10-07,2620,2026-10-09
+TAMAR,44,Tasa de interes TAMAR de bancos privados ,En porcentaje nominal anual,D,2024-10-01,2026-10-07,487,2026-10-09
+TASA_POLITICA,160,Tasas de interés de política monetaria,En porcentaje nominal anual,D,2016-01-04,2025-07-10,2318,2026-10-09

@@ -836,6 +836,744 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-06-01,CC_SERVICIOS,-626.6524999999999,Cuenta corriente cambiaria: total servicios,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2026-07-01,CC_SERVICIOS,-900.1830000000004,Cuenta corriente cambiaria: total servicios,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
 2026-08-01,CC_SERVICIOS,-712.2184,Cuenta corriente cambiaria: total servicios,USD mn,"datos.gob.ar (Balance Cambiario, BCRA)",flujo,none
+2016-06-01,COBROS_EXPO_AGRO,2452.5008444,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-07-01,COBROS_EXPO_AGRO,2335.33927537,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-08-01,COBROS_EXPO_AGRO,2456.82676687,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-09-01,COBROS_EXPO_AGRO,2011.55504606,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-10-01,COBROS_EXPO_AGRO,1942.97027439,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-11-01,COBROS_EXPO_AGRO,1829.52321891,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-12-01,COBROS_EXPO_AGRO,1747.1222893099998,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-01-01,COBROS_EXPO_AGRO,2427.5544087,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-02-01,COBROS_EXPO_AGRO,1416.1416290400002,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-03-01,COBROS_EXPO_AGRO,2259.029801,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-04-01,COBROS_EXPO_AGRO,2199.32855666,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-05-01,COBROS_EXPO_AGRO,3037.61553722,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-06-01,COBROS_EXPO_AGRO,2728.63632874,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-07-01,COBROS_EXPO_AGRO,2566.71143101,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-08-01,COBROS_EXPO_AGRO,2651.85948413,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-09-01,COBROS_EXPO_AGRO,2151.52382613,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-10-01,COBROS_EXPO_AGRO,1821.00279448,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-11-01,COBROS_EXPO_AGRO,1717.18569489,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-12-01,COBROS_EXPO_AGRO,1768.78784072,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-01-01,COBROS_EXPO_AGRO,2305.05190439,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-02-01,COBROS_EXPO_AGRO,1681.90899144,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-03-01,COBROS_EXPO_AGRO,1756.6326991100002,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-04-01,COBROS_EXPO_AGRO,2239.84787439,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-05-01,COBROS_EXPO_AGRO,2355.76672287,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-06-01,COBROS_EXPO_AGRO,2515.09456739,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-07-01,COBROS_EXPO_AGRO,1999.03197293,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-08-01,COBROS_EXPO_AGRO,1909.3975503,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-09-01,COBROS_EXPO_AGRO,1613.58584694,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-10-01,COBROS_EXPO_AGRO,1343.88764282,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-11-01,COBROS_EXPO_AGRO,1104.59879707,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-12-01,COBROS_EXPO_AGRO,1468.59154721,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-01-01,COBROS_EXPO_AGRO,2079.66742438,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-02-01,COBROS_EXPO_AGRO,1544.41739932,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-03-01,COBROS_EXPO_AGRO,1399.32380024,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-04-01,COBROS_EXPO_AGRO,2193.80952042,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-05-01,COBROS_EXPO_AGRO,2905.4311090700003,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-06-01,COBROS_EXPO_AGRO,2376.5306540700003,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-07-01,COBROS_EXPO_AGRO,2485.62525674,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-08-01,COBROS_EXPO_AGRO,2650.136624,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-09-01,COBROS_EXPO_AGRO,2268.95781905,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-10-01,COBROS_EXPO_AGRO,1917.6452548,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-11-01,COBROS_EXPO_AGRO,2437.2028523,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-12-01,COBROS_EXPO_AGRO,2498.7687893500006,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-01-01,COBROS_EXPO_AGRO,1843.43957322,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-02-01,COBROS_EXPO_AGRO,958.11295536,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-03-01,COBROS_EXPO_AGRO,1226.71506274,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-04-01,COBROS_EXPO_AGRO,1711.42750412,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-05-01,COBROS_EXPO_AGRO,2091.61164373,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-06-01,COBROS_EXPO_AGRO,2481.13928243,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-07-01,COBROS_EXPO_AGRO,2458.27279745,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-08-01,COBROS_EXPO_AGRO,1944.43277648,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-09-01,COBROS_EXPO_AGRO,1980.91510117,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-10-01,COBROS_EXPO_AGRO,1686.14518073,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-11-01,COBROS_EXPO_AGRO,1848.72065073,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-12-01,COBROS_EXPO_AGRO,1894.57532471,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-01-01,COBROS_EXPO_AGRO,2269.37133535,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-02-01,COBROS_EXPO_AGRO,2217.59959985,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-03-01,COBROS_EXPO_AGRO,3387.2370882100004,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-04-01,COBROS_EXPO_AGRO,3810.55864104,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-05-01,COBROS_EXPO_AGRO,4454.21616356,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-06-01,COBROS_EXPO_AGRO,4183.222454819999,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-07-01,COBROS_EXPO_AGRO,3916.02701159,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-08-01,COBROS_EXPO_AGRO,3237.56240605,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-09-01,COBROS_EXPO_AGRO,2891.2878685500004,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-10-01,COBROS_EXPO_AGRO,2692.7067759,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-11-01,COBROS_EXPO_AGRO,2145.19826108,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-12-01,COBROS_EXPO_AGRO,2957.4631264,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-01-01,COBROS_EXPO_AGRO,2702.7741396300003,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-02-01,COBROS_EXPO_AGRO,2630.24402835,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-03-01,COBROS_EXPO_AGRO,3834.86575656,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-04-01,COBROS_EXPO_AGRO,3916.33880049,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-05-01,COBROS_EXPO_AGRO,4824.44673448,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-06-01,COBROS_EXPO_AGRO,4236.82570372,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-07-01,COBROS_EXPO_AGRO,3350.23173179,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-08-01,COBROS_EXPO_AGRO,3443.70096188,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-09-01,COBROS_EXPO_AGRO,8573.087531300002,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-10-01,COBROS_EXPO_AGRO,1219.7422767000005,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-11-01,COBROS_EXPO_AGRO,1658.54250568,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-12-01,COBROS_EXPO_AGRO,3784.6712624,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-01-01,COBROS_EXPO_AGRO,927.4935723999998,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-02-01,COBROS_EXPO_AGRO,901.18389394,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-03-01,COBROS_EXPO_AGRO,1508.9408353699998,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-04-01,COBROS_EXPO_AGRO,2741.7069138100005,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-05-01,COBROS_EXPO_AGRO,4418.54786011,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-06-01,COBROS_EXPO_AGRO,1699.12263556,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-07-01,COBROS_EXPO_AGRO,2134.3492698600003,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-08-01,COBROS_EXPO_AGRO,2062.39215245,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-09-01,COBROS_EXPO_AGRO,2097.0925239,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-10-01,COBROS_EXPO_AGRO,820.70479712,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-11-01,COBROS_EXPO_AGRO,861.9412810900001,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-12-01,COBROS_EXPO_AGRO,1440.09914074,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-01-01,COBROS_EXPO_AGRO,1713.08856591,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-02-01,COBROS_EXPO_AGRO,1511.7598078699998,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-03-01,COBROS_EXPO_AGRO,1654.4458891200002,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-04-01,COBROS_EXPO_AGRO,2008.08055804,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-05-01,COBROS_EXPO_AGRO,2659.38586008,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-06-01,COBROS_EXPO_AGRO,1948.31440543,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-07-01,COBROS_EXPO_AGRO,2503.09253018,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-08-01,COBROS_EXPO_AGRO,2216.92705873,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-09-01,COBROS_EXPO_AGRO,2103.67258937,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-10-01,COBROS_EXPO_AGRO,2340.09430998,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-11-01,COBROS_EXPO_AGRO,1877.40926771,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-12-01,COBROS_EXPO_AGRO,1920.94067614,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-01-01,COBROS_EXPO_AGRO,2248.31969434,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-02-01,COBROS_EXPO_AGRO,2103.11339337,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-03-01,COBROS_EXPO_AGRO,1846.65411886,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-04-01,COBROS_EXPO_AGRO,2833.44892676,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-05-01,COBROS_EXPO_AGRO,3571.92344673,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-06-01,COBROS_EXPO_AGRO,4149.89888715,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-07-01,COBROS_EXPO_AGRO,4933.208475769999,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-08-01,COBROS_EXPO_AGRO,2131.73609346,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-09-01,COBROS_EXPO_AGRO,8034.85125675,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-10-01,COBROS_EXPO_AGRO,775.85508693,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-11-01,COBROS_EXPO_AGRO,768.18408943,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-12-01,COBROS_EXPO_AGRO,1216.98128819,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-01-01,COBROS_EXPO_AGRO,2178.65720341,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-02-01,COBROS_EXPO_AGRO,1524.15049843,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-03-01,COBROS_EXPO_AGRO,2318.49664106,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-04-01,COBROS_EXPO_AGRO,2790.126592667,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-05-01,COBROS_EXPO_AGRO,3276.4485503446,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-06-01,COBROS_EXPO_AGRO,3554.6160999065,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-07-01,COBROS_EXPO_AGRO,3965.7618626572,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-08-01,COBROS_EXPO_AGRO,3323.6705471512,Cobros de exportaciones: sector Oleaginosos y cerealeros,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-06-01,COBROS_EXPO_GAS,3.169731,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-07-01,COBROS_EXPO_GAS,3.891352,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-08-01,COBROS_EXPO_GAS,2.642391,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-09-01,COBROS_EXPO_GAS,5.675736,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-10-01,COBROS_EXPO_GAS,7.36313,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-11-01,COBROS_EXPO_GAS,17.358241,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-12-01,COBROS_EXPO_GAS,0.022347,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-01-01,COBROS_EXPO_GAS,12.74726058,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-02-01,COBROS_EXPO_GAS,0.319456,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-03-01,COBROS_EXPO_GAS,6.0209417400000005,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-04-01,COBROS_EXPO_GAS,0.337038,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-05-01,COBROS_EXPO_GAS,0.708768,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-06-01,COBROS_EXPO_GAS,0.355466,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-07-01,COBROS_EXPO_GAS,7.814984,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-08-01,COBROS_EXPO_GAS,5.924398,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-09-01,COBROS_EXPO_GAS,0.439304,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-10-01,COBROS_EXPO_GAS,13.112738,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-11-01,COBROS_EXPO_GAS,0.2498409999999999,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-12-01,COBROS_EXPO_GAS,7.139288,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-01-01,COBROS_EXPO_GAS,24.591035,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-02-01,COBROS_EXPO_GAS,4.9442,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-03-01,COBROS_EXPO_GAS,0.5429919999999999,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-04-01,COBROS_EXPO_GAS,5.06247,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-05-01,COBROS_EXPO_GAS,111.274931,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-06-01,COBROS_EXPO_GAS,40.438572,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-07-01,COBROS_EXPO_GAS,0.026125,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-08-01,COBROS_EXPO_GAS,0.1706148,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-09-01,COBROS_EXPO_GAS,0.145802,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-10-01,COBROS_EXPO_GAS,0.14212143,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-11-01,COBROS_EXPO_GAS,0.014044,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-12-01,COBROS_EXPO_GAS,0.142279,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-01-01,COBROS_EXPO_GAS,0.180121,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-02-01,COBROS_EXPO_GAS,0.002539,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-03-01,COBROS_EXPO_GAS,0.0,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-04-01,COBROS_EXPO_GAS,57.698172,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-05-01,COBROS_EXPO_GAS,25.117832,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-06-01,COBROS_EXPO_GAS,14.922984,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-07-01,COBROS_EXPO_GAS,64.354208,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-08-01,COBROS_EXPO_GAS,55.519525,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-09-01,COBROS_EXPO_GAS,10.66462,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-10-01,COBROS_EXPO_GAS,8.569452,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-11-01,COBROS_EXPO_GAS,40.026492000000005,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-12-01,COBROS_EXPO_GAS,13.925601,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-01-01,COBROS_EXPO_GAS,14.983768,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-02-01,COBROS_EXPO_GAS,6.44722,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-03-01,COBROS_EXPO_GAS,16.906045,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-04-01,COBROS_EXPO_GAS,6.04895148,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-05-01,COBROS_EXPO_GAS,6.68716,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-06-01,COBROS_EXPO_GAS,6.344123,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-07-01,COBROS_EXPO_GAS,10.569959,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-08-01,COBROS_EXPO_GAS,9.865311,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-09-01,COBROS_EXPO_GAS,7.022834,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-10-01,COBROS_EXPO_GAS,10.898434,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-11-01,COBROS_EXPO_GAS,11.961431,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-12-01,COBROS_EXPO_GAS,7.748050999999999,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-01-01,COBROS_EXPO_GAS,17.716598,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-02-01,COBROS_EXPO_GAS,23.469277,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-03-01,COBROS_EXPO_GAS,28.576128,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-04-01,COBROS_EXPO_GAS,8.177681,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-05-01,COBROS_EXPO_GAS,22.849917,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-06-01,COBROS_EXPO_GAS,6.945617,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-07-01,COBROS_EXPO_GAS,6.00659,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-08-01,COBROS_EXPO_GAS,5.349169,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-09-01,COBROS_EXPO_GAS,10.514293,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-10-01,COBROS_EXPO_GAS,9.47639,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-11-01,COBROS_EXPO_GAS,30.499151,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-12-01,COBROS_EXPO_GAS,27.247082,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-01-01,COBROS_EXPO_GAS,38.448888,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-02-01,COBROS_EXPO_GAS,32.316485,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-03-01,COBROS_EXPO_GAS,58.525403,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-04-01,COBROS_EXPO_GAS,39.855069,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-05-01,COBROS_EXPO_GAS,7.784498,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-06-01,COBROS_EXPO_GAS,6.490189,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-07-01,COBROS_EXPO_GAS,17.025951,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-08-01,COBROS_EXPO_GAS,15.977239,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-09-01,COBROS_EXPO_GAS,13.622421,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-10-01,COBROS_EXPO_GAS,26.983939,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-11-01,COBROS_EXPO_GAS,20.92545,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-12-01,COBROS_EXPO_GAS,29.619655,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-01-01,COBROS_EXPO_GAS,31.683312,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-02-01,COBROS_EXPO_GAS,17.586959,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-03-01,COBROS_EXPO_GAS,33.790690999999995,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-04-01,COBROS_EXPO_GAS,27.352273,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-05-01,COBROS_EXPO_GAS,21.898137,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-06-01,COBROS_EXPO_GAS,12.83678,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-07-01,COBROS_EXPO_GAS,10.98479,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-08-01,COBROS_EXPO_GAS,11.416255,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-09-01,COBROS_EXPO_GAS,13.171878,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-10-01,COBROS_EXPO_GAS,16.568388,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-11-01,COBROS_EXPO_GAS,2.8980750000000004,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-12-01,COBROS_EXPO_GAS,13.874563,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-01-01,COBROS_EXPO_GAS,19.853496,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-02-01,COBROS_EXPO_GAS,22.348854,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-03-01,COBROS_EXPO_GAS,10.329229,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-04-01,COBROS_EXPO_GAS,28.03951,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-05-01,COBROS_EXPO_GAS,17.574088,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-06-01,COBROS_EXPO_GAS,7.77165,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-07-01,COBROS_EXPO_GAS,10.417292,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-08-01,COBROS_EXPO_GAS,14.47077,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-09-01,COBROS_EXPO_GAS,13.040853,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-10-01,COBROS_EXPO_GAS,19.192825,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-11-01,COBROS_EXPO_GAS,27.97595,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-12-01,COBROS_EXPO_GAS,19.766092,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-01-01,COBROS_EXPO_GAS,34.92776600000001,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-02-01,COBROS_EXPO_GAS,20.984282,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-03-01,COBROS_EXPO_GAS,24.935951,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-04-01,COBROS_EXPO_GAS,0.974646,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-05-01,COBROS_EXPO_GAS,3.412027,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-06-01,COBROS_EXPO_GAS,9.463927,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-07-01,COBROS_EXPO_GAS,14.733643,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-08-01,COBROS_EXPO_GAS,19.587689,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-09-01,COBROS_EXPO_GAS,18.511835,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-10-01,COBROS_EXPO_GAS,20.806514,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-11-01,COBROS_EXPO_GAS,27.075811,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-12-01,COBROS_EXPO_GAS,23.406081,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-01-01,COBROS_EXPO_GAS,26.21676,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-02-01,COBROS_EXPO_GAS,22.5219429,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-03-01,COBROS_EXPO_GAS,26.811825,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-04-01,COBROS_EXPO_GAS,33.307366,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-05-01,COBROS_EXPO_GAS,19.256805,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-06-01,COBROS_EXPO_GAS,23.240465,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-07-01,COBROS_EXPO_GAS,18.387956,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-08-01,COBROS_EXPO_GAS,4.40999,Cobros de exportaciones: sector Gas,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-06-01,COBROS_EXPO_METALES_COMUNES,92.12707159,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-07-01,COBROS_EXPO_METALES_COMUNES,63.08688123,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-08-01,COBROS_EXPO_METALES_COMUNES,129.38471002999998,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-09-01,COBROS_EXPO_METALES_COMUNES,105.81828501,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-10-01,COBROS_EXPO_METALES_COMUNES,72.47260808,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-11-01,COBROS_EXPO_METALES_COMUNES,64.2927597,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-12-01,COBROS_EXPO_METALES_COMUNES,123.40632327999998,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-01-01,COBROS_EXPO_METALES_COMUNES,118.43854952,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-02-01,COBROS_EXPO_METALES_COMUNES,89.98384488,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-03-01,COBROS_EXPO_METALES_COMUNES,199.97857622,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-04-01,COBROS_EXPO_METALES_COMUNES,115.1485339,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-05-01,COBROS_EXPO_METALES_COMUNES,98.47120048,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-06-01,COBROS_EXPO_METALES_COMUNES,150.61470909000002,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-07-01,COBROS_EXPO_METALES_COMUNES,128.45763664,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-08-01,COBROS_EXPO_METALES_COMUNES,132.89228986,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-09-01,COBROS_EXPO_METALES_COMUNES,77.96470801000001,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-10-01,COBROS_EXPO_METALES_COMUNES,149.53364933,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-11-01,COBROS_EXPO_METALES_COMUNES,132.06876665,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-12-01,COBROS_EXPO_METALES_COMUNES,96.91566574,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-01-01,COBROS_EXPO_METALES_COMUNES,109.24310312,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-02-01,COBROS_EXPO_METALES_COMUNES,178.50962122,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-03-01,COBROS_EXPO_METALES_COMUNES,101.66933128,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-04-01,COBROS_EXPO_METALES_COMUNES,82.42977753000001,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-05-01,COBROS_EXPO_METALES_COMUNES,72.92747188000001,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-06-01,COBROS_EXPO_METALES_COMUNES,125.9597853,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-07-01,COBROS_EXPO_METALES_COMUNES,111.31382231,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-08-01,COBROS_EXPO_METALES_COMUNES,131.10494755000002,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-09-01,COBROS_EXPO_METALES_COMUNES,73.42560797000002,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-10-01,COBROS_EXPO_METALES_COMUNES,107.14159369,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-11-01,COBROS_EXPO_METALES_COMUNES,184.45141992,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-12-01,COBROS_EXPO_METALES_COMUNES,136.49966051,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-01-01,COBROS_EXPO_METALES_COMUNES,96.68723604,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-02-01,COBROS_EXPO_METALES_COMUNES,89.19518048,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-03-01,COBROS_EXPO_METALES_COMUNES,66.82736439,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-04-01,COBROS_EXPO_METALES_COMUNES,32.29012423,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-05-01,COBROS_EXPO_METALES_COMUNES,81.38846247000001,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-06-01,COBROS_EXPO_METALES_COMUNES,123.03319798,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-07-01,COBROS_EXPO_METALES_COMUNES,116.13006310000002,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-08-01,COBROS_EXPO_METALES_COMUNES,149.66071884999997,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-09-01,COBROS_EXPO_METALES_COMUNES,145.64501066000005,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-10-01,COBROS_EXPO_METALES_COMUNES,185.85153744,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-11-01,COBROS_EXPO_METALES_COMUNES,181.00859497,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-12-01,COBROS_EXPO_METALES_COMUNES,171.72652968999998,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-01-01,COBROS_EXPO_METALES_COMUNES,145.39532978999998,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-02-01,COBROS_EXPO_METALES_COMUNES,109.21657188,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-03-01,COBROS_EXPO_METALES_COMUNES,113.38192532,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-04-01,COBROS_EXPO_METALES_COMUNES,99.74462963,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-05-01,COBROS_EXPO_METALES_COMUNES,62.79908725,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-06-01,COBROS_EXPO_METALES_COMUNES,71.69622731999999,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-07-01,COBROS_EXPO_METALES_COMUNES,66.59418696,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-08-01,COBROS_EXPO_METALES_COMUNES,56.21244911,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-09-01,COBROS_EXPO_METALES_COMUNES,102.29211545,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-10-01,COBROS_EXPO_METALES_COMUNES,92.25782328,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-11-01,COBROS_EXPO_METALES_COMUNES,83.29765237999999,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-12-01,COBROS_EXPO_METALES_COMUNES,102.55174437,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-01-01,COBROS_EXPO_METALES_COMUNES,69.15962833,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-02-01,COBROS_EXPO_METALES_COMUNES,74.40560139,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-03-01,COBROS_EXPO_METALES_COMUNES,115.77765679,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-04-01,COBROS_EXPO_METALES_COMUNES,117.34940722,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-05-01,COBROS_EXPO_METALES_COMUNES,116.36387321,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-06-01,COBROS_EXPO_METALES_COMUNES,205.85349366,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-07-01,COBROS_EXPO_METALES_COMUNES,111.13100211,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-08-01,COBROS_EXPO_METALES_COMUNES,151.40349484,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-09-01,COBROS_EXPO_METALES_COMUNES,159.53296668000002,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-10-01,COBROS_EXPO_METALES_COMUNES,181.41092028,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-11-01,COBROS_EXPO_METALES_COMUNES,153.35554801000004,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-12-01,COBROS_EXPO_METALES_COMUNES,199.61491945,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-01-01,COBROS_EXPO_METALES_COMUNES,142.47819983,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-02-01,COBROS_EXPO_METALES_COMUNES,113.77146589,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-03-01,COBROS_EXPO_METALES_COMUNES,194.71710157,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-04-01,COBROS_EXPO_METALES_COMUNES,172.55284712,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-05-01,COBROS_EXPO_METALES_COMUNES,248.73563311,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-06-01,COBROS_EXPO_METALES_COMUNES,144.14166337999998,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-07-01,COBROS_EXPO_METALES_COMUNES,164.47671499999998,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-08-01,COBROS_EXPO_METALES_COMUNES,175.30522518,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-09-01,COBROS_EXPO_METALES_COMUNES,232.38411275,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-10-01,COBROS_EXPO_METALES_COMUNES,123.87480378,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-11-01,COBROS_EXPO_METALES_COMUNES,193.97410141,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-12-01,COBROS_EXPO_METALES_COMUNES,162.70977385,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-01-01,COBROS_EXPO_METALES_COMUNES,150.38979573,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-02-01,COBROS_EXPO_METALES_COMUNES,225.40891861,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-03-01,COBROS_EXPO_METALES_COMUNES,208.83836656000005,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-04-01,COBROS_EXPO_METALES_COMUNES,191.11537644,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-05-01,COBROS_EXPO_METALES_COMUNES,191.2895477,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-06-01,COBROS_EXPO_METALES_COMUNES,162.42629581,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-07-01,COBROS_EXPO_METALES_COMUNES,156.84898791,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-08-01,COBROS_EXPO_METALES_COMUNES,196.65540404,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-09-01,COBROS_EXPO_METALES_COMUNES,198.13471165,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-10-01,COBROS_EXPO_METALES_COMUNES,82.42878198,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-11-01,COBROS_EXPO_METALES_COMUNES,117.43069254,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-12-01,COBROS_EXPO_METALES_COMUNES,140.73753299,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-01-01,COBROS_EXPO_METALES_COMUNES,123.86435873,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-02-01,COBROS_EXPO_METALES_COMUNES,169.35002116,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-03-01,COBROS_EXPO_METALES_COMUNES,167.90125595,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-04-01,COBROS_EXPO_METALES_COMUNES,184.53786811,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-05-01,COBROS_EXPO_METALES_COMUNES,152.87780406000002,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-06-01,COBROS_EXPO_METALES_COMUNES,176.92846405,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-07-01,COBROS_EXPO_METALES_COMUNES,176.09074359,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-08-01,COBROS_EXPO_METALES_COMUNES,152.86518386,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-09-01,COBROS_EXPO_METALES_COMUNES,176.26325255,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-10-01,COBROS_EXPO_METALES_COMUNES,72.86619661,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-11-01,COBROS_EXPO_METALES_COMUNES,179.0044588,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-12-01,COBROS_EXPO_METALES_COMUNES,164.22854536,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-01-01,COBROS_EXPO_METALES_COMUNES,154.68541623,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-02-01,COBROS_EXPO_METALES_COMUNES,176.44788643,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-03-01,COBROS_EXPO_METALES_COMUNES,155.83802434,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-04-01,COBROS_EXPO_METALES_COMUNES,152.15096381,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-05-01,COBROS_EXPO_METALES_COMUNES,217.0427295,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-06-01,COBROS_EXPO_METALES_COMUNES,212.93262397,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-07-01,COBROS_EXPO_METALES_COMUNES,280.57821003,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-08-01,COBROS_EXPO_METALES_COMUNES,177.44258257,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-09-01,COBROS_EXPO_METALES_COMUNES,247.47736533,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-10-01,COBROS_EXPO_METALES_COMUNES,208.4223936,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-11-01,COBROS_EXPO_METALES_COMUNES,178.38842489,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-12-01,COBROS_EXPO_METALES_COMUNES,277.8121882,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-01-01,COBROS_EXPO_METALES_COMUNES,196.62614458,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-02-01,COBROS_EXPO_METALES_COMUNES,151.84266816,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-03-01,COBROS_EXPO_METALES_COMUNES,177.58421495,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-04-01,COBROS_EXPO_METALES_COMUNES,161.44649124,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-05-01,COBROS_EXPO_METALES_COMUNES,230.8370419951,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-06-01,COBROS_EXPO_METALES_COMUNES,203.9296675945,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-07-01,COBROS_EXPO_METALES_COMUNES,244.0650408833,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-08-01,COBROS_EXPO_METALES_COMUNES,240.4994426631,Cobros de exportaciones: sector Metales comunes,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-06-01,COBROS_EXPO_MINERIA,227.66190299,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-07-01,COBROS_EXPO_MINERIA,275.54734983000003,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-08-01,COBROS_EXPO_MINERIA,256.106274,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-09-01,COBROS_EXPO_MINERIA,281.929498,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-10-01,COBROS_EXPO_MINERIA,236.03302249,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-11-01,COBROS_EXPO_MINERIA,258.4857219,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-12-01,COBROS_EXPO_MINERIA,318.01931300000007,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-01-01,COBROS_EXPO_MINERIA,242.50149714,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-02-01,COBROS_EXPO_MINERIA,233.672797,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-03-01,COBROS_EXPO_MINERIA,317.760845,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-04-01,COBROS_EXPO_MINERIA,242.995934,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-05-01,COBROS_EXPO_MINERIA,250.31193714,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-06-01,COBROS_EXPO_MINERIA,470.79131735,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-07-01,COBROS_EXPO_MINERIA,206.856291,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-08-01,COBROS_EXPO_MINERIA,284.96828094,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-09-01,COBROS_EXPO_MINERIA,287.8862305,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-10-01,COBROS_EXPO_MINERIA,284.10606466,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-11-01,COBROS_EXPO_MINERIA,232.3582226,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-12-01,COBROS_EXPO_MINERIA,289.55617893999994,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-01-01,COBROS_EXPO_MINERIA,288.411612,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-02-01,COBROS_EXPO_MINERIA,210.19789115,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-03-01,COBROS_EXPO_MINERIA,247.26077626,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-04-01,COBROS_EXPO_MINERIA,235.54865899,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-05-01,COBROS_EXPO_MINERIA,213.76510837,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-06-01,COBROS_EXPO_MINERIA,232.21862294,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-07-01,COBROS_EXPO_MINERIA,255.12279241,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-08-01,COBROS_EXPO_MINERIA,258.066182,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-09-01,COBROS_EXPO_MINERIA,179.59506688,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-10-01,COBROS_EXPO_MINERIA,223.7155848,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-11-01,COBROS_EXPO_MINERIA,216.897421,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-12-01,COBROS_EXPO_MINERIA,236.27242656,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-01-01,COBROS_EXPO_MINERIA,277.83521563999994,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-02-01,COBROS_EXPO_MINERIA,213.581615,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-03-01,COBROS_EXPO_MINERIA,224.76904092,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-04-01,COBROS_EXPO_MINERIA,225.15281682,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-05-01,COBROS_EXPO_MINERIA,257.36210843,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-06-01,COBROS_EXPO_MINERIA,252.93244653,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-07-01,COBROS_EXPO_MINERIA,230.35414606,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-08-01,COBROS_EXPO_MINERIA,205.48000991,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-09-01,COBROS_EXPO_MINERIA,221.21010642,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-10-01,COBROS_EXPO_MINERIA,288.552856,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-11-01,COBROS_EXPO_MINERIA,252.490718,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-12-01,COBROS_EXPO_MINERIA,308.79620026000003,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-01-01,COBROS_EXPO_MINERIA,262.50273135,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-02-01,COBROS_EXPO_MINERIA,269.15372359,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-03-01,COBROS_EXPO_MINERIA,289.05033236,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-04-01,COBROS_EXPO_MINERIA,191.10292338,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-05-01,COBROS_EXPO_MINERIA,195.472912,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-06-01,COBROS_EXPO_MINERIA,185.13005475000003,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-07-01,COBROS_EXPO_MINERIA,180.16482706,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-08-01,COBROS_EXPO_MINERIA,200.9282651,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-09-01,COBROS_EXPO_MINERIA,231.682671,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-10-01,COBROS_EXPO_MINERIA,204.70956308,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-11-01,COBROS_EXPO_MINERIA,204.65082732,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-12-01,COBROS_EXPO_MINERIA,314.43376464,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-01-01,COBROS_EXPO_MINERIA,146.02769787,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-02-01,COBROS_EXPO_MINERIA,251.06677008000003,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-03-01,COBROS_EXPO_MINERIA,170.39122182999995,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-04-01,COBROS_EXPO_MINERIA,263.66807621,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-05-01,COBROS_EXPO_MINERIA,266.36936505,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-06-01,COBROS_EXPO_MINERIA,342.12735526,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-07-01,COBROS_EXPO_MINERIA,223.053061,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-08-01,COBROS_EXPO_MINERIA,321.39202299999994,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-09-01,COBROS_EXPO_MINERIA,265.71943630000004,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-10-01,COBROS_EXPO_MINERIA,286.52710479,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-11-01,COBROS_EXPO_MINERIA,219.98757371,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-12-01,COBROS_EXPO_MINERIA,368.94290901,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-01-01,COBROS_EXPO_MINERIA,277.20813224,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-02-01,COBROS_EXPO_MINERIA,289.70163305000005,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-03-01,COBROS_EXPO_MINERIA,304.13455979,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-04-01,COBROS_EXPO_MINERIA,283.80722298,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-05-01,COBROS_EXPO_MINERIA,342.0381798,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-06-01,COBROS_EXPO_MINERIA,391.869397,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-07-01,COBROS_EXPO_MINERIA,306.23190876,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-08-01,COBROS_EXPO_MINERIA,304.9347431999999,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-09-01,COBROS_EXPO_MINERIA,352.93489695000005,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-10-01,COBROS_EXPO_MINERIA,328.629818,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-11-01,COBROS_EXPO_MINERIA,296.5409031,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-12-01,COBROS_EXPO_MINERIA,352.204852,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-01-01,COBROS_EXPO_MINERIA,284.896628,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-02-01,COBROS_EXPO_MINERIA,291.200279,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-03-01,COBROS_EXPO_MINERIA,346.24349507999995,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-04-01,COBROS_EXPO_MINERIA,281.92120803,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-05-01,COBROS_EXPO_MINERIA,330.18720764,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-06-01,COBROS_EXPO_MINERIA,393.00201826,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-07-01,COBROS_EXPO_MINERIA,298.42216232999994,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-08-01,COBROS_EXPO_MINERIA,316.9418,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-09-01,COBROS_EXPO_MINERIA,216.874693,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-10-01,COBROS_EXPO_MINERIA,240.23587555,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-11-01,COBROS_EXPO_MINERIA,200.522562,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-12-01,COBROS_EXPO_MINERIA,184.5902966,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-01-01,COBROS_EXPO_MINERIA,222.53467926,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-02-01,COBROS_EXPO_MINERIA,313.218587,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-03-01,COBROS_EXPO_MINERIA,175.71331444999998,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-04-01,COBROS_EXPO_MINERIA,268.07651143,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-05-01,COBROS_EXPO_MINERIA,373.43329454,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-06-01,COBROS_EXPO_MINERIA,241.47416233,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-07-01,COBROS_EXPO_MINERIA,282.92194507,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-08-01,COBROS_EXPO_MINERIA,425.14468868,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-09-01,COBROS_EXPO_MINERIA,317.57633444,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-10-01,COBROS_EXPO_MINERIA,402.33203056,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-11-01,COBROS_EXPO_MINERIA,354.52747444,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-12-01,COBROS_EXPO_MINERIA,366.81347528,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-01-01,COBROS_EXPO_MINERIA,353.42017244,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-02-01,COBROS_EXPO_MINERIA,399.0167633999999,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-03-01,COBROS_EXPO_MINERIA,299.76605524,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-04-01,COBROS_EXPO_MINERIA,591.716454,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-05-01,COBROS_EXPO_MINERIA,446.91989732,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-06-01,COBROS_EXPO_MINERIA,521.1088724800001,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-07-01,COBROS_EXPO_MINERIA,556.9768384800001,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-08-01,COBROS_EXPO_MINERIA,370.89355865,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-09-01,COBROS_EXPO_MINERIA,490.9763864,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-10-01,COBROS_EXPO_MINERIA,543.0249353199999,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-11-01,COBROS_EXPO_MINERIA,409.15104443,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-12-01,COBROS_EXPO_MINERIA,582.98056702,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-01-01,COBROS_EXPO_MINERIA,779.14541504,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-02-01,COBROS_EXPO_MINERIA,641.2940172000001,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-03-01,COBROS_EXPO_MINERIA,760.2316079999999,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-04-01,COBROS_EXPO_MINERIA,847.36241267,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-05-01,COBROS_EXPO_MINERIA,911.64647478,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-06-01,COBROS_EXPO_MINERIA,644.8784586,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-07-01,COBROS_EXPO_MINERIA,896.76176704,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-08-01,COBROS_EXPO_MINERIA,541.2209100228,Cobros de exportaciones: sector Minería,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-06-01,COBROS_EXPO_PETROLEO,152.50099085,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-07-01,COBROS_EXPO_PETROLEO,104.634468,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-08-01,COBROS_EXPO_PETROLEO,108.98048,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-09-01,COBROS_EXPO_PETROLEO,133.741935,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-10-01,COBROS_EXPO_PETROLEO,193.75961411,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-11-01,COBROS_EXPO_PETROLEO,257.670674,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-12-01,COBROS_EXPO_PETROLEO,250.091826,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-01-01,COBROS_EXPO_PETROLEO,250.342603,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-02-01,COBROS_EXPO_PETROLEO,300.914734,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-03-01,COBROS_EXPO_PETROLEO,149.10744236,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-04-01,COBROS_EXPO_PETROLEO,126.552475,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-05-01,COBROS_EXPO_PETROLEO,138.02444483,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-06-01,COBROS_EXPO_PETROLEO,97.27094,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-07-01,COBROS_EXPO_PETROLEO,133.03697188,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-08-01,COBROS_EXPO_PETROLEO,98.393028,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-09-01,COBROS_EXPO_PETROLEO,128.134049,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-10-01,COBROS_EXPO_PETROLEO,227.761715,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-11-01,COBROS_EXPO_PETROLEO,92.65941989,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-12-01,COBROS_EXPO_PETROLEO,330.657566,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-01-01,COBROS_EXPO_PETROLEO,268.73103497,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-02-01,COBROS_EXPO_PETROLEO,197.513044,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-03-01,COBROS_EXPO_PETROLEO,194.24483844,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-04-01,COBROS_EXPO_PETROLEO,114.240253,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-05-01,COBROS_EXPO_PETROLEO,98.70862,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-06-01,COBROS_EXPO_PETROLEO,239.822588,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-07-01,COBROS_EXPO_PETROLEO,235.486861,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-08-01,COBROS_EXPO_PETROLEO,282.388106,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-09-01,COBROS_EXPO_PETROLEO,146.181312,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-10-01,COBROS_EXPO_PETROLEO,267.46736300000003,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-11-01,COBROS_EXPO_PETROLEO,168.87750599999998,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-12-01,COBROS_EXPO_PETROLEO,223.205236,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-01-01,COBROS_EXPO_PETROLEO,300.4645,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-02-01,COBROS_EXPO_PETROLEO,205.20310368000003,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-03-01,COBROS_EXPO_PETROLEO,201.119687,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-04-01,COBROS_EXPO_PETROLEO,145.8862474,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-05-01,COBROS_EXPO_PETROLEO,165.24166281,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-06-01,COBROS_EXPO_PETROLEO,307.106768,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-07-01,COBROS_EXPO_PETROLEO,227.70844515,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-08-01,COBROS_EXPO_PETROLEO,163.47496103,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-09-01,COBROS_EXPO_PETROLEO,370.026828,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-10-01,COBROS_EXPO_PETROLEO,379.20377582,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-11-01,COBROS_EXPO_PETROLEO,315.202549,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-12-01,COBROS_EXPO_PETROLEO,427.662595,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-01-01,COBROS_EXPO_PETROLEO,468.057741,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-02-01,COBROS_EXPO_PETROLEO,308.661225,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-03-01,COBROS_EXPO_PETROLEO,273.69414717,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-04-01,COBROS_EXPO_PETROLEO,250.061451,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-05-01,COBROS_EXPO_PETROLEO,219.80886,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-06-01,COBROS_EXPO_PETROLEO,176.192295,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-07-01,COBROS_EXPO_PETROLEO,234.307497,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-08-01,COBROS_EXPO_PETROLEO,296.81075,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-09-01,COBROS_EXPO_PETROLEO,286.70581200000004,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-10-01,COBROS_EXPO_PETROLEO,206.66192413,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-11-01,COBROS_EXPO_PETROLEO,206.947827,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-12-01,COBROS_EXPO_PETROLEO,247.205044,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-01-01,COBROS_EXPO_PETROLEO,296.6164085,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-02-01,COBROS_EXPO_PETROLEO,269.02240886000004,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-03-01,COBROS_EXPO_PETROLEO,305.95462,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-04-01,COBROS_EXPO_PETROLEO,305.936482,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-05-01,COBROS_EXPO_PETROLEO,222.090917,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-06-01,COBROS_EXPO_PETROLEO,395.17410100000006,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-07-01,COBROS_EXPO_PETROLEO,442.28432345,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-08-01,COBROS_EXPO_PETROLEO,382.392972,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-09-01,COBROS_EXPO_PETROLEO,381.147232,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-10-01,COBROS_EXPO_PETROLEO,358.235113,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-11-01,COBROS_EXPO_PETROLEO,520.601964,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-12-01,COBROS_EXPO_PETROLEO,437.68135228,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-01-01,COBROS_EXPO_PETROLEO,418.530558,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-02-01,COBROS_EXPO_PETROLEO,460.189516,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-03-01,COBROS_EXPO_PETROLEO,976.149806,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-04-01,COBROS_EXPO_PETROLEO,560.579343,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-05-01,COBROS_EXPO_PETROLEO,760.2195869999999,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-06-01,COBROS_EXPO_PETROLEO,705.32422,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-07-01,COBROS_EXPO_PETROLEO,766.732476,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-08-01,COBROS_EXPO_PETROLEO,659.7883973,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-09-01,COBROS_EXPO_PETROLEO,709.765266,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-10-01,COBROS_EXPO_PETROLEO,791.580175,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-11-01,COBROS_EXPO_PETROLEO,827.881321,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-12-01,COBROS_EXPO_PETROLEO,772.0106539999999,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-01-01,COBROS_EXPO_PETROLEO,563.0694,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-02-01,COBROS_EXPO_PETROLEO,650.052644,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-03-01,COBROS_EXPO_PETROLEO,839.603976,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-04-01,COBROS_EXPO_PETROLEO,880.9596329999999,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-05-01,COBROS_EXPO_PETROLEO,654.06696196,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-06-01,COBROS_EXPO_PETROLEO,513.675823,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-07-01,COBROS_EXPO_PETROLEO,669.38536498,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-08-01,COBROS_EXPO_PETROLEO,420.751478,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-09-01,COBROS_EXPO_PETROLEO,725.66342801,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-10-01,COBROS_EXPO_PETROLEO,755.20864271,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-11-01,COBROS_EXPO_PETROLEO,585.197499,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-12-01,COBROS_EXPO_PETROLEO,398.124,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-01-01,COBROS_EXPO_PETROLEO,563.267754,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-02-01,COBROS_EXPO_PETROLEO,636.445233,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-03-01,COBROS_EXPO_PETROLEO,813.247165,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-04-01,COBROS_EXPO_PETROLEO,856.48275628,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-05-01,COBROS_EXPO_PETROLEO,816.322492,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-06-01,COBROS_EXPO_PETROLEO,528.485858,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-07-01,COBROS_EXPO_PETROLEO,670.32424826,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-08-01,COBROS_EXPO_PETROLEO,529.100064,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-09-01,COBROS_EXPO_PETROLEO,489.326979,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-10-01,COBROS_EXPO_PETROLEO,616.52205,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-11-01,COBROS_EXPO_PETROLEO,622.360001,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-12-01,COBROS_EXPO_PETROLEO,718.41870782,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-01-01,COBROS_EXPO_PETROLEO,848.91720031,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-02-01,COBROS_EXPO_PETROLEO,570.70510679,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-03-01,COBROS_EXPO_PETROLEO,701.169582,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-04-01,COBROS_EXPO_PETROLEO,1006.186766,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-05-01,COBROS_EXPO_PETROLEO,947.403559,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-06-01,COBROS_EXPO_PETROLEO,1084.517934,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-07-01,COBROS_EXPO_PETROLEO,1162.21202,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-08-01,COBROS_EXPO_PETROLEO,861.996643,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-09-01,COBROS_EXPO_PETROLEO,955.332487,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-10-01,COBROS_EXPO_PETROLEO,684.4717909999999,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-11-01,COBROS_EXPO_PETROLEO,578.674235,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-12-01,COBROS_EXPO_PETROLEO,580.51244554,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-01-01,COBROS_EXPO_PETROLEO,750.327098,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-02-01,COBROS_EXPO_PETROLEO,735.63284146,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-03-01,COBROS_EXPO_PETROLEO,837.290798,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-04-01,COBROS_EXPO_PETROLEO,1362.912683,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-05-01,COBROS_EXPO_PETROLEO,1713.795248,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-06-01,COBROS_EXPO_PETROLEO,1690.642036,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-07-01,COBROS_EXPO_PETROLEO,1305.50883,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-08-01,COBROS_EXPO_PETROLEO,1317.96800528,Cobros de exportaciones: sector Petróleo,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-06-01,COBROS_EXPO_TOTAL,5077.065268569999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-07-01,COBROS_EXPO_TOTAL,4599.56861903,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-08-01,COBROS_EXPO_TOTAL,5156.887235400001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-09-01,COBROS_EXPO_TOTAL,4726.49627483,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-10-01,COBROS_EXPO_TOTAL,4447.645890710001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-11-01,COBROS_EXPO_TOTAL,4555.446651940001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2016-12-01,COBROS_EXPO_TOTAL,4646.98464215,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-01-01,COBROS_EXPO_TOTAL,5091.060668450001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-02-01,COBROS_EXPO_TOTAL,3634.10393173,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-03-01,COBROS_EXPO_TOTAL,5050.877542719999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-04-01,COBROS_EXPO_TOTAL,4600.7317914800005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-05-01,COBROS_EXPO_TOTAL,5761.471686669999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-06-01,COBROS_EXPO_TOTAL,5685.024671859999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-07-01,COBROS_EXPO_TOTAL,5077.6329083400005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-08-01,COBROS_EXPO_TOTAL,5283.6477891,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-09-01,COBROS_EXPO_TOTAL,4747.83680783,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-10-01,COBROS_EXPO_TOTAL,4765.450232550001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-11-01,COBROS_EXPO_TOTAL,4306.80993885,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2017-12-01,COBROS_EXPO_TOTAL,4419.045192850001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-01-01,COBROS_EXPO_TOTAL,5023.019477100001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-02-01,COBROS_EXPO_TOTAL,3829.60202581,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-03-01,COBROS_EXPO_TOTAL,3898.926737470001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-04-01,COBROS_EXPO_TOTAL,4534.7021322699975,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-05-01,COBROS_EXPO_TOTAL,4545.61281361,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-06-01,COBROS_EXPO_TOTAL,4850.793847050001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-07-01,COBROS_EXPO_TOTAL,4361.109459799999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-08-01,COBROS_EXPO_TOTAL,4420.304993269999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-09-01,COBROS_EXPO_TOTAL,3684.2683172,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-10-01,COBROS_EXPO_TOTAL,4015.83629992,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-11-01,COBROS_EXPO_TOTAL,3653.28394706,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2018-12-01,COBROS_EXPO_TOTAL,4062.4786594399993,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-01-01,COBROS_EXPO_TOTAL,4688.411094380001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-02-01,COBROS_EXPO_TOTAL,3768.10139777,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-03-01,COBROS_EXPO_TOTAL,3572.92660221,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-04-01,COBROS_EXPO_TOTAL,4452.69012012,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-05-01,COBROS_EXPO_TOTAL,5292.978182819999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-06-01,COBROS_EXPO_TOTAL,4821.6302111800005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-07-01,COBROS_EXPO_TOTAL,4961.654787560001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-08-01,COBROS_EXPO_TOTAL,4944.9847551,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-09-01,COBROS_EXPO_TOTAL,5175.73178493,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-10-01,COBROS_EXPO_TOTAL,5074.9014833400015,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-11-01,COBROS_EXPO_TOTAL,5328.37641663,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2019-12-01,COBROS_EXPO_TOTAL,5713.62366583,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-01-01,COBROS_EXPO_TOTAL,5145.76296359,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-02-01,COBROS_EXPO_TOTAL,3516.32436659,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-03-01,COBROS_EXPO_TOTAL,3745.21091763,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-04-01,COBROS_EXPO_TOTAL,3944.09456397,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-05-01,COBROS_EXPO_TOTAL,3867.8045028700008,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-06-01,COBROS_EXPO_TOTAL,4346.702244200001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-07-01,COBROS_EXPO_TOTAL,4526.03648579,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-08-01,COBROS_EXPO_TOTAL,4075.00720925,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-09-01,COBROS_EXPO_TOTAL,4433.407344350001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-10-01,COBROS_EXPO_TOTAL,4048.24425566,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-11-01,COBROS_EXPO_TOTAL,4253.92459442,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2020-12-01,COBROS_EXPO_TOTAL,4654.211574910001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-01-01,COBROS_EXPO_TOTAL,4878.223855849999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-02-01,COBROS_EXPO_TOTAL,4756.76050435,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-03-01,COBROS_EXPO_TOTAL,6508.832195230001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-04-01,COBROS_EXPO_TOTAL,6728.331984610001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-05-01,COBROS_EXPO_TOTAL,7284.13687569,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-06-01,COBROS_EXPO_TOTAL,7678.843185079999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-07-01,COBROS_EXPO_TOTAL,7225.531344499999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-08-01,COBROS_EXPO_TOTAL,6806.13875528,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-09-01,COBROS_EXPO_TOTAL,6306.85690161,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-10-01,COBROS_EXPO_TOTAL,5928.65830311,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-11-01,COBROS_EXPO_TOTAL,5623.177552479998,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2021-12-01,COBROS_EXPO_TOTAL,6741.2889172000005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-01-01,COBROS_EXPO_TOTAL,6119.953935990001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-02-01,COBROS_EXPO_TOTAL,5594.909409489999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-03-01,COBROS_EXPO_TOTAL,8023.332483620001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-04-01,COBROS_EXPO_TOTAL,7393.2654667,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-05-01,COBROS_EXPO_TOTAL,8933.1839797,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-06-01,COBROS_EXPO_TOTAL,8262.62596838,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-07-01,COBROS_EXPO_TOTAL,7239.667170680001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-08-01,COBROS_EXPO_TOTAL,7541.419305979999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-09-01,COBROS_EXPO_TOTAL,12891.38498105,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-10-01,COBROS_EXPO_TOTAL,4890.284881819999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-11-01,COBROS_EXPO_TOTAL,5918.891894439998,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2022-12-01,COBROS_EXPO_TOTAL,7723.77839048,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-01-01,COBROS_EXPO_TOTAL,4577.110621940001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-02-01,COBROS_EXPO_TOTAL,4334.91894919,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-03-01,COBROS_EXPO_TOTAL,5339.80410118,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-04-01,COBROS_EXPO_TOTAL,6299.43429712,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-05-01,COBROS_EXPO_TOTAL,8245.67956971,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-06-01,COBROS_EXPO_TOTAL,5209.3460118,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-07-01,COBROS_EXPO_TOTAL,5563.808664439999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-08-01,COBROS_EXPO_TOTAL,5387.754628590001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-09-01,COBROS_EXPO_TOTAL,5412.5134072400015,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-10-01,COBROS_EXPO_TOTAL,3594.72742322,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-11-01,COBROS_EXPO_TOTAL,3593.81651627,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2023-12-01,COBROS_EXPO_TOTAL,4104.496260779999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-01-01,COBROS_EXPO_TOTAL,4947.418233359999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-02-01,COBROS_EXPO_TOTAL,4747.07902797,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-03-01,COBROS_EXPO_TOTAL,5018.069567809999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-04-01,COBROS_EXPO_TOTAL,5895.805536959999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-05-01,COBROS_EXPO_TOTAL,6451.65303304,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-06-01,COBROS_EXPO_TOTAL,4930.7226141,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-07-01,COBROS_EXPO_TOTAL,5890.81047683,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-08-01,COBROS_EXPO_TOTAL,5599.97097714,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-09-01,COBROS_EXPO_TOTAL,5538.9191691900005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-10-01,COBROS_EXPO_TOTAL,6292.2806743500005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-11-01,COBROS_EXPO_TOTAL,5697.27373221,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2024-12-01,COBROS_EXPO_TOTAL,5886.878497069999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-01-01,COBROS_EXPO_TOTAL,6613.874455169999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-02-01,COBROS_EXPO_TOTAL,5669.49543099,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-03-01,COBROS_EXPO_TOTAL,5295.932471189999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-04-01,COBROS_EXPO_TOTAL,7121.4032213400005,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-05-01,COBROS_EXPO_TOTAL,7960.60352461,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-06-01,COBROS_EXPO_TOTAL,9121.12055793,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-07-01,COBROS_EXPO_TOTAL,10175.230488589996,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-08-01,COBROS_EXPO_TOTAL,6600.621303229999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-09-01,COBROS_EXPO_TOTAL,12853.14261133,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-10-01,COBROS_EXPO_TOTAL,5389.29079255,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-11-01,COBROS_EXPO_TOTAL,4888.134829840001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2025-12-01,COBROS_EXPO_TOTAL,6117.72622413,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-01-01,COBROS_EXPO_TOTAL,6814.138920529998,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-02-01,COBROS_EXPO_TOTAL,6006.628996670001,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-03-01,COBROS_EXPO_TOTAL,7329.431164719999,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-04-01,COBROS_EXPO_TOTAL,8325.674205998499,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-05-01,COBROS_EXPO_TOTAL,9297.3205867476,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-06-01,COBROS_EXPO_TOTAL,9437.652596090596,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-07-01,COBROS_EXPO_TOTAL,10073.803781937,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
+2026-08-01,COBROS_EXPO_TOTAL,8794.9045451815,Cobros de exportaciones de bienes: total,USD mn,"datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)",flujo,none
 2016-06-01,COMPRAS_BCRA,323.0851,"Compras de divisas del BCRA (variación de reservas por compra de divisas, suma del mes)",USD mn,BCRA,flujo,sum
 2016-07-01,COMPRAS_BCRA,719.4258,"Compras de divisas del BCRA (variación de reservas por compra de divisas, suma del mes)",USD mn,BCRA,flujo,sum
 2016-08-01,COMPRAS_BCRA,5.854,"Compras de divisas del BCRA (variación de reservas por compra de divisas, suma del mes)",USD mn,BCRA,flujo,sum
@@ -2045,6 +2783,129 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-06-01,EXPO_GAS,121.57376319,Exportaciones de gas de petróleo y otros hidrocarburos (FOB),USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2026-07-01,EXPO_GAS,93.37642499,Exportaciones de gas de petróleo y otros hidrocarburos (FOB),USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2026-08-01,EXPO_GAS,91.03382958,Exportaciones de gas de petróleo y otros hidrocarburos (FOB),USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-06-01,EXPO_METALES_COMUNES,110.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-07-01,EXPO_METALES_COMUNES,108.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-08-01,EXPO_METALES_COMUNES,119.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-09-01,EXPO_METALES_COMUNES,135.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-10-01,EXPO_METALES_COMUNES,94.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-11-01,EXPO_METALES_COMUNES,160.66072239996674,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2016-12-01,EXPO_METALES_COMUNES,104.83149148711895,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-01-01,EXPO_METALES_COMUNES,117.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-02-01,EXPO_METALES_COMUNES,98.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-03-01,EXPO_METALES_COMUNES,117.74689949715464,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-04-01,EXPO_METALES_COMUNES,131.50636243350888,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-05-01,EXPO_METALES_COMUNES,135.8420462130096,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-06-01,EXPO_METALES_COMUNES,140.49324547803914,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-07-01,EXPO_METALES_COMUNES,155.32253259765454,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-08-01,EXPO_METALES_COMUNES,159.7293063935867,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-09-01,EXPO_METALES_COMUNES,153.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-10-01,EXPO_METALES_COMUNES,205.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-11-01,EXPO_METALES_COMUNES,169.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2017-12-01,EXPO_METALES_COMUNES,149.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-01-01,EXPO_METALES_COMUNES,176.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-02-01,EXPO_METALES_COMUNES,144.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-03-01,EXPO_METALES_COMUNES,154.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-04-01,EXPO_METALES_COMUNES,160.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-05-01,EXPO_METALES_COMUNES,149.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-06-01,EXPO_METALES_COMUNES,212.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-07-01,EXPO_METALES_COMUNES,202.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-08-01,EXPO_METALES_COMUNES,219.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-09-01,EXPO_METALES_COMUNES,191.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-10-01,EXPO_METALES_COMUNES,178.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-11-01,EXPO_METALES_COMUNES,215.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2018-12-01,EXPO_METALES_COMUNES,191.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-01-01,EXPO_METALES_COMUNES,157.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-02-01,EXPO_METALES_COMUNES,119.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-03-01,EXPO_METALES_COMUNES,117.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-04-01,EXPO_METALES_COMUNES,202.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-05-01,EXPO_METALES_COMUNES,184.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-06-01,EXPO_METALES_COMUNES,172.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-07-01,EXPO_METALES_COMUNES,173.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-08-01,EXPO_METALES_COMUNES,183.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-09-01,EXPO_METALES_COMUNES,149.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-10-01,EXPO_METALES_COMUNES,220.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-11-01,EXPO_METALES_COMUNES,203.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2019-12-01,EXPO_METALES_COMUNES,166.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-01-01,EXPO_METALES_COMUNES,136.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-02-01,EXPO_METALES_COMUNES,100.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-03-01,EXPO_METALES_COMUNES,116.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-04-01,EXPO_METALES_COMUNES,102.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-05-01,EXPO_METALES_COMUNES,103.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-06-01,EXPO_METALES_COMUNES,89.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-07-01,EXPO_METALES_COMUNES,104.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-08-01,EXPO_METALES_COMUNES,121.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-09-01,EXPO_METALES_COMUNES,100.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-10-01,EXPO_METALES_COMUNES,98.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-11-01,EXPO_METALES_COMUNES,88.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2020-12-01,EXPO_METALES_COMUNES,110.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-01-01,EXPO_METALES_COMUNES,64.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-02-01,EXPO_METALES_COMUNES,107.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-03-01,EXPO_METALES_COMUNES,74.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-04-01,EXPO_METALES_COMUNES,157.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-05-01,EXPO_METALES_COMUNES,101.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-06-01,EXPO_METALES_COMUNES,210.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-07-01,EXPO_METALES_COMUNES,94.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-08-01,EXPO_METALES_COMUNES,262.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-09-01,EXPO_METALES_COMUNES,199.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-10-01,EXPO_METALES_COMUNES,221.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-11-01,EXPO_METALES_COMUNES,157.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2021-12-01,EXPO_METALES_COMUNES,194.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-01-01,EXPO_METALES_COMUNES,85.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-02-01,EXPO_METALES_COMUNES,223.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-03-01,EXPO_METALES_COMUNES,144.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-04-01,EXPO_METALES_COMUNES,237.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-05-01,EXPO_METALES_COMUNES,117.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-06-01,EXPO_METALES_COMUNES,235.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-07-01,EXPO_METALES_COMUNES,125.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-08-01,EXPO_METALES_COMUNES,208.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-09-01,EXPO_METALES_COMUNES,222.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-10-01,EXPO_METALES_COMUNES,224.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-11-01,EXPO_METALES_COMUNES,120.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2022-12-01,EXPO_METALES_COMUNES,138.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-01-01,EXPO_METALES_COMUNES,182.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-02-01,EXPO_METALES_COMUNES,175.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-03-01,EXPO_METALES_COMUNES,179.2823492,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-04-01,EXPO_METALES_COMUNES,193.53454308,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-05-01,EXPO_METALES_COMUNES,194.41843077,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-06-01,EXPO_METALES_COMUNES,108.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-07-01,EXPO_METALES_COMUNES,203.9958,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-08-01,EXPO_METALES_COMUNES,139.08316954,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-09-01,EXPO_METALES_COMUNES,120.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-10-01,EXPO_METALES_COMUNES,194.0,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-11-01,EXPO_METALES_COMUNES,210.4614,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2023-12-01,EXPO_METALES_COMUNES,142.20138293,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-01-01,EXPO_METALES_COMUNES,169.96393568,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-02-01,EXPO_METALES_COMUNES,138.21428639,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-03-01,EXPO_METALES_COMUNES,160.31325509,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-04-01,EXPO_METALES_COMUNES,188.66667576,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-05-01,EXPO_METALES_COMUNES,226.94942332,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-06-01,EXPO_METALES_COMUNES,174.78942935,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-07-01,EXPO_METALES_COMUNES,221.80522146,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-08-01,EXPO_METALES_COMUNES,219.26543733,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-09-01,EXPO_METALES_COMUNES,150.43838173,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-10-01,EXPO_METALES_COMUNES,220.18208594,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-11-01,EXPO_METALES_COMUNES,234.23481472,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2024-12-01,EXPO_METALES_COMUNES,174.57845155,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-01-01,EXPO_METALES_COMUNES,176.16876854,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-02-01,EXPO_METALES_COMUNES,82.18786442,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-03-01,EXPO_METALES_COMUNES,146.29063409,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-04-01,EXPO_METALES_COMUNES,240.50782272,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-05-01,EXPO_METALES_COMUNES,186.90357781,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-06-01,EXPO_METALES_COMUNES,108.59879287,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-07-01,EXPO_METALES_COMUNES,276.87378749,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-08-01,EXPO_METALES_COMUNES,236.84012177,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-09-01,EXPO_METALES_COMUNES,140.92017435,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-10-01,EXPO_METALES_COMUNES,213.02744067,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-11-01,EXPO_METALES_COMUNES,311.10060031,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2025-12-01,EXPO_METALES_COMUNES,185.74968426,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-01-01,EXPO_METALES_COMUNES,219.88986378,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-02-01,EXPO_METALES_COMUNES,77.70842028,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-03-01,EXPO_METALES_COMUNES,272.62159822,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-04-01,EXPO_METALES_COMUNES,280.61794367,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-05-01,EXPO_METALES_COMUNES,240.83305845,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-06-01,EXPO_METALES_COMUNES,302.20836365,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-07-01,EXPO_METALES_COMUNES,259.23329633,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
+2026-08-01,EXPO_METALES_COMUNES,163.82545935,"Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2016-06-01,EXPO_METALES_PRECIOSOS,220.0,"Exportaciones de piedras y metales preciosos (FOB; en la práctica, sobre todo oro y plata)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2016-07-01,EXPO_METALES_PRECIOSOS,107.0,"Exportaciones de piedras y metales preciosos (FOB; en la práctica, sobre todo oro y plata)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
 2016-08-01,EXPO_METALES_PRECIOSOS,253.0,"Exportaciones de piedras y metales preciosos (FOB; en la práctica, sobre todo oro y plata)",USD mn,"datos.gob.ar (INDEC, Intercambio Comercial Argentino)",flujo,none
@@ -3886,6 +4747,130 @@ fecha,variable,valor,etiqueta,unidad,fuente,tipo,agregacion
 2026-05-01,PRECIO_SOJA,439.149647497951,"Precio internacional de la soja (FRED/FMI, promedio mensual)",USD por tonelada,FRED (St. Louis Fed),precio,none
 2026-06-01,PRECIO_SOJA,414.542332960393,"Precio internacional de la soja (FRED/FMI, promedio mensual)",USD por tonelada,FRED (St. Louis Fed),precio,none
 2026-07-01,PRECIO_SOJA,442.4505721529122,"Precio internacional de la soja (FRED/FMI, promedio mensual)",USD por tonelada,FRED (St. Louis Fed),precio,none
+2016-06-01,PRECIO_WTI,48.76,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-07-01,PRECIO_WTI,44.65,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-08-01,PRECIO_WTI,44.72,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-09-01,PRECIO_WTI,45.18,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-10-01,PRECIO_WTI,49.78,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-11-01,PRECIO_WTI,45.66,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2016-12-01,PRECIO_WTI,51.97,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-01-01,PRECIO_WTI,52.5,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-02-01,PRECIO_WTI,53.47,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-03-01,PRECIO_WTI,49.33,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-04-01,PRECIO_WTI,51.06,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-05-01,PRECIO_WTI,48.48,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-06-01,PRECIO_WTI,45.18,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-07-01,PRECIO_WTI,46.63,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-08-01,PRECIO_WTI,48.04,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-09-01,PRECIO_WTI,49.82,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-10-01,PRECIO_WTI,51.58,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-11-01,PRECIO_WTI,56.64,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2017-12-01,PRECIO_WTI,57.88,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-01-01,PRECIO_WTI,63.7,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-02-01,PRECIO_WTI,62.23,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-03-01,PRECIO_WTI,62.73,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-04-01,PRECIO_WTI,66.25,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-05-01,PRECIO_WTI,69.98,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-06-01,PRECIO_WTI,67.87,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-07-01,PRECIO_WTI,70.98,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-08-01,PRECIO_WTI,68.06,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-09-01,PRECIO_WTI,70.23,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-10-01,PRECIO_WTI,70.75,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-11-01,PRECIO_WTI,56.96,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2018-12-01,PRECIO_WTI,49.52,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-01-01,PRECIO_WTI,51.38,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-02-01,PRECIO_WTI,54.95,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-03-01,PRECIO_WTI,58.15,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-04-01,PRECIO_WTI,63.86,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-05-01,PRECIO_WTI,60.83,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-06-01,PRECIO_WTI,54.66,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-07-01,PRECIO_WTI,57.35,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-08-01,PRECIO_WTI,54.81,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-09-01,PRECIO_WTI,56.95,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-10-01,PRECIO_WTI,53.96,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-11-01,PRECIO_WTI,57.03,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2019-12-01,PRECIO_WTI,59.88,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-01-01,PRECIO_WTI,57.52,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-02-01,PRECIO_WTI,50.54,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-03-01,PRECIO_WTI,29.21,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-04-01,PRECIO_WTI,16.55,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-05-01,PRECIO_WTI,28.56,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-06-01,PRECIO_WTI,38.31,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-07-01,PRECIO_WTI,40.71,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-08-01,PRECIO_WTI,42.34,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-09-01,PRECIO_WTI,39.63,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-10-01,PRECIO_WTI,39.4,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-11-01,PRECIO_WTI,40.94,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2020-12-01,PRECIO_WTI,47.02,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-01-01,PRECIO_WTI,52.0,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-02-01,PRECIO_WTI,59.04,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-03-01,PRECIO_WTI,62.33,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-04-01,PRECIO_WTI,61.72,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-05-01,PRECIO_WTI,65.17,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-06-01,PRECIO_WTI,71.38,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-07-01,PRECIO_WTI,72.49,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-08-01,PRECIO_WTI,67.73,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-09-01,PRECIO_WTI,71.65,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-10-01,PRECIO_WTI,81.48,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-11-01,PRECIO_WTI,79.15,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2021-12-01,PRECIO_WTI,71.71,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-01-01,PRECIO_WTI,83.22,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-02-01,PRECIO_WTI,91.64,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-03-01,PRECIO_WTI,108.5,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-04-01,PRECIO_WTI,101.78,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-05-01,PRECIO_WTI,109.55,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-06-01,PRECIO_WTI,114.84,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-07-01,PRECIO_WTI,101.62,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-08-01,PRECIO_WTI,93.67,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-09-01,PRECIO_WTI,84.26,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-10-01,PRECIO_WTI,87.55,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-11-01,PRECIO_WTI,84.37,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2022-12-01,PRECIO_WTI,76.44,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-01-01,PRECIO_WTI,78.12,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-02-01,PRECIO_WTI,76.83,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-03-01,PRECIO_WTI,73.28,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-04-01,PRECIO_WTI,79.45,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-05-01,PRECIO_WTI,71.58,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-06-01,PRECIO_WTI,70.25,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-07-01,PRECIO_WTI,76.07,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-08-01,PRECIO_WTI,81.39,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-09-01,PRECIO_WTI,89.43,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-10-01,PRECIO_WTI,85.64,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-11-01,PRECIO_WTI,77.69,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2023-12-01,PRECIO_WTI,71.9,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-01-01,PRECIO_WTI,74.15,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-02-01,PRECIO_WTI,77.25,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-03-01,PRECIO_WTI,81.28,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-04-01,PRECIO_WTI,85.35,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-05-01,PRECIO_WTI,80.02,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-06-01,PRECIO_WTI,79.77,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-07-01,PRECIO_WTI,81.8,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-08-01,PRECIO_WTI,76.68,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-09-01,PRECIO_WTI,70.24,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-10-01,PRECIO_WTI,71.99,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-11-01,PRECIO_WTI,69.95,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2024-12-01,PRECIO_WTI,70.12,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-01-01,PRECIO_WTI,75.74,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-02-01,PRECIO_WTI,71.53,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-03-01,PRECIO_WTI,68.24,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-04-01,PRECIO_WTI,63.54,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-05-01,PRECIO_WTI,62.17,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-06-01,PRECIO_WTI,68.17,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-07-01,PRECIO_WTI,68.39,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-08-01,PRECIO_WTI,64.86,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-09-01,PRECIO_WTI,63.96,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-10-01,PRECIO_WTI,60.89,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-11-01,PRECIO_WTI,60.06,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2025-12-01,PRECIO_WTI,57.97,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-01-01,PRECIO_WTI,60.04,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-02-01,PRECIO_WTI,64.51,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-03-01,PRECIO_WTI,91.38,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-04-01,PRECIO_WTI,100.32,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-05-01,PRECIO_WTI,102.13,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-06-01,PRECIO_WTI,84.81,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-07-01,PRECIO_WTI,80.46,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-08-01,PRECIO_WTI,83.9,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
+2026-09-01,PRECIO_WTI,97.31,"Petróleo WTI (FRED, promedio mensual)",USD por barril,FRED (St. Louis Fed),precio,none
 2016-06-01,RESERVAS_BRUTAS,30507.0,Reservas internacionales (fin de mes),USD mn,BCRA,stock,last
 2016-07-01,RESERVAS_BRUTAS,32511.0,Reservas internacionales (fin de mes),USD mn,BCRA,stock,last
 2016-08-01,RESERVAS_BRUTAS,31150.0,Reservas internacionales (fin de mes),USD mn,BCRA,stock,last
