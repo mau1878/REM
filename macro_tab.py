@@ -1022,6 +1022,77 @@ def _bloque_flujos(macro, ser, show):
     return ["", "## Flujos de dolares (suma movil de 12 meses, USD mn)", tabla.to_csv(index=False).strip()]
 
 
+FINANCIAMIENTO = {  # clave: etiqueta (suma de 12 meses, USD mn; positivo = entran dolares)
+    "CC_CAMBIARIA": "Cuenta corriente cambiaria (bienes, servicios, rentas)",
+    "IED_NETA": "Inversión directa de no residentes",
+    "PORTAFOLIO_NETO": "Inversión de portafolio de no residentes",
+    "PRESTAMOS_NETO": "Préstamos financieros y títulos de deuda (ingresos − egresos)",
+    "FAE_PRIV_NETA": "Formación de activos externos del sector privado",
+    "OTROS_CF": "Otros movimientos (sector público, organismos, sector financiero, no clasificado)",
+    "RESULTADO": "Resultado cambiario: cuenta corriente + cuenta capital y financiera",
+    "COMPRAS_BCRA": "Compras de divisas del BCRA (referencia)",
+}
+
+
+def _panel_financiamiento(macro, ser):
+    vs = set(macro["variable"])
+    cols = {v: ser(v) for v in ("CC_CAMBIARIA", "IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_ING", "PRESTAMOS_EGR", "FAE_PRIV_NETA", "CF_TOTAL",
+                                "CK_CAMBIARIA", "CKF_TOTAL", "COMPRAS_BCRA") if v in vs}
+    df = pd.DataFrame(cols).sort_index().asfreq("MS")
+    if {"PRESTAMOS_ING", "PRESTAMOS_EGR"} <= set(df):
+        # el signo de «egresos» depende de la serie: si viene negativo ya resta, si viene positivo hay que restarlo
+        signo = -1.0 if df["PRESTAMOS_EGR"].dropna().median() >= 0 else 1.0
+        df["PRESTAMOS_NETO"] = df["PRESTAMOS_ING"] + signo * df["PRESTAMOS_EGR"]
+    if {"CKF_TOTAL", "CC_CAMBIARIA"} <= set(df):
+        df["RESULTADO"] = df["CC_CAMBIARIA"] + df["CKF_TOTAL"]
+    if {"CF_TOTAL", "IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_NETO", "FAE_PRIV_NETA"} <= set(df):
+        df["OTROS_CF"] = df["CF_TOTAL"] - df[["IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_NETO", "FAE_PRIV_NETA"]].sum(axis=1, min_count=4)
+        if "CK_CAMBIARIA" in df:  # la cuenta de capital va con los otros movimientos
+            df["OTROS_CF"] = df["OTROS_CF"] + df["CK_CAMBIARIA"]
+    return df
+
+
+def _bloque_financiamiento(macro, ser, show):
+    """¿Con qué se financia la salida de dólares? Fuentes y usos de dólares (Balance Cambiario), suma móvil de 12 meses."""
+    st.subheader("¿Con qué se financia la salida de dólares?")
+    df = _panel_financiamiento(macro, ser)
+    claves = [k for k in FINANCIAMIENTO if k in df.columns]
+    if not {"IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_NETO"} <= set(claves):
+        st.info("Faltan series de la cuenta capital y financiera cambiaria en data/macro.csv. Correr la Action de ingesta con el fetch_macro.py nuevo.")
+        return []
+    r12 = df[claves].rolling(12, min_periods=12).sum()
+    comp = [k for k in ("CC_CAMBIARIA", "IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_NETO", "FAE_PRIV_NETA", "OTROS_CF") if k in claves]
+    fig = go.Figure()
+    for k in comp:
+        x = r12[k].dropna()
+        fig.add_trace(go.Bar(x=x.index, y=x, name=FINANCIAMIENTO[k].split(" (")[0]))
+    if "RESULTADO" in claves:
+        x = r12["RESULTADO"].dropna()
+        fig.add_trace(go.Scatter(x=x.index, y=x, mode="lines", name="Resultado cambiario", line=dict(color="black", width=2.5)))
+    fig.update_layout(barmode="relative", title="Fuentes (positivo) y usos (negativo) de dólares, suma de 12 meses (millones de USD)", height=440,
+                      hovermode="x unified", legend=dict(orientation="h", y=-0.3), yaxis_title="USD mn, 12 meses", xaxis_title="Último mes de la ventana")
+    show(fig)
+    filas = []
+    for k in claves:
+        x = r12[k].dropna()
+        if x.empty:
+            continue
+        ultimo = x.index.max()
+        antes = x.get(ultimo - pd.DateOffset(years=1), np.nan)
+        fila = {"Concepto": FINANCIAMIENTO[k], "Hasta": f"{ultimo:%Y-%m}", "Último 12 m": round(x.iloc[-1]),
+                "Mismo mes año anterior": None if antes != antes else round(antes)}
+        for nombre, _, _ in REGIMENES:
+            sub = x[[regimen_de(t) == nombre for t in x.index]]
+            fila[f"Promedio {nombre}"] = round(sub.mean()) if len(sub) else None
+        filas.append(fila)
+    tabla = pd.DataFrame(filas)
+    st.dataframe(tabla, hide_index=True, width="stretch")
+    st.caption("Positivo = entran dólares; negativo = salen. «Otros movimientos» es un residuo (cuenta financiera total menos los cuatro rubros de arriba, "
+               "más la cuenta de capital): incluye sector público, organismos y sector financiero. El resultado cambiario es lo que absorbe el BCRA "
+               "(compra o venta de reservas); es una identidad de caja, no una causalidad. Para ver el signo de cada rubro cotejar con la serie original (descubrir_series.py verificar).")
+    return ["", "## Fuentes y usos de dolares (Balance Cambiario, suma movil de 12 meses, USD mn)", tabla.to_csv(index=False).strip()]
+
+
 def _bloque_precios(macro, ser, show):
     st.subheader("Términos de intercambio y precios internacionales")
     vs = [k for k in PRECIOS if k in set(macro["variable"])]
@@ -1291,7 +1362,7 @@ def render_tcr(data_dir, show):
         st.caption("El REM proyecta el dólar mayorista: la comparación con las expectativas solo se muestra con «Mayorista oficial».")
 
     st.header("Factores de contexto")
-    extra = _bloque_flujos(macro, ser, show) + _bloque_precios(macro, ser, show) + _bloque_vencimientos(data_dir, ser, show)
+    extra = _bloque_flujos(macro, ser, show) + _bloque_financiamiento(macro, ser, show) + _bloque_precios(macro, ser, show) + _bloque_vencimientos(data_dir, ser, show)
 
     # --- exportable para compartir con Claude (mismo estilo que Termometro y Tension)
     ult = d.tail(24).copy()
