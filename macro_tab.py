@@ -1029,15 +1029,30 @@ FINANCIAMIENTO = {  # clave: etiqueta (suma de 12 meses, USD mn; positivo = entr
     "PRESTAMOS_NETO": "Préstamos financieros y títulos de deuda (ingresos − egresos)",
     "FAE_PRIV_NETA": "Formación de activos externos del sector privado",
     "OTROS_CF": "Otros movimientos (sector público, organismos, sector financiero, no clasificado)",
+    "SP_OTRAS": "   · Sector público: otras operaciones (neto)",
+    "SP_FAE": "   · Sector público: formación de activos externos",
+    "FMI_TOTAL": "   · FMI (total)",
+    "ORG_BILAT_TOTAL": "   · Otros organismos internacionales y bilaterales (total)",
+    "SF_FAE": "   · Sector financiero: formación de activos externos",
+    "TITULOS_VALORES": "   · Compra-venta de títulos valores",
+    "CANJE": "   · Canje por transferencias con el exterior",
+    "OTROS_NETOS": "   · Otros movimientos netos (clasificados por BCRA)",
+    "OTROS_RESIDUO": "   · Residuo no explicado por los rubros anteriores",
+    "RENTAS_ING": "Referencia: utilidades, dividendos y otras rentas — ingresos",
+    "RENTAS_EGR": "Referencia: utilidades, dividendos y otras rentas — egresos (signo según la fuente)",
+    "INTERESES_EGR": "Referencia: intereses pagados (signo según la fuente)",
     "RESULTADO": "Resultado cambiario: cuenta corriente + cuenta capital y financiera",
     "COMPRAS_BCRA": "Compras de divisas del BCRA (referencia)",
 }
 
 
+_COMP_OTROS = ("SP_OTRAS", "SP_FAE", "FMI_TOTAL", "ORG_BILAT_TOTAL", "SF_FAE", "TITULOS_VALORES", "CANJE", "OTROS_NETOS")
+
+
 def _panel_financiamiento(macro, ser):
     vs = set(macro["variable"])
     cols = {v: ser(v) for v in ("CC_CAMBIARIA", "IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_ING", "PRESTAMOS_EGR", "FAE_PRIV_NETA", "CF_TOTAL",
-                                "CK_CAMBIARIA", "CKF_TOTAL", "COMPRAS_BCRA") if v in vs}
+                                "CK_CAMBIARIA", "CKF_TOTAL", "COMPRAS_BCRA", *_COMP_OTROS, "RENTAS_ING", "RENTAS_EGR", "INTERESES_EGR") if v in vs}
     df = pd.DataFrame(cols).sort_index().asfreq("MS")
     if {"PRESTAMOS_ING", "PRESTAMOS_EGR"} <= set(df):
         # el signo de «egresos» depende de la serie: si viene negativo ya resta, si viene positivo hay que restarlo
@@ -1049,6 +1064,10 @@ def _panel_financiamiento(macro, ser):
         df["OTROS_CF"] = df["CF_TOTAL"] - df[["IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_NETO", "FAE_PRIV_NETA"]].sum(axis=1, min_count=4)
         if "CK_CAMBIARIA" in df:  # la cuenta de capital va con los otros movimientos
             df["OTROS_CF"] = df["OTROS_CF"] + df["CK_CAMBIARIA"]
+    comp = [c for c in _COMP_OTROS if c in df]
+    if "OTROS_CF" in df and comp:
+        # el residuo incluye la cuenta de capital y cualquier rubro que no desagregamos; si es grande, revisar signos
+        df["OTROS_RESIDUO"] = df["OTROS_CF"] - df[comp].sum(axis=1, min_count=1).fillna(0)
     return df
 
 
@@ -1057,6 +1076,8 @@ def _bloque_financiamiento(macro, ser, show):
     st.subheader("¿Con qué se financia la salida de dólares?")
     df = _panel_financiamiento(macro, ser)
     claves = [k for k in FINANCIAMIENTO if k in df.columns]
+    if "OTROS_CF" in claves and not any(c in claves for c in _COMP_OTROS):
+        claves = [k for k in claves if k != "OTROS_RESIDUO"]
     if not {"IED_NETA", "PORTAFOLIO_NETO", "PRESTAMOS_NETO"} <= set(claves):
         st.info("Faltan series de la cuenta capital y financiera cambiaria en data/macro.csv. Correr la Action de ingesta con el fetch_macro.py nuevo.")
         return []
@@ -1088,7 +1109,8 @@ def _bloque_financiamiento(macro, ser, show):
     tabla = pd.DataFrame(filas)
     st.dataframe(tabla, hide_index=True, width="stretch")
     st.caption("Positivo = entran dólares; negativo = salen. «Otros movimientos» es un residuo (cuenta financiera total menos los cuatro rubros de arriba, "
-               "más la cuenta de capital): incluye sector público, organismos y sector financiero. El resultado cambiario es lo que absorbe el BCRA "
+               "más la cuenta de capital); las filas con «·» lo desagregan y el residuo muestra lo que esos rubros no explican (si es grande, hay un signo o un rubro mal "
+               "asignado). Las filas «Referencia» son cuenta corriente (rentas) y sirven para contrastar la hipótesis de remesas de dividendos con la inversión directa negativa. El resultado cambiario es lo que absorbe el BCRA "
                "(compra o venta de reservas); es una identidad de caja, no una causalidad. Para ver el signo de cada rubro cotejar con la serie original (descubrir_series.py verificar).")
     return ["", "## Fuentes y usos de dolares (Balance Cambiario, suma movil de 12 meses, USD mn)", tabla.to_csv(index=False).strip()]
 
