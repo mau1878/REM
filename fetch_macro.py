@@ -50,6 +50,7 @@ FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv"
 ACTUALS = DATA / "actuals_monthly.csv"  # lo escribe fetch_actuals.py (serie IPC_MENSUAL, var. % mensual)
 BLANDAS = ("argdatos", "fred", "local")  # fuentes cuya falla conserva lo previo en vez de abortar
 ICA = "datos.gob.ar (INDEC, Intercambio Comercial Argentino)"
+BALANCE_SECT = "datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)"
 MIN_MESES = 12  # una serie con menos meses que esto se considera fallida (respuesta vacia o truncada)
 
 # tipo: stock | flujo | precio | indicador  (la pestaña lo usa para ofrecer transformaciones con sentido)
@@ -114,6 +115,21 @@ SERIES = [
          etiqueta="Exportaciones de gas de petróleo y otros hidrocarburos (FOB)"),
     dict(var="EXPO_METALES_PRECIOSOS", src="datos", id="75.3_IPMP_0_M_29", agg="none", tipo="flujo", unidad="USD mn", soft=True, fuente=ICA,
          etiqueta="Exportaciones de piedras y metales preciosos (FOB; en la práctica, sobre todo oro y plata)"),
+    dict(var="EXPO_METALES_COMUNES", src="datos", id="75.3_IMCM_0_M_32", agg="none", tipo="flujo", unidad="USD mn", soft=True, fuente=ICA,
+         etiqueta="Exportaciones de metales comunes y sus manufacturas (FOB; aluminio, acero, etc.)"),
+    # ---- cobros de exportaciones por SECTOR del exportador (Balance Cambiario, BCRA via datos.gob.ar): la mineria incluye litio, oro, plata, cobre
+    dict(var="COBROS_EXPO_MINERIA", src="datos", id="184.1_BIENES_COBRIA_0_M_21", agg="none", tipo="flujo", unidad="USD mn", soft=True,
+         fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones: sector Minería"),
+    dict(var="COBROS_EXPO_PETROLEO", src="datos", id="184.1_BIENES_COBLEO_0_M_22", agg="none", tipo="flujo", unidad="USD mn", soft=True,
+         fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones: sector Petróleo"),
+    dict(var="COBROS_EXPO_GAS", src="datos", id="184.1_BIENES_COBON_0_M_56", agg="none", tipo="flujo", unidad="USD mn", soft=True,
+         fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones: sector Gas"),
+    dict(var="COBROS_EXPO_METALES_COMUNES", src="datos", id="184.1_BIENES_COBION_0_M_41", agg="none", tipo="flujo", unidad="USD mn", soft=True,
+         fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones: sector Metales comunes"),
+    dict(var="COBROS_EXPO_AGRO", src="datos", id="184.1_BIENES_COBROS_0_M_36", agg="none", tipo="flujo", unidad="USD mn", soft=True,
+         fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones: sector Oleaginosos y cerealeros"),
+    dict(var="COBROS_EXPO_TOTAL", src="datos", id="184.1_BIENES_COBNES_0_M_35", agg="none", tipo="flujo", unidad="USD mn", soft=True,
+         fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones de bienes: total"),
     # ---- terminos de intercambio (INDEC, TRIMESTRAL: la fecha es el inicio del trimestre)
     dict(var="TERMINOS_INTERCAMBIO", src="datos", id="82.2_ITI_2004_T_27", agg="none", tipo="indicador", unidad="índice 2004=100",
          soft=True, fuente="datos.gob.ar (INDEC, términos de intercambio)",
