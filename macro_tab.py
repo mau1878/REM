@@ -937,6 +937,13 @@ FLUJOS = {  # clave: etiqueta (suma de 12 meses, USD mn; positivo = entran dolar
     "EXPO_METALES_PRECIOSOS": "Exportaciones de piedras y metales preciosos (sobre todo oro y plata)",
     "EXPO_MINERIA_APROX": "Exportaciones mineras aproximadas (metales preciosos + cobre; sin litio)",
     "EXPO_COBRE": "Exportaciones de mineral de cobre y concentrados",
+    "EXPO_METALES_COMUNES": "Exportaciones de metales comunes y manufacturas (aluminio, acero, etc.)",
+    "COBROS_EXPO_MINERIA": "Cobros de exportaciones del sector Minería (incluye litio, oro, plata, cobre; Balance Cambiario)",
+    "COBROS_EXPO_PETROLEO": "Cobros de exportaciones del sector Petróleo (Balance Cambiario)",
+    "COBROS_EXPO_GAS": "Cobros de exportaciones del sector Gas (Balance Cambiario)",
+    "COBROS_EXPO_METALES_COMUNES": "Cobros de exportaciones del sector Metales comunes (Balance Cambiario)",
+    "COBROS_EXPO_AGRO": "Cobros de exportaciones del sector Oleaginosos y cerealeros (Balance Cambiario)",
+    "COBROS_EXPO_TOTAL": "Cobros de exportaciones de bienes, total (Balance Cambiario)",
     "CC_CAMBIARIA": "Cuenta corriente cambiaria (neta, Balance Cambiario)",
     "CC_SERVICIOS": "Servicios en la cuenta corriente cambiaria (neto)",
     "FAE_PRIV_NETA": "Formación de activos externos del sector privado (neta; negativo = salida)",
@@ -955,7 +962,9 @@ PRECIOS = {
 def _panel_flujos(macro, ser):
     vs = set(macro["variable"])
     cols = {v: ser(v) for v in ("EXPO_TOTAL", "IMPO_TOTAL", "EXPO_ENERGIA", "IMPO_COMBUSTIBLES", "EXPO_PRIMARIOS", "EXPO_MOA",
-                                "EXPO_COBRE", "EXPO_PETROLEO", "EXPO_GAS", "EXPO_METALES_PRECIOSOS", "CC_CAMBIARIA", "CC_SERVICIOS", "FAE_PRIV_NETA",
+                                "EXPO_COBRE", "EXPO_PETROLEO", "EXPO_GAS", "EXPO_METALES_PRECIOSOS", "EXPO_METALES_COMUNES",
+                                "COBROS_EXPO_MINERIA", "COBROS_EXPO_PETROLEO", "COBROS_EXPO_GAS", "COBROS_EXPO_METALES_COMUNES",
+                                "COBROS_EXPO_AGRO", "COBROS_EXPO_TOTAL", "CC_CAMBIARIA", "CC_SERVICIOS", "FAE_PRIV_NETA",
                                 "COMPRAS_BCRA") if v in vs}
     df = pd.DataFrame(cols)
     if {"EXPO_TOTAL", "IMPO_TOTAL"} <= set(df):
