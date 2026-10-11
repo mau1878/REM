@@ -9,6 +9,9 @@ Fuentes:
   * datos.gob.ar, API de Series de Tiempo (Balance Cambiario y comercio exterior del INDEC, ya mensual; terminos de intercambio, trimestral).
   * ArgentinaDatos (terceros, NO oficial): dolar CCL, MEP (bolsa), blue y riesgo pais. Si falla, se conserva lo ya guardado.
   * FRED (St. Louis Fed, CSV abierto): IPC de EE.UU. (CPIAUCSL) y precios de cobre, soja y WTI. Cuenta como fuente de terceros.
+  * FRED, series DIARIAS (promedio del mes): indice amplio del dolar (DTWEXBGS), real brasileño (DEXBZUS), tasa a 10 años de EE.UU. (DGS10),
+    fed funds (DFF) y VIX (VIXCLS). Factores externos para el modulo dolar/.
+  * data/manual/icg.csv (opcional, a mano): Indice de Confianza en el Gobierno (UTDT), columnas fecha,valor. Si no existe se omite.
   * data/actuals_monthly.csv (lo genera fetch_actuals.py antes en el workflow): IPC mensual de Argentina, que se encadena en un indice.
   * Derivadas: brechas CCL / MEP / blue contra el mayorista oficial (BCRA id 5) y tipo de cambio real bilateral con EE.UU.
 
@@ -48,7 +51,7 @@ DATOS = "https://apis.datos.gob.ar/series/api/series/"
 ARGDATOS = "https://api.argentinadatos.com/v1"
 FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv"
 ACTUALS = DATA / "actuals_monthly.csv"  # lo escribe fetch_actuals.py (serie IPC_MENSUAL, var. % mensual)
-BLANDAS = ("argdatos", "fred", "local")  # fuentes cuya falla conserva lo previo en vez de abortar
+BLANDAS = ("argdatos", "fred", "fred_d", "manual", "local")  # fuentes cuya falla conserva lo previo en vez de abortar
 ICA = "datos.gob.ar (INDEC, Intercambio Comercial Argentino)"
 BALANCE_SECT = "datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)"
 MIN_MESES = 12  # una serie con menos meses que esto se considera fallida (respuesta vacia o truncada)
@@ -179,6 +182,20 @@ SERIES = [
          etiqueta="Precio internacional de la soja (FRED/FMI, promedio mensual)"),
     dict(var="PRECIO_WTI", src="fred", id="MCOILWTICO", agg="none", tipo="precio", unidad="USD por barril",
          etiqueta="Petróleo WTI (FRED, promedio mensual)"),
+    # ---- factores externos (FRED, series diarias -> promedio mensual) y confianza (manual)
+    dict(var="DXY_AMPLIO", src="fred_d", id="DTWEXBGS", agg="mean", tipo="precio", unidad="índice ene-2006=100",
+         etiqueta="Índice amplio del dólar de EE.UU. contra monedas de socios comerciales (FRED DTWEXBGS, promedio del mes)"),
+    dict(var="BRL_USD", src="fred_d", id="DEXBZUS", agg="mean", tipo="precio", unidad="BRL por USD",
+         etiqueta="Real brasileño por dólar (FRED DEXBZUS, promedio del mes; más alto = real más débil)"),
+    dict(var="TASA_10Y_EEUU", src="fred_d", id="DGS10", agg="mean", tipo="indicador", unidad="%",
+         etiqueta="Tasa del Tesoro de EE.UU. a 10 años (FRED DGS10, promedio del mes)"),
+    dict(var="FED_FUNDS", src="fred_d", id="DFF", agg="mean", tipo="indicador", unidad="%",
+         etiqueta="Tasa de fondos federales efectiva (FRED DFF, promedio del mes)"),
+    dict(var="VIX", src="fred_d", id="VIXCLS", agg="mean", tipo="indicador", unidad="puntos",
+         etiqueta="VIX, volatilidad implícita del S&P 500 (FRED VIXCLS, promedio del mes)"),
+    dict(var="ICG_UTDT", src="manual", id="icg.csv", agg="none", tipo="indicador", unidad="puntos (0-5)", soft=True,
+         fuente="UTDT, Índice de Confianza en el Gobierno (carga manual en data/manual/icg.csv)",
+         etiqueta="Índice de Confianza en el Gobierno (UTDT; se carga a mano)"),
     dict(var="RIESGO_PAIS", src="argdatos", id="riesgo-pais", agg="last", tipo="indicador", unidad="pb",
          etiqueta="Riesgo país (fin de mes)"),
 ]
@@ -291,6 +308,29 @@ def fetch_fred(series_id, start):
     return full.dropna()
 
 
+def fetch_fred_daily(series_id, start):
+    """Serie DIARIA de FRED (sin clave). Sin interpolar: los dias sin dato ('.') se descartan y to_monthly() promedia el mes."""
+    txt = http_json(FRED, {"id": series_id, "cosd": start}, texto=True)
+    df = pd.read_csv(io.StringIO(txt)).iloc[:, :2]
+    df.columns = ["fecha", "valor"]
+    df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
+    df = df.dropna()
+    return _to_series(zip(df["fecha"], df["valor"]))
+
+
+def fetch_manual(nombre, start):
+    """CSV a mano en data/manual/<nombre> con columnas fecha,valor (cualquier dia del mes; se pasa a inicio de mes)."""
+    path = DATA / "manual" / nombre
+    if not path.exists():
+        raise RuntimeError(f"no existe {path} (opcional: cargar fecha,valor mensual)")
+    df = pd.read_csv(path)
+    df.columns = [c.strip().lower() for c in df.columns]
+    df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
+    df = df.dropna(subset=["valor"])
+    f = pd.to_datetime(df["fecha"]).dt.to_period("M").dt.to_timestamp()
+    return pd.Series(df["valor"].values, index=f).groupby(level=0).last().sort_index()
+
+
 def fetch_ipc_local(_id, _start):
     """Indice de precios de Argentina: encadena la variacion mensual de data/actuals_monthly.csv (serie IPC_MENSUAL, columna 'ultimo').
     Base ene-2016 = 100. Es un indice propio (empalme BCRA/INDEC): sirve para cocientes y variaciones, no como cifra oficial de nivel."""
@@ -355,6 +395,10 @@ def main(argv=None):
                 raw = fetch_datos(sp["id"], START)
             elif sp["src"] == "fred":
                 raw = fetch_fred(sp["id"], START)
+            elif sp["src"] == "fred_d":
+                raw = fetch_fred_daily(sp["id"], START)
+            elif sp["src"] == "manual":
+                raw = fetch_manual(sp["id"], START)
             elif sp["src"] == "local":
                 raw = fetch_ipc_local(sp["id"], START)
             else:
@@ -431,7 +475,7 @@ def main(argv=None):
     meta = {s["var"]: s for s in SERIES + BRECHAS + TCR}
     fuente = {"bcra": "BCRA", "datos": "datos.gob.ar (Balance Cambiario, BCRA)", "argdatos": "ArgentinaDatos (terceros)",
               "derivada": "Calculada: CCL (ArgentinaDatos) / mayorista (BCRA)",
-              "fred": "FRED (St. Louis Fed)", "local": "BCRA (IPC mensual, encadenado)"}
+              "fred": "FRED (St. Louis Fed)", "fred_d": "FRED (St. Louis Fed)", "manual": "Carga manual", "local": "BCRA (IPC mensual, encadenado)"}
     frames = []
     for v, s in got.items():
         d = pd.DataFrame({"fecha": pd.to_datetime(s.index), "variable": v, "valor": s.values})
