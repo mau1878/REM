@@ -405,6 +405,14 @@ def main(argv=None):
                 raw = fetch_argdatos(sp["id"], START)
             daily[v] = raw
             m = to_monthly(raw, sp["agg"], today)
+            # Si la fuente dejo de devolver meses que ya teniamos guardados (huecos dentro del rango), se conservan los previos:
+            # un hueco nuevo en la API no debe borrar historia (datos.gob.ar devolvio series con ~50% de meses vacios).
+            prev_s = cache[cache["variable"] == v].set_index("fecha")["valor"] if len(cache) else None
+            if prev_s is not None and len(prev_s) and len(m):
+                faltan = [t for t in prev_s.index.difference(m.index) if m.index.min() <= t <= m.index.max()]
+                if faltan:
+                    m = m.combine_first(prev_s.loc[faltan]).sort_index()
+                    avisos.append(f"{v}: la fuente no devolvio {len(faltan)} meses ya guardados dentro del rango; se conservan los previos")
             if len(m) < MIN_MESES:
                 raise RuntimeError(f"solo {len(m)} meses con datos (minimo {MIN_MESES})")
             got[v] = m
