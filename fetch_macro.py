@@ -423,14 +423,44 @@ def _candidatos(sp, n=6):
         for it in j.get("data", []):
             f = it.get("field") or {}
             if f.get("id"):
-                vistos[f["id"]] = f
+                vistos[f["id"]] = it
 
-    def desc(f):
+    def desc(it):
+        f = it["field"]
         return (f.get("description") or f.get("title") or "")
 
-    orden = sorted(vistos.values(), key=lambda f: (not f["id"].startswith(prefijo),
-                                                   -difflib.SequenceMatcher(None, desc(f).lower(), sp["etiqueta"].lower()).ratio()))
-    return orden[:n]
+    orden = sorted(vistos.values(), key=lambda it: (not it["field"]["id"].startswith(prefijo),
+                                                    -difflib.SequenceMatcher(None, desc(it).lower(), sp["etiqueta"].lower()).ratio()))
+    return orden[:n], vistos.get(sp["id"])
+
+
+def _sonda(sp):
+    """Para una serie que el catalogo da por existente pero cuyo pedido devuelve 0 filas: prueba variantes del pedido y cuenta filas.
+    Sirve para distinguir un parametro conflictivo (start_date, limit...) de un problema del lado de la API."""
+    base = {"ids": sp["id"], "format": "json"}
+    variantes = [
+        ("sin start_date, limit=1000", dict(base, limit=1000)),
+        ("start_date=2016-06-01, end_date=2026-08-01", dict(base, start_date="2016-06-01", end_date="2026-08-01", limit=1000)),
+        ("ultimos 5 (sort=desc)", dict(base, limit=5, sort="desc")),
+        ("start_date=2020-01", dict(base, start_date="2020-01", limit=1000)),
+        ("pedido original con metadata=none", dict(base, start_date=START[:7], limit=1000, metadata="none")),
+    ]
+    for k, (nombre, p) in enumerate(variantes):
+        try:
+            j = http_json(DATOS, p)
+            data = j.get("data", [])
+            ok = [r for r in data if len(r) > 1 and r[1] is not None]
+            print(f"    sonda {nombre:<44} filas={len(data):>4} con valor={len(ok):>4} ultimo={ok[-1][0][:7] if ok else '-'}")
+            if k == 0:
+                print(f"          claves de la respuesta: {sorted(j)}; params eco: {json.dumps(j.get('params'))[:160]}")
+        except Exception as e:  # noqa: BLE001
+            print(f"    sonda {nombre:<44} ERROR {e}")
+    try:
+        txt = http_json(DATOS, dict(base, start_date=START[:7], limit=1000, format="csv"), texto=True)
+        lineas = txt.strip().splitlines()
+        print(f"    sonda format=csv                                  lineas={len(lineas)} primeras={lineas[:2]}")
+    except Exception as e:  # noqa: BLE001
+        print(f"    sonda format=csv                                  ERROR {e}")
 
 
 def diagnose(vars_):
@@ -485,9 +515,18 @@ def diagnose(vars_):
             d, upd, fin = r["meta"]
             print(f"    API dice: descripcion={d!r} is_updating={upd} time_index_end={fin}")
         print("    candidatos (mismo prefijo primero):")
-        for f in _candidatos(sp):
+        cands, propio = _candidatos(sp)
+        for it in cands:
+            f = it["field"]
             marca = "*" if f["id"] == sp["id"] else " "
             print(f"     {marca} {f['id']:<40} fin={f.get('time_index_end')} act={f.get('is_updating')}  {(f.get('description') or f.get('title') or '')[:90]}")
+        if propio:  # URLs de la distribucion (p. ej. el CSV completo), por si hay que leer la serie de ahi
+            for blk in ("distribution", "dataset"):
+                for k, v in (propio.get(blk) or {}).items():
+                    if isinstance(v, str) and v.startswith("http"):
+                        print(f"    {blk}.{k}: {v}")
+        if r.get("estado") == "SIN FILAS":
+            _sonda(sp)
     print(f"\n{len(res) - len(malas)} OK, {len(malas)} con problemas")
     return 0
 
