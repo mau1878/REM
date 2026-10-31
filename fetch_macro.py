@@ -19,14 +19,21 @@ Politica de errores (pensada para el workflow mensual):
   * Si falla una serie OFICIAL (BCRA / datos.gob.ar): no se escribe nada y el script termina con codigo 1
     (el Action falla y no commitea datos a medias).
   * Si falla una serie de TERCEROS (ArgentinaDatos, FRED, IPC local, comercio exterior INDEC): se conservan las filas previas de data/macro.csv y se avisa por pantalla.
+  * Series oficiales con "fallback" (FAE_PRIV_EGRESOS): si la serie directa no llega se deriva de otras (egresos = ingresos - neta),
+    contrastando contra lo guardado; si la derivada no replica lo guardado se conserva lo previo y se avisa (aborta solo si no hay nada previo).
+  * Guardia de atraso: toda serie cuyo ultimo dato quede >= --max-atraso meses detras del dato mas reciente de su misma fuente genera un
+    AVISO ATRASO (y una anotacion ::warning:: en GitHub Actions). Con --fail-on-atraso ademas el script termina con codigo 1 sin escribir.
 
 Solo usa libreria estandar + pandas. Uso:
     python fetch_macro.py                 # actualiza data/macro.csv
     python fetch_macro.py --only COMPRAS_BCRA,RESERVAS_BRUTAS   # depuracion (no escribe, solo muestra)
+    python fetch_macro.py --diagnose      # revisa todas las series de datos.gob.ar (filas, ultimo dato, metadatos, IDs candidatos); no escribe
+    python fetch_macro.py --diagnose FAE_PRIV_EGRESOS,FMI_TOTAL   # idem, solo esas variables
 Variable de entorno opcional BCRA_CA_BUNDLE: ruta a un bundle de certificados si el entorno no valida la cadena
 de la API del BCRA (no se desactiva nunca la verificacion TLS).
 """
 import argparse
+import difflib
 import io
 import json
 import os
@@ -55,6 +62,8 @@ BLANDAS = ("argdatos", "fred", "fred_d", "manual", "local")  # fuentes cuya fall
 ICA = "datos.gob.ar (INDEC, Intercambio Comercial Argentino)"
 BALANCE_SECT = "datos.gob.ar (BCRA, Balance Cambiario: cobros y pagos por bienes, sectorial)"
 MIN_MESES = 12  # una serie con menos meses que esto se considera fallida (respuesta vacia o truncada)
+SEARCH = "https://apis.datos.gob.ar/series/api/search/"  # buscador de series de datos.gob.ar (solo para --diagnose)
+ATRASO_MAX = 2  # meses de atraso (vs. el dato mas reciente de la misma fuente) desde los que se avisa
 
 # tipo: stock | flujo | precio | indicador  (la pestaña lo usa para ofrecer transformaciones con sentido)
 # agg: como se pasa de diario a mensual (last = ultimo dato del mes; sum; mean; none = ya es mensual)
@@ -77,7 +86,8 @@ SERIES = [
     dict(var="FAE_PRIV_INGRESOS", src="datos", id="182.1_C_K_FINC_CINC_0_M_57", agg="none", tipo="flujo", unidad="USD mn",
          etiqueta="Formación de activos externos del sector privado: ingresos"),
     dict(var="FAE_PRIV_EGRESOS", src="datos", id="182.1_C_K_FINC_CINC_NO_FINAN_0_M_56", agg="none", tipo="flujo",
-         unidad="USD mn", etiqueta="Formación de activos externos del sector privado: egresos"),
+         unidad="USD mn", fallback="ing_menos_neta",  # si la directa no llega: egresos = ingresos - neta (egresos en positivo)
+         etiqueta="Formación de activos externos del sector privado: egresos"),
     # cuenta capital y financiera cambiaria: con que se financia la salida de dolares (IED, portafolio, deuda). Signo: positivo = entran dolares
     dict(var="CKF_TOTAL", src="datos", id="182.1_TOTAL_CUENRIA_0_M_41", agg="none", tipo="flujo", unidad="USD mn", soft=True,
          etiqueta="Total cuenta capital y financiera cambiaria"),
@@ -173,7 +183,7 @@ SERIES = [
          fuente=BALANCE_SECT, etiqueta="Cobros de exportaciones de bienes: total"),
     # ---- terminos de intercambio (INDEC, TRIMESTRAL: la fecha es el inicio del trimestre)
     dict(var="TERMINOS_INTERCAMBIO", src="datos", id="82.2_ITI_2004_T_27", agg="none", tipo="indicador", unidad="índice 2004=100",
-         soft=True, fuente="datos.gob.ar (INDEC, términos de intercambio)",
+         soft=True, atraso_ok=6, fuente="datos.gob.ar (INDEC, términos de intercambio)",
          etiqueta="Términos de intercambio (índice 2004=100, trimestral)"),
     # ---- precios internacionales (FRED, mensual, USD)
     dict(var="PRECIO_COBRE", src="fred", id="PCOPPUSDM", agg="none", tipo="precio", unidad="USD por tonelada",
@@ -366,20 +376,145 @@ def brecha_mensual(ccl, tcm, today):
     return to_monthly((d["ccl"] / d["tcm"] - 1.0) * 100.0, "mean", today)
 
 
+# ---------------------------------------------------------------- guardia de atraso
+def chequear_atraso(got, frescas, meta, max_atraso):
+    """Series cuyo ultimo dato queda >= max_atraso meses detras del dato mas reciente de su misma fuente (o, si es la unica de su
+    fuente, de todas las frescas). Detecta tanto series conservadas del CSV previo (la descarga fallo) como series que la API
+    sigue devolviendo pero dejaron de actualizarse. Devuelve [(var, ultimo, atraso_meses, referencia, fresca)]."""
+    ult = {v: pd.Timestamp(s.index.max()) for v, s in got.items() if len(s) and meta.get(v, {}).get("src") != "derivada"}
+    por_src = {}
+    for v in frescas:
+        if v in ult:
+            por_src.setdefault(meta[v]["src"], []).append(ult[v])
+    if not por_src:
+        return []
+    ref_global = max(max(x) for x in por_src.values())
+    out = []
+    for v, u in sorted(ult.items()):
+        m = meta[v]
+        ref = max(por_src[m["src"]]) if m["src"] in por_src else ref_global
+        lag = (ref.year - u.year) * 12 + (ref.month - u.month)
+        if lag >= max(1, m.get("atraso_ok", max_atraso)):
+            out.append((v, u, lag, ref, v in frescas))
+    return out
+
+
+# ---------------------------------------------------------------- diagnostico (--diagnose)
+def _campo_meta(j):
+    """(descripcion, is_updating, time_index_end) del bloque 'meta' de metadata=full; tolera cambios de forma de la respuesta."""
+    for blk in j.get("meta") or []:
+        f = blk.get("field") if isinstance(blk, dict) else None
+        if f:
+            return f.get("description") or f.get("title"), f.get("is_updating"), f.get("time_index_end")
+    return None, None, None
+
+
+def _candidatos(sp, n=6):
+    """IDs parecidos segun el buscador de datos.gob.ar: primero los del mismo prefijo de dataset, luego por similitud de descripcion."""
+    prefijo = sp["id"].split("_")[0].split(".")[0] + "."
+    clave = " ".join(w for w in sp["etiqueta"].replace("(", " ").replace(")", " ").replace(":", " ").split() if len(w) > 3)[:120]
+    vistos = {}
+    for q in dict.fromkeys([sp["etiqueta"], clave]):
+        try:
+            j = http_json(SEARCH, {"q": q, "limit": 50})
+        except Exception as e:  # noqa: BLE001
+            print(f"      (busqueda fallo: {e})")
+            continue
+        for it in j.get("data", []):
+            f = it.get("field") or {}
+            if f.get("id"):
+                vistos[f["id"]] = f
+
+    def desc(f):
+        return (f.get("description") or f.get("title") or "")
+
+    orden = sorted(vistos.values(), key=lambda f: (not f["id"].startswith(prefijo),
+                                                   -difflib.SequenceMatcher(None, desc(f).lower(), sp["etiqueta"].lower()).ratio()))
+    return orden[:n]
+
+
+def diagnose(vars_):
+    """Para cada serie de datos.gob.ar: filas devueltas, filas con valor, primer/ultimo dato, metadatos de la API y, si la serie esta
+    vacia o atrasada, IDs candidatos. No escribe nada."""
+    sel = [sp for sp in SERIES if sp["src"] == "datos" and (vars_ is None or sp["var"] in vars_)]
+    if not sel:
+        print("--diagnose: ninguna variable de datos.gob.ar coincide con la lista pedida")
+        return 1
+    res = []
+    for sp in sel:
+        r = dict(sp=sp)
+        try:
+            j = http_json(DATOS, {"ids": sp["id"], "start_date": START[:7], "limit": 1000, "format": "json", "metadata": "full"})
+            data = j.get("data", [])
+            con = [(f, v) for f, v in data if v is not None]
+            r.update(n=len(data), n_ok=len(con), primero=con[0][0][:7] if con else None,
+                     ultimo=con[-1][0][:7] if con else None, meta=_campo_meta(j))
+        except Exception as e:  # noqa: BLE001
+            r["error"] = str(e)
+        res.append(r)
+    ref = max((r["ultimo"] for r in res if r.get("ultimo")), default=None)
+    print(f"Referencia: dato mas reciente entre las series revisadas = {ref}\n")
+    print(f"{'variable':<28}{'estado':<12}{'filas':>6}{'con valor':>10}  {'primero':<8}{'ultimo':<8} id")
+    malas = []
+    for r in res:
+        sp = r["sp"]
+        if "error" in r:
+            estado = "ERROR"
+        elif r["n"] == 0:
+            estado = "SIN FILAS"
+        elif r["n_ok"] == 0:
+            estado = "SOLO NULOS"
+        elif r["n_ok"] < MIN_MESES:
+            estado = "POCOS"
+        elif (pd.Period(ref, "M") - pd.Period(r["ultimo"], "M")).n >= max(1, sp.get("atraso_ok", ATRASO_MAX)):
+            estado = "ATRASADA"
+        else:
+            estado = "OK"
+        r["estado"] = estado
+        print(f"{sp['var']:<28}{estado:<12}{r.get('n', '-'):>6}{r.get('n_ok', '-'):>10}  "
+              f"{(r.get('primero') or '-'):<8}{(r.get('ultimo') or '-'):<8} {sp['id']}")
+        if estado != "OK":
+            malas.append(r)
+    for r in malas:
+        sp = r["sp"]
+        print(f"\n=== {sp['var']} [{r['estado']}] id={sp['id']}")
+        print(f"    etiqueta configurada: {sp['etiqueta']}")
+        if "error" in r:
+            print(f"    error: {r['error']}")
+        else:
+            d, upd, fin = r["meta"]
+            print(f"    API dice: descripcion={d!r} is_updating={upd} time_index_end={fin}")
+        print("    candidatos (mismo prefijo primero):")
+        for f in _candidatos(sp):
+            marca = "*" if f["id"] == sp["id"] else " "
+            print(f"     {marca} {f['id']:<40} fin={f.get('time_index_end')} act={f.get('is_updating')}  {(f.get('description') or f.get('title') or '')[:90]}")
+    print(f"\n{len(res) - len(malas)} OK, {len(malas)} con problemas")
+    return 0
+
+
 # ---------------------------------------------------------------- main
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", help="lista de variables separadas por coma (depuracion: no escribe el CSV)")
     ap.add_argument("--today", default=str(date.today()), help="fecha de referencia YYYY-MM-DD (default: hoy)")
     ap.add_argument("--insecure", action="store_true", help="no verifica SSL, solo para api.bcra.gob.ar (igual que fetch_actuals.py)")
+    ap.add_argument("--diagnose", nargs="?", const="*", metavar="VARS",
+                    help="revisa las series de datos.gob.ar (todas, o las indicadas separadas por coma): filas, ultimo dato, "
+                         "metadatos de la API e IDs candidatos; no escribe nada")
+    ap.add_argument("--max-atraso", type=int, default=ATRASO_MAX,
+                    help=f"meses de atraso (vs. el dato mas reciente de la misma fuente) desde los que se avisa (default {ATRASO_MAX})")
+    ap.add_argument("--fail-on-atraso", action="store_true",
+                    help="si hay series atrasadas, termina con codigo 1 sin escribir data/macro.csv (default: solo avisa)")
     args = ap.parse_args(argv)
     global INSECURE
     INSECURE = args.insecure
+    if args.diagnose is not None:
+        return diagnose(None if args.diagnose == "*" else set(args.diagnose.split(",")))
     today, end = args.today, args.today
     only = set(args.only.split(",")) if args.only else None
 
     cache = pd.read_csv(OUT, parse_dates=["fecha"]) if OUT.exists() else pd.DataFrame()
-    got, daily = {}, {}
+    got, daily, frescas, pendientes, fuentes_extra = {}, {}, set(), [], {}
     fallos_oficiales, avisos = [], []
 
     for sp in SERIES:
@@ -416,6 +551,7 @@ def main(argv=None):
             if len(m) < MIN_MESES:
                 raise RuntimeError(f"solo {len(m)} meses con datos (minimo {MIN_MESES})")
             got[v] = m
+            frescas.add(v)
             print(f"OK   {v:<22} {len(m):>3} meses  {m.index.min():%Y-%m} -> {m.index.max():%Y-%m}  ult={m.iloc[-1]:,.2f}")
         except Exception as e:  # noqa: BLE001
             if sp["src"] in BLANDAS or sp.get("soft"):
@@ -425,8 +561,42 @@ def main(argv=None):
                     avisos.append(f"{v}: fallo ({e}); se conservan {len(prev)} filas previas")
                 else:
                     avisos.append(f"{v}: fallo ({e}) y no hay datos previos; se omite")
+            elif sp.get("fallback"):
+                pendientes.append((sp, str(e)))
             else:
                 fallos_oficiales.append(f"{v}: {e}")
+
+    # series oficiales con respaldo: si la directa no llego, se deriva de otras que si llegaron y se contrasta con lo guardado.
+    # Orden de preferencia: directa -> derivada (si replica lo guardado) -> filas previas (aviso) -> abortar (no hay nada previo)
+    for sp, err in pendientes:
+        v = sp["var"]
+        prev = cache[cache["variable"] == v] if len(cache) else pd.DataFrame()
+        try:
+            if sp["fallback"] != "ing_menos_neta":
+                raise RuntimeError(f"respaldo desconocido: {sp['fallback']}")
+            if "FAE_PRIV_INGRESOS" not in frescas or "FAE_PRIV_NETA" not in frescas:
+                raise RuntimeError("ingresos/neta no llegaron frescos")
+            d = (got["FAE_PRIV_INGRESOS"] - got["FAE_PRIV_NETA"]).dropna()  # egresos (positivo) = ingresos - neta
+            if len(d) < MIN_MESES:
+                raise RuntimeError(f"solo {len(d)} meses derivados")
+            if len(prev):
+                prev_s = prev.set_index("fecha")["valor"]
+                comunes = d.index.intersection(prev_s.index)
+                if len(comunes):
+                    dif = (d.loc[comunes] - prev_s.loc[comunes]).abs().max()
+                    print(f"CHEQ {v}: derivada vs guardada en {len(comunes)} meses, dif. max = {dif:,.2f} USD mn")
+                    if dif > 1.0:
+                        raise RuntimeError(f"la derivada no replica lo guardado (dif. max {dif:,.2f}); revisar signo o definicion")
+            got[v] = d
+            fuentes_extra[v] = "Calculada: ingresos - neta (datos.gob.ar, Balance Cambiario); la serie directa no devolvio datos"
+            avisos.append(f"{v}: la serie directa fallo ({err}); se deriva de ingresos - neta")
+            print(f"OK   {v:<22} {len(d):>3} meses  {d.index.min():%Y-%m} -> {d.index.max():%Y-%m}  ult={d.iloc[-1]:,.2f}  (derivada)")
+        except Exception as e2:  # noqa: BLE001
+            if len(prev):
+                got[v] = prev.set_index("fecha")["valor"]
+                avisos.append(f"{v}: fallo ({err}); respaldo no aplicable ({e2}); se conservan {len(prev)} filas previas")
+            else:
+                fallos_oficiales.append(f"{v}: {err} | respaldo: {e2}")
 
     # brechas contra el mayorista (si falla el dolar de terceros se conserva la brecha previa)
     for b in BRECHAS:
@@ -469,6 +639,14 @@ def main(argv=None):
                 got[tv] = prev.set_index("fecha")["valor"]
             avisos.append(f"{tv}: {e}; " + ("se conserva la previa" if len(prev) else "se omite"))
 
+    meta = {s["var"]: s for s in SERIES + BRECHAS + TCR}
+    atrasadas = [] if only else chequear_atraso(got, frescas, meta, max(1, args.max_atraso))
+    for v, u, lag, ref, fresca in atrasadas:
+        msg = (f"ATRASO {v}: ultimo dato {u:%Y-%m}, {lag} meses detras de su fuente ({ref:%Y-%m}); "
+               + ("la API devuelve datos pero no se actualiza" if fresca else "se conservo del CSV previo (la descarga fallo)"))
+        avisos.append(msg)
+        if os.environ.get("GITHUB_ACTIONS"):
+            print(f"::warning title=fetch_macro atraso::{msg}")  # anotacion visible en el resumen del run
     for a in avisos:
         print("AVISO", a)
     if fallos_oficiales:
@@ -476,11 +654,13 @@ def main(argv=None):
         for f in fallos_oficiales:
             print("  -", f, file=sys.stderr)
         return 1
+    if atrasadas and args.fail_on_atraso:
+        print(f"\nERROR: --fail-on-atraso: {len(atrasadas)} series atrasadas; NO se escribe data/macro.csv", file=sys.stderr)
+        return 1
     if only:
         print("\n(--only: no se escribe el CSV)")
         return 0
 
-    meta = {s["var"]: s for s in SERIES + BRECHAS + TCR}
     fuente = {"bcra": "BCRA", "datos": "datos.gob.ar (Balance Cambiario, BCRA)", "argdatos": "ArgentinaDatos (terceros)",
               "derivada": "Calculada: CCL (ArgentinaDatos) / mayorista (BCRA)",
               "fred": "FRED (St. Louis Fed)", "fred_d": "FRED (St. Louis Fed)", "manual": "Carga manual", "local": "BCRA (IPC mensual, encadenado)"}
@@ -488,7 +668,7 @@ def main(argv=None):
     for v, s in got.items():
         d = pd.DataFrame({"fecha": pd.to_datetime(s.index), "variable": v, "valor": s.values})
         m = meta[v]
-        d["etiqueta"], d["unidad"], d["fuente"] = m["etiqueta"], m["unidad"], m.get("fuente") or fuente[m["src"]]
+        d["etiqueta"], d["unidad"], d["fuente"] = m["etiqueta"], m["unidad"], fuentes_extra.get(v) or m.get("fuente") or fuente[m["src"]]
         d["tipo"], d["agregacion"] = m["tipo"], m["agg"]
         frames.append(d)
     out = pd.concat(frames, ignore_index=True).sort_values(["variable", "fecha"])
