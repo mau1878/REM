@@ -54,6 +54,11 @@ jobs:
       - name: Reales INDEC (datos.gob.ar)
         run: python fetch_indec.py   # sale con 1 si queda una serie base sin resolver (hoy PIB_SA)
 
+      # TEMPORAL: diagnostico de las 7 series de datos.gob.ar que devuelven 0 meses. No escribe nada y siempre sale con 0.
+      # Pegar la salida en el chat y borrar este paso una vez fijados los IDs.
+      - name: Diagnostico series datos.gob.ar (temporal)
+        run: python fetch_macro.py --diagnose FAE_PRIV_EGRESOS,FMI_TOTAL,INTERESES_EGR,EXPO_ENERGIA,IMPO_COMBUSTIBLES,EXPO_METALES_COMUNES,COBROS_EXPO_TOTAL
+
       # Contexto macro-financiero (BCRA, datos.gob.ar, ArgentinaDatos) -> data/macro.csv.
       # Si falla una fuente oficial sale con 1 y no escribe nada; si fallan las de terceros conserva lo previo.
       - name: Series macro-financieras -> data/macro.csv
