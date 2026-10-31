@@ -57,7 +57,7 @@ jobs:
       # TEMPORAL: diagnostico de las 7 series de datos.gob.ar que devuelven 0 meses. No escribe nada y siempre sale con 0.
       # Pegar la salida en el chat y borrar este paso una vez fijados los IDs.
       - name: Diagnostico series datos.gob.ar (temporal)
-        run: python fetch_macro.py --diagnose FAE_PRIV_EGRESOS,FMI_TOTAL,INTERESES_EGR,EXPO_ENERGIA,IMPO_COMBUSTIBLES,EXPO_METALES_COMUNES,COBROS_EXPO_TOTAL
+        run: python fetch_macro.py --diagnose   # sin argumentos: revisa todas las de datos.gob.ar (las que andan sirven de control)
 
       # Contexto macro-financiero (BCRA, datos.gob.ar, ArgentinaDatos) -> data/macro.csv.
       # Si falla una fuente oficial sale con 1 y no escribe nada; si fallan las de terceros conserva lo previo.
